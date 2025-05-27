@@ -269,12 +269,20 @@ a {
   flex-direction: row;
   width: 100%;
 }
+@media (max-width: 960px) {
+  .header .container .inner-container {
+    font-size: 14px;
+    gap: 12px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
 .header .container .inner-container .accessibility {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
   font-size: 16px;
+  gap: 16px;
 }
 .header .container .inner-container .accessibility li {
   display: flex;
@@ -297,6 +305,11 @@ a {
   align-items: center;
   backdrop-filter: blur(20px);
   background: rgba(5, 13, 28, 0.2);
+}
+@media (max-width: 960px) {
+  .nav {
+    top: 86px;
+  }
 }
 .nav .container {
   display: flex;

@@ -296,12 +296,19 @@ a {
             flex-direction: row;
             width: 100%;
 
+            @media (max-width: 960px) {
+                font-size: 14px;
+                gap: 12px;
+                justify-content: space-around;
+                flex-wrap: wrap;
+            }
+
             .accessibility {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                justify-content: space-between;
                 font-size: 16px;
+                gap: 16px;
 
                 li {
                     display: flex;
@@ -329,6 +336,10 @@ a {
     align-items: center;
     backdrop-filter: blur(20px);
     background: #050D1C33;
+
+    @media (max-width: 960px) {
+        top: 86px;
+    }
 
     .container {
         display: flex;
