@@ -255,6 +255,7 @@ a {
     margin: 0 auto;
     padding: 0 20px;
     width: 100%;
+    overflow-x: hidden;
 }
 
 
@@ -310,6 +311,13 @@ a {
                 font-size: 16px;
                 gap: 16px;
 
+                @media (max-width: 436px) {
+                    gap: 8px;
+
+                    justify-content: space-around;
+                    flex-wrap: wrap;
+                }
+
                 li {
                     display: flex;
                     align-items: center;
@@ -317,6 +325,10 @@ a {
                     border-left: 1px solid gray;
                     padding: 0 20px;
                     height: 24px;
+
+                    @media (max-width: 436px) {
+                        border-left: 1px solid var(--blue1);
+                    }
                 }
 
                 :first-child {
@@ -337,14 +349,19 @@ a {
     backdrop-filter: blur(20px);
     background: #050D1C33;
 
-    @media (max-width: 960px) {
+    @media (max-width:872px) {
         top: 86px;
     }
+
 
     .container {
         display: flex;
         justify-content: space-between;
         position: relative;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
 
         .nav-main {
             position: absolute;
@@ -357,11 +374,33 @@ a {
             align-items: center;
             gap: 30px;
 
+
+
             ul {
                 display: flex;
                 justify-content: center;
                 gap: 24px;
                 flex-wrap: wrap;
+            }
+
+
+
+            img {
+                width: 100px;
+
+
+
+            }
+
+            @media(max-width:1024px) {
+
+                min-width: 533px;
+
+                ul {
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
             }
         }
 
@@ -376,6 +415,12 @@ a {
             flex-direction: row;
             padding: 12px;
             gap: 12px;
+
+            @media (max-width: 1024px) {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
 
             .nav-btn {
                 background: #ffffff1a;
@@ -423,6 +468,7 @@ a {
 
         }
     }
+
 
     .container {
         position: relative;
@@ -532,12 +578,35 @@ a {
             }
         }
     }
+
+    @media(max-width:1024px) {
+
+
+        max-height: 1060px;
+
+
+        .container {
+            padding-top: 220px;
+        }
+    }
+
 }
 
 
 .about {
-    background-color: var(--black8);
+    position: relative;
     color: var(--black1);
+    background-color: #fff;
+    width: 100%;
+
+    ::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url("./../images/backgorund-wave.png") center no-repeat var(--black8);
+        background-size: cover;
+        opacity: 0.1;
+    }
 
     .container {
 
@@ -545,7 +614,6 @@ a {
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
-        align-items: center;
 
 
     }
@@ -553,6 +621,17 @@ a {
     .about-wrapper {
         max-width: 792px;
         min-width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 16px 0;
+        justify-content: center;
+        text-align: center;
+
+        @media(max-width:1332px) {
+            margin: 0 auto;
+        }
 
         h3 {
             font-size: 50px;
@@ -578,6 +657,8 @@ a {
         position: relative;
         border-radius: 10px;
         overflow: hidden;
+        display: flex;
+
 
         .sun {
             width: 100px;
@@ -746,6 +827,71 @@ a {
                 transform: translateY(-50%) rotate(-360deg);
             }
         }
+
+        @media (max-width: 768px) {
+            width: 250px;
+            height: 250px;
+            margin: 0 auto;
+
+            img {
+                max-width: 50px;
+            }
+
+            .sun {
+                width: 50px;
+                height: 50px;
+            }
+
+            .orbit1 {
+                width: 120px;
+                height: 120px;
+            }
+
+            .orbit2 {
+                width: 140px;
+                height: 140px;
+            }
+
+            .orbit3 {
+                width: 160px;
+                height: 160px;
+            }
+
+            .orbit4 {
+                width: 180px;
+                height: 180px;
+            }
+
+            .orbit5 {
+                width: 200px;
+                height: 200px;
+            }
+
+            .planet {
+                width: 50px !important;
+                height: 50px !important;
+            }
+
+            .planet.planet1 {
+                right: 5px;
+            }
+
+            .planet.planet2 {
+                right: 15px;
+            }
+
+            .planet.planet3 {
+                right: 25px;
+            }
+
+            .planet.planet4 {
+                right: 35px;
+            }
+
+            .planet.planet5 {
+                right: 50px;
+            }
+        }
     }
 
 }
@@ -821,8 +967,15 @@ a {
 
         .location {
             iframe {
-                width: 388px;
+                max-width: 388px;
+                width: 100%;
                 height: 150px;
+            }
+
+            @media(max-width:768px) {
+                width: 500px;
+                height: 500px;
+                margin: 0 auto;
             }
         }
 
@@ -857,9 +1010,7 @@ a {
 }
 
 @media(max-width:1024px) {
-    .nav {
-        padding: 40px 0;
-    }
+
 
     .nav-main {
         min-width: 533px;

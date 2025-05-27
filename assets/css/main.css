@@ -233,6 +233,7 @@ a {
   margin: 0 auto;
   padding: 0 20px;
   width: 100%;
+  overflow-x: hidden;
 }
 
 .main {
@@ -284,6 +285,13 @@ a {
   font-size: 16px;
   gap: 16px;
 }
+@media (max-width: 436px) {
+  .header .container .inner-container .accessibility {
+    gap: 8px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
 .header .container .inner-container .accessibility li {
   display: flex;
   align-items: center;
@@ -291,6 +299,11 @@ a {
   border-left: 1px solid gray;
   padding: 0 20px;
   height: 24px;
+}
+@media (max-width: 436px) {
+  .header .container .inner-container .accessibility li {
+    border-left: 1px solid var(--blue1);
+  }
 }
 .header .container .inner-container .accessibility :first-child {
   border-left: 0;
@@ -306,7 +319,7 @@ a {
   backdrop-filter: blur(20px);
   background: rgba(5, 13, 28, 0.2);
 }
-@media (max-width: 960px) {
+@media (max-width: 872px) {
   .nav {
     top: 86px;
   }
@@ -315,6 +328,11 @@ a {
   display: flex;
   justify-content: space-between;
   position: relative;
+}
+@media (max-width: 768px) {
+  .nav .container {
+    display: none;
+  }
 }
 .nav .container .nav-main {
   position: absolute;
@@ -333,6 +351,19 @@ a {
   gap: 24px;
   flex-wrap: wrap;
 }
+.nav .container .nav-main img {
+  width: 100px;
+}
+@media (max-width: 1024px) {
+  .nav .container .nav-main {
+    min-width: 533px;
+  }
+  .nav .container .nav-main ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .nav .container .cabinet {
   background: var(--button-dark-gdnt);
   gap: 6px;
@@ -343,6 +374,13 @@ a {
   flex-direction: row;
   padding: 12px;
   gap: 12px;
+}
+@media (max-width: 1024px) {
+  .nav .container .nav-buttons {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .nav .container .nav-buttons .nav-btn {
   background: rgba(255, 255, 255, 0.1019607843);
@@ -467,21 +505,50 @@ a {
 .hero .container .card-wrapper .card2 {
   background: linear-gradient(180deg, #F6EFBD 0%, #E4DCA6 100%);
 }
+@media (max-width: 1024px) {
+  .hero {
+    max-height: 1060px;
+  }
+  .hero .container {
+    padding-top: 220px;
+  }
+}
 
 .about {
-  background-color: var(--black8);
+  position: relative;
   color: var(--black1);
+  background-color: #fff;
+  width: 100%;
+}
+.about ::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("./../images/backgorund-wave.png") center no-repeat var(--black8);
+  background-size: cover;
+  opacity: 0.1;
 }
 .about .container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-  align-items: center;
 }
 .about .about-wrapper {
   max-width: 792px;
   min-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 0;
+  justify-content: center;
+  text-align: center;
+}
+@media (max-width: 1332px) {
+  .about .about-wrapper {
+    margin: 0 auto;
+  }
 }
 .about .about-wrapper h3 {
   font-size: 50px;
@@ -502,6 +569,7 @@ a {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
+  display: flex;
 }
 .about .solar-system .sun {
   width: 100px;
@@ -648,6 +716,59 @@ a {
     transform: translateY(-50%) rotate(-360deg);
   }
 }
+@media (max-width: 768px) {
+  .about .solar-system {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+  }
+  .about .solar-system img {
+    max-width: 50px;
+  }
+  .about .solar-system .sun {
+    width: 50px;
+    height: 50px;
+  }
+  .about .solar-system .orbit1 {
+    width: 120px;
+    height: 120px;
+  }
+  .about .solar-system .orbit2 {
+    width: 140px;
+    height: 140px;
+  }
+  .about .solar-system .orbit3 {
+    width: 160px;
+    height: 160px;
+  }
+  .about .solar-system .orbit4 {
+    width: 180px;
+    height: 180px;
+  }
+  .about .solar-system .orbit5 {
+    width: 200px;
+    height: 200px;
+  }
+  .about .solar-system .planet {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .about .solar-system .planet.planet1 {
+    right: 5px;
+  }
+  .about .solar-system .planet.planet2 {
+    right: 15px;
+  }
+  .about .solar-system .planet.planet3 {
+    right: 25px;
+  }
+  .about .solar-system .planet.planet4 {
+    right: 35px;
+  }
+  .about .solar-system .planet.planet5 {
+    right: 50px;
+  }
+}
 
 .footer {
   background-color: var(--blue1);
@@ -702,8 +823,16 @@ a {
   background-color: #1fa6ff;
 }
 .footer .footer-wrapper .location iframe {
-  width: 388px;
+  max-width: 388px;
+  width: 100%;
   height: 150px;
+}
+@media (max-width: 768px) {
+  .footer .footer-wrapper .location {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+  }
 }
 .footer .footer-wrapper .bottom {
   width: 100%;
@@ -729,9 +858,6 @@ a {
 }
 
 @media (max-width: 1024px) {
-  .nav {
-    padding: 40px 0;
-  }
   .nav-main {
     min-width: 533px;
   }
