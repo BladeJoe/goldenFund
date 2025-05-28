@@ -783,7 +783,6 @@ a {
   position: relative;
   background-color: var(--blue3);
   color: var(--white);
-  margin: 2rem auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   z-index: 3;
 }
