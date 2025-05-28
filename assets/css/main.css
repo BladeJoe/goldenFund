@@ -997,6 +997,10 @@ a {
   .footer .container .footer-wrapper .col ul {
     align-items: center;
   }
+  .footer .container .footer-wrapper .col .address,
+  .footer .container .footer-wrapper .col .social-icons {
+    margin-top: 20px;
+  }
   .footer .container .footer-wrapper .autohide {
     display: none;
   }
