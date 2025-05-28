@@ -80,6 +80,7 @@ body {
   width: 100vw;
   font-family: "Lato", sans-serif;
   color: var(--white);
+  overflow-x: hidden;
 }
 
 button {
@@ -233,7 +234,6 @@ a {
   margin: 0 auto;
   padding: 0 20px;
   width: 100%;
-  overflow-x: hidden;
 }
 
 .main {
