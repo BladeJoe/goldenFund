@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Golden Fund of Nation</title>
     <meta name="author" content="xbm" />
+    <meta name="description" content="Golden Fund of Nation" />
     <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -16,48 +19,47 @@
             <div class="inner-container">
                 <ul class="accessibility">
                     <li>
-                        <img src="./assets/images/call.svg" alt="">
+                        <img src="./assets/images/call.svg" alt="" aria-label="call">
                         <span>+998 71 202 41 11</span>
                     </li>
                     <li>
-                        <img src="assets/images/mail.svg" alt="">
+                        <img src="assets/images/mail.svg" alt="" aria-label="email">
                         <span>info@newuu.uz</span>
                     </li>
                 </ul>
                 <ul class="accessibility">
                     <li>
-                        <a href="#">
+                        <a href="#" aria-label="Increase visibility">
                             <img src="./assets/images/visibility.svg" width="22" height="22" alt="">
                         </a>
-                        <a href="#">
+                        <a href="#" aria-label="Mobile version">
                             <img src="./assets/images/smartphone.svg" width="22" height="22" alt="">
-                        </a><a href="#">
+                        </a>
+                        <a href="#" aria-label="Read aloud">
                             <img src="./assets/images/readaloud.svg" width="22" height="22" alt="">
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" aria-label="Instagram">
                             <img src="./assets/images/instagram.svg" width="22" height="22" alt="">
-
                         </a>
-                        <a href="#">
+                        <a href="#" aria-label="Telegram">
                             <img src="./assets/images/telegram.svg" width="22" height="22" alt="">
-
                         </a>
-                        <a href="#">
+                        <a href="#" aria-label="YouTube">
                             <img src="./assets/images/youtube.svg" width="22" height="22" alt="">
-
                         </a>
-                        <a href="#">
+                        <a href="#" aria-label="Facebook">
                             <img src="./assets/images/facebook.svg" width="22" height="22" alt="">
-
                         </a>
                     </li>
                     <li>
-                        <select name="lang" id="langugage">
+                        <label for="language">d</label>
+                        <select name="lang" id="language">
                             <option value="ru">🇷🇺 RUS</option>
                             <option value="uz">🇺🇿 UZB</option>
                         </select>
+
                     </li>
                 </ul>
 
@@ -68,7 +70,7 @@
     <nav class="nav">
         <div class="container">
             <div class="nav-buttons ">
-                <button class="btn nav-btn">
+                <button class="btn nav-btn" aria-label="Open navigation">
                     <img src="./assets/images/menudots.svg" alt="" height="20" width="20">
                 </button>
             </div>
@@ -78,7 +80,7 @@
                     <li>Новости</li>
                     <li>Члены</li>
                 </ul>
-                <img src="./assets/images/president-school-logo.png" width="140" height="140">
+                <img src="./assets/images/president-school-logo.png" width="140" height="140" alt="">
                 <ul class="right">
                     <li>Альянс партнёры</li>
                     <li>Контакты</li>
@@ -86,10 +88,10 @@
             </div>
 
             <div class="nav-buttons">
-                <button class="btn nav-btn">
+                <button class="btn nav-btn" aria-label="Search website">
                     <img src="./assets/images/magnifer.svg" width="22" height="22" alt="">
                 </button>
-                <button class="cabinet btn">
+                <button class="cabinet btn" aria-label="Open account">
                     <img src="./assets/images/profile.svg" width="22" height="22" alt="">
                     Кабинет
                 </button>
@@ -98,9 +100,9 @@
     </nav>
 
     <main class="main">
-        <section class="section hero">
+        <section class="section hero" data-aos="fade-zoom-in" data-aos-duration="1000">
             <div class="video-wrapper">
-                <video id="video" autoplay loop muted poster="./assets/images/videoframe.png">
+                <video id="video" autoplay loop muted preload="auto">
                     <source src="./assets/videos/slider.mp4" type="video/mp4">
                 </video>
                 <div class="video-overlay"></div>
@@ -148,8 +150,8 @@
             <div class="container">
                 <div class="about-wrapper">
                     <span class="body">О сообществе</span>
-                    <h3>Платформа <span>будущего лидерства</span>
-                        и развития Узбекистана</h3>
+                    <h2>Платформа <span>будущего лидерства</span>
+                        и развития Узбекистана</h2>
                     <p>
                         Сообщество создано по инициативе Президента Республики Узбекистан Шавката Мирзиёева в рамках
                         инициативы «Одаренные дети Президента».Оно объединяет выпускников Президентских школ,
@@ -173,31 +175,32 @@
 
                     <div class="planet-container planet1">
                         <div class="planet planet1">
-                            <img src="./assets/images/planet1.svg" alt="">
+                            <img src="./assets/images/el-yurt-white.png" width="77" height="77" alt="">
                         </div>
                     </div>
 
                     <div class="planet-container planet2">
                         <div class="planet planet2">
-                            <img src="./assets/images/planet2.svg" alt="">
+                            <img src="./assets/images/newuu-green.png" width="77" height="77" alt="">
                         </div>
                     </div>
 
                     <div class="planet-container planet3">
                         <div class="planet planet3">
-                            <img src="./assets/images/planet3.svg" alt="">
+                            <img src="./assets/images/national-member-light.png" width="67" height="77" alt="">
                         </div>
                     </div>
 
                     <div class="planet-container planet4">
                         <div class="planet planet4">
-                            <img src="./assets/images/planet4.svg" alt="">
+                            <img src="./assets/images/graduate-international-dark.png" width="77" height="77" alt="">
                         </div>
                     </div>
 
                     <div class="planet-container planet5">
                         <div class="planet planet5">
-                            <img src="./assets/images/planet5.svg" alt="">
+
+                            <img src="./assets/images/president-school-logo.png" width="67" alt="">
                         </div>
                     </div>
 
@@ -227,12 +230,12 @@
                                     <div class="slide-track">
                                         <div class="slide"><img src="./assets/images/president-school-logo.png"
                                                 width="80" height="80" alt=""></div>
-                                        <div class="slide"><img src="./assets/images/el-yurt.png" width="80" height="80"
-                                                alt=""></div>
+                                        <div class="slide"><img src="./assets/images/el-yurt-blue.png" width="80"
+                                                height="80" alt=""></div>
                                         <div class="slide"><img src="./assets/images/president-school-logo.png"
                                                 width="80" height="80" alt=""></div>
-                                        <div class="slide"><img src="./assets/images/el-yurt.png" width="80" height="80"
-                                                alt=""></div>
+                                        <div class="slide"><img src="./assets/images/el-yurt-blue.png" width="80"
+                                                height="80" alt=""></div>
                                     </div>
                                 </div>
                             </div>
@@ -248,11 +251,11 @@
                             <div class="top-right">
                                 <div class="slider-vertical">
                                     <div class="slide-vertical">
-                                        <img src="./assets/images/golden-fund-logo.png" width="100" height="100" alt="">
+                                        <img src="./assets/images/golden-fund-logo.png" width="100" alt="">
 
-                                        <img src="./assets/images/newuu-logo.png" width="100" height="100" alt="">
+                                        <img src="./assets/images/newuu-white.png" width="100" alt="">
 
-                                        <img src="./assets/images/golden-fund-logo.png" width="100" height="100" alt="">
+                                        <img src="./assets/images/golden-fund-logo.png" width="100" alt="">
                                     </div>
                                 </div>
 
@@ -260,20 +263,22 @@
                             <div class="bottom-right">
                                 <div class="slider-horizontal-reverse">
                                     <div class="slide-horizontal-reverse">
-                                        <img src="./assets/images/graduate-international.png" width="100" height="100"
-                                            alt="">
-
-                                        <img src="./assets/images/national-member-logo.png" width="100" height="100"
-                                            alt="">
-
-                                        <img src="./assets/images/graduate-international.png" width="100" height="100"
-                                            alt="">
-                                        <img src="./assets/images/national-member-logo.png" width="100" height="100"
-                                            alt="">
-
-                                        <img src="./assets/images/graduate-international.png" width="100" height="100"
-                                            alt=""><img src="./assets/images/national-member-logo.png" width="100"
+                                        <img src="./assets/images/graduate-international-light.png" width="100"
                                             height="100" alt="">
+
+                                        <img src="./assets/images/national-member-dark.png" width="100" height="100"
+                                            alt="">
+
+                                        <img src="./assets/images/graduate-international-light.png" width="100"
+                                            height="100" alt="">
+                                        <img src="./assets/images/national-member-dark.png" width="100" height="100"
+                                            alt="">
+
+                                        <img src="./assets/images/graduate-international-light.png" width="100"
+                                            height="100" alt="">
+
+                                        <img src="./assets/images/national-member-dark.png" width="100" height="100"
+                                            alt="">
 
                                     </div>
                                 </div>
@@ -284,7 +289,19 @@
 
                     <div class="member-text">
                         <p>ЧЛЕНЫ</p>
-
+                        <h3>Члены сообщества
+                            <span>поддержки одаренной молодежи</span>
+                        </h3>
+                        <p>
+                            Cообщество объединяет выпускников Президентских школ, Международной школы Аль-Беруни,
+                            Университета «Новый Узбекистан», стипендиатов фонда «Эл-юрт умиди», участников Национальной
+                            программы поддержки инициативы «Одаренные дети Президента», студентов топ-университетов
+                            мира, а также специалистов, работающих в авторитетных компаниях. В этом разделе можно
+                            ознакомиться с профилями членов сообщества, их специализациями, географией и сферами
+                            деятельности.
+                        </p>
+                        <button class="btn">Члены сообщества <img src="./assets/images/arrownextwhite.svg"
+                                alt=""></button>
                     </div>
                 </div>
             </div>
@@ -293,30 +310,34 @@
             <div class="container">
                 <div class="contact-wrapper">
                     <div class="form-section">
-                        <h5>Есть вопросы?</h5>
+                        <h3>Есть вопросы?</h3>
                         <p class="body-text-3">Свяжитесь с нами — мы всегда на связи и готовы помочь</p>
 
                         <div class="form-grid">
                             <div class="form-group">
-                                <label class="body-text-3">Имя:</label>
-                                <input type="text" placeholder="Введите">
+                                <label class="body-text-3" for="first-name">Имя:</label>
+                                <input type="text" id="first-name" name="first-name" placeholder="Введите"
+                                    autocomplete="given-name">
                             </div>
                             <div class="form-group">
-                                <label class="body-text-3">Фамилия:</label>
-                                <input type="text" placeholder="Введите">
+                                <label class="body-text-3" for="last-name">Фамилия:</label>
+                                <input type="text" id="last-name" name="last-name" placeholder="Введите"
+                                    autocomplete="family-name">
                             </div>
                             <div class="form-group">
-                                <label class="body-text-3">Электронная почта:</label>
-                                <input type="email" placeholder="Введите">
+                                <label class="body-text-3" for="email">Электронная почта:</label>
+                                <input type="email" id="email" name="email" placeholder="Введите" autocomplete="email">
                             </div>
                             <div class="form-group">
-                                <label class="body-text-3">Номер телефона:</label>
-                                <input type="tel" placeholder="Введите">
+                                <label class="body-text-3" for="phone">Номер телефона:</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Введите" autocomplete="tel">
                             </div>
                             <div class="form-group full-width">
-                                <label class="body-text-3">Сообщения:</label>
-                                <textarea placeholder="Введите"></textarea>
+                                <label class="body-text-3" for="message">Сообщения:</label>
+                                <textarea id="message" name="message" placeholder="Введите"
+                                    autocomplete="off"></textarea>
                             </div>
+
                         </div>
 
                         <button class="btn submit-btn ">Отправить сообщение ✈</button>
@@ -331,7 +352,7 @@
         </section>
 
 
-        <section class="section footer">
+        <footer class="section footer">
             <div class="container">
                 <div class="footer-wrapper">
                     <div class="col">
@@ -360,30 +381,25 @@
 
                             <div class="social-icons">
 
-
-                                <a href="#">
-                                    <img src="./assets/images/instagram.svg" width="20" height="20" alt="">
-
+                                <a href="#" aria-label="Instagram">
+                                    <img src="./assets/images/instagram.svg" width="22" height="22" alt="">
                                 </a>
-                                <a href="#">
-                                    <img src="./assets/images/telegram.svg" width="20" height="20" alt="">
-
+                                <a href="#" aria-label="Telegram">
+                                    <img src="./assets/images/telegram.svg" width="22" height="22" alt="">
                                 </a>
-                                <a href="#">
-                                    <img src="./assets/images/youtube.svg" width="20" height="20" alt="">
-
+                                <a href="#" aria-label="YouTube">
+                                    <img src="./assets/images/youtube.svg" width="22" height="22" alt="">
                                 </a>
-                                <a href="#">
-                                    <img src="./assets/images/facebook.svg" width="20" height="20" alt="">
-
+                                <a href="#" aria-label="Facebook">
+                                    <img src="./assets/images/facebook.svg" width="22" height="22" alt="">
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="col">
                         <span class="subtitle-1">Расположение</span>
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5993.338718943731!2d69.295472!3d41.316056!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef51b50c0eda7%3A0x1ef4e0e3a79a0726!2sNew%20Uzbekistan%20University!5e0!3m2!1sen!2sus!4v1741592880123!5m2!1sen!2sus"
+                        <iframe title="location"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5993.34!2d69.295472!3d41.316056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef51b50c0eda7%3A0x1ef4e0e3a79a0726!2sNew%20Uzbekistan%20University!5e0!3m2!1sen!2sus"
                             style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
@@ -397,13 +413,14 @@
                     <span class="body-text-3">Copyright © <span id="year"></span>, Golden Fund of Nation. Все права
                         защищены.</span>
                     <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
-                    <span class="developer">Developed by: <a href="https://proend.uz"><img
-                                src="./assets/images/Proend-logo 2.svg" alt=""></a></span>
+                    <span class="developer">Developed by: <a href="https://proend.uz"
+                            aria-label="developed by proend"><img src="./assets/images/Proend-logo 2.svg"
+                                alt=""></a></span>
                 </div>
             </div>
 
             </div>
-        </section>
+        </footer>
     </main>
 </body>
 <template
@@ -412,8 +429,12 @@
 
 
 
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init()
+</script>
 
-</body>
 <script src="./assets/js/main.js"></script>
+</body>
 
 </html>

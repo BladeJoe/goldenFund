@@ -252,9 +252,9 @@ a {
 }
 
 .container {
-    max-width: 1600px;
+    max-width: 1632px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 16px;
     width: 100%;
 }
 
@@ -1043,16 +1043,10 @@ main {
             }
         }
 
-
-
-
-
-
         .members-wrapper {
             display: flex;
             flex-direction: row;
             gap: 88px;
-
 
             .golden-fund-wrapper {
                 display: flex;
@@ -1105,159 +1099,189 @@ main {
                         transform: translateX(-20%);
                     }
                 }
-            }
 
-            .grid {
-                display: grid;
-                grid-template-columns: 1fr 3fr 2fr;
-                grid-template-rows: 1fr 1fr;
-                height: 218px;
-                width: 100%;
+                .grid {
+                    display: grid;
+                    grid-template-columns: 1fr 3fr 2fr;
+                    grid-template-rows: 1fr 1fr;
+                    height: 218px;
+                    width: 100%;
 
-                .left {
-                    background: var(--yellow);
-                    grid-row: span 2;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: space-between;
-                    width: 120px;
-
-                    .slider {
-                        height: 100%;
-                        overflow: hidden;
-                        position: relative;
-                    }
-
-                    .slide-track {
+                    .left {
+                        background: var(--yellow);
+                        grid-row: span 2;
                         display: flex;
                         flex-direction: column;
-                        animation: scrollDown 10s linear infinite;
-                        gap: 40px;
+                        align-items: center;
+                        justify-content: space-between;
+                        width: 120px;
+
+                        .slider {
+                            height: 100%;
+                            overflow: hidden;
+                            position: relative;
+                        }
+
+                        .slide-track {
+                            display: flex;
+                            flex-direction: column;
+                            animation: scrollDown 10s linear infinite;
+                            gap: 40px;
+                        }
+
+                        .slide {
+                            height: 100px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+
+                        @keyframes scrollDown {
+                            0% {
+                                transform: translateY(-280px);
+                            }
+
+                            100% {
+                                transform: translateY(0);
+                            }
+                        }
                     }
 
-                    .slide {
-                        height: 100px;
+
+
+                    .center {
+                        grid-row: span 2;
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                    }
+                        background: var(--green2);
 
-                    @keyframes scrollDown {
-                        0% {
-                            transform: translateY(-280px);
+                        .slider-horizontal {
+                            width: 300px;
+                            overflow: hidden;
+                            position: relative;
                         }
 
-                        100% {
-                            transform: translateY(0);
-                        }
-                    }
-                }
-
-
-
-                .center {
-                    grid-row: span 2;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    background: var(--green2);
-
-                    .slider-horizontal {
-                        width: 300px;
-                        overflow: hidden;
-                        position: relative;
-                    }
-
-                    .slide-horizontal {
-                        animation: slideLeftRight 5s linear infinite alternate;
-                        display: inline-block;
-                    }
-
-                    @keyframes slideLeftRight {
-                        0% {
-                            transform: translateX(0);
+                        .slide-horizontal {
+                            animation: slideLeftRight 6s linear infinite alternate;
+                            display: inline-block;
                         }
 
-                        100% {
-                            transform: translateX(150px);
+                        @keyframes slideLeftRight {
+                            0% {
+                                transform: translateX(0);
+                            }
+
+                            100% {
+                                transform: translateX(150px);
+                            }
                         }
+
                     }
 
-                }
-
-                .top-right {
-                    background: var(--blue4);
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    font-weight: bold;
-                    height: 100px;
-                    overflow: hidden;
-                    text-align: center;
-
-                    .slider-vertical {
+                    .top-right {
+                        background: var(--blue4);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: bold;
                         height: 100px;
                         overflow: hidden;
+                        text-align: center;
+
+                        .slider-vertical {
+                            height: 100px;
+                            overflow: hidden;
+                            position: relative;
+                        }
+
+                        .slide-vertical {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 20px;
+                            animation: slideBottomToTop 6s linear infinite;
+                        }
+
+                        @keyframes slideBottomToTop {
+                            0% {
+                                transform: translateY(0);
+                            }
+
+                            100% {
+                                transform: translateY(-240px);
+                            }
+                        }
+                    }
+
+
+
+                    .bottom-right {
+                        background: var(--beige);
+                        text-align: center;
                         position: relative;
-                    }
-
-                    .slide-vertical {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 20px;
-                        animation: slideBottomToTop 5s linear infinite;
-                    }
-
-                    @keyframes slideBottomToTop {
-                        0% {
-                            transform: translateY(0);
-                        }
-
-                        100% {
-                            transform: translateY(-240px);
-                        }
-                    }
-                }
-
-
-
-                .bottom-right {
-                    background: var(--beige);
-                    text-align: center;
-                    position: relative;
-                    width: 300px;
-                    height: 120px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    flex-direction: row;
-
-                    .slider-horizontal-reverse {
-                        overflow: hidden;
-
-                    }
-
-                    .slide-horizontal-reverse {
-                        animation: slideRightLeft 2s linear infinite;
-                        gap: 20px;
+                        width: 300px;
+                        height: 120px;
                         display: flex;
                         align-items: center;
                         justify-content: center;
                         flex-direction: row;
-                    }
 
-                    @keyframes slideRightLeft {
-                        0% {
-                            transform: translateX(0);
+                        .slider-horizontal-reverse {
+                            overflow: hidden;
+
                         }
 
-                        100% {
-                            transform: translateX(-240px);
+                        .slide-horizontal-reverse {
+                            animation: slideRightLeft 4s linear infinite;
+                            gap: 25px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: row;
+                        }
+
+                        @keyframes slideRightLeft {
+                            0% {
+                                transform: translateX(0);
+                            }
+
+                            100% {
+                                transform: translateX(-250px);
+                            }
                         }
                     }
                 }
             }
+
+            .member-text {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: space-between;
+
+                h3 {
+                    font-weight: normal;
+                    font-style: 49px;
+
+                    span {
+                        font-weight: bold;
+                    }
+                }
+
+                .highlight-title {
+                    white-space: wrap;
+                }
+
+                .btn {
+                    background: var(--button-light-gdnt);
+                    display: flex;
+                    align-items: center;
+                    border-radius: 12px;
+                    gap: 10px;
+                }
+
+            }
+
 
         }
     }
@@ -1323,7 +1347,7 @@ main {
                     }
                 }
 
-                ul {
+                ul {    
                     list-style: none;
                     padding: 0;
                     display: flex;
