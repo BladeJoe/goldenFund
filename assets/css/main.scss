@@ -259,11 +259,11 @@ a {
 }
 
 
-.main {
+main {
     position: relative;
 
-    .section {
-        background-color: var(--white);
+    section {
+        background: var(--white);
     }
 }
 
@@ -460,7 +460,7 @@ a {
     .container {
         position: relative;
         z-index: 2;
-        padding-top: 332px;
+        padding-top: 400px;
 
 
         .hero-wrapper {
@@ -579,20 +579,22 @@ a {
 
 }
 
+.about::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("./../images/backgorund-wave.png") center no-repeat var(--black8);
+    background-size: cover;
+    opacity: 0.3;
+    z-index: -1;
+}
 
 .about {
     position: relative;
     color: var(--black1);
-    width: 100%;
+    z-index: 1;
 
-    ::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: url("./../images/backgorund-wave.png") center no-repeat var(--black8);
-        background-size: cover;
-        opacity: 0.0001;
-    }
+
 
     .container {
 
@@ -601,218 +603,220 @@ a {
         justify-content: space-between;
         flex-wrap: wrap;
 
+        padding: 120px 16px;
 
-    }
-
-    .about-wrapper {
-        max-width: 792px;
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        gap: 12px;
-        padding: 16px 0;
-        justify-content: center;
-
-        @media(max-width:1332px) {
-            align-items: center;
-            margin: 0 auto;
+        .about-wrapper {
+            max-width: 792px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 12px;
+            padding: 16px 0;
             justify-content: center;
-            text-align: center;
-        }
 
-        h3 {
-            font-size: 50px;
-            font-weight: normal;
+            @media(max-width:1332px) {
+                align-items: center;
+                margin: 0 auto;
+                justify-content: center;
+                text-align: center;
+            }
 
-            span {
-                color: var(--blue5);
-                font-weight: bold;
+            h3 {
+                font-size: 50px;
+                font-weight: normal;
+
+                span {
+                    color: var(--blue5);
+                    font-weight: bold;
+                }
+            }
+
+            .btn-about {
+                background: var(--button-light-gdnt);
+                border-radius: 12px;
+                gap: 10px;
+
             }
         }
 
-        .btn-about {
-            background: var(--button-light-gdnt);
-            border-radius: 12px;
-            gap: 10px;
-
-        }
-    }
-
-    .solar-system {
-        width: 500px;
-        height: 500px;
-        position: relative;
-        border-radius: 10px;
-        overflow: hidden;
-        display: flex;
-
-
-        .sun {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            position: absolute;
-            top: 50%;
-            background: #fff;
-            left: 50%;
+        .solar-system {
+            width: 500px;
+            height: 500px;
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            transform: translate(-50%, -50%);
-            z-index: 10;
-        }
 
-        .orbit {
-            position: absolute;
-            border: 2px dashed var(--blue1);
-            border-radius: 50%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
 
-        .orbit1 {
-            width: 240px;
-            height: 240px;
-        }
-
-        .orbit2 {
-            width: 280px;
-            height: 280px;
-        }
-
-        .orbit3 {
-            width: 320px;
-            height: 320px;
-        }
-
-        .orbit4 {
-            width: 360px;
-            height: 360px;
-        }
-
-        .orbit5 {
-            width: 400px;
-            height: 400px;
-        }
-
-        .planet-container {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            animation: rotate linear infinite;
-        }
-
-        .planet-container.planet1 {
-            animation-duration: 20s;
-        }
-
-        .planet-container.planet2 {
-            animation-duration: 20s;
-            animation-delay: -4s;
-        }
-
-        .planet-container.planet3 {
-            animation-duration: 20s;
-            animation-delay: -8s;
-        }
-
-        .planet-container.planet4 {
-            animation-duration: 20s;
-            animation-delay: -12s;
-        }
-
-        .planet-container.planet5 {
-            animation-duration: 20s;
-            animation-delay: -16s;
-        }
-
-        .planet {
-            position: absolute;
-            top: 50%;
-            animation: counter-rotate linear infinite;
-            background: #fff;
-            width: 100px;
-            border-radius: 999px;
-        }
-
-        .planet.planet1 {
-            width: 100px;
-            height: 100px;
-            right: 10px;
-            transform: translateY(-50%);
-            animation-duration: 20s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .planet.planet2 {
-            width: 100px;
-            height: 100px;
-            right: 30px;
-            transform: translateY(-50%);
-            animation-duration: 20s;
-            animation-delay: -4s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .planet.planet3 {
-            width: 100px;
-            height: 100px;
-            right: 50px;
-            transform: translateY(-50%);
-            animation-duration: 20s;
-            animation-delay: -8s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .planet.planet4 {
-            width: 100px;
-            height: 100px;
-            right: 70px;
-            transform: translateY(-50%);
-            animation-duration: 20s;
-            animation-delay: -12s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .planet.planet5 {
-            width: 100px;
-            height: 100px;
-            right: 100px;
-            transform: translateY(-50%);
-            animation-duration: 20s;
-            animation-delay: -16s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        @keyframes rotate {
-            from {
-                transform: rotate(0deg);
+            .sun {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                background: #fff;
+                left: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transform: translate(-50%, -50%);
+                z-index: 10;
             }
 
-            to {
-                transform: rotate(360deg);
+            .orbit {
+                position: absolute;
+                border: 2px dashed var(--blue1);
+                border-radius: 50%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
             }
-        }
 
-        @keyframes counter-rotate {
-            from {
-                transform: translateY(-50%) rotate(0deg);
+            .orbit1 {
+                width: 240px;
+                height: 240px;
             }
 
-            to {
-                transform: translateY(-50%) rotate(-360deg);
+            .orbit2 {
+                width: 280px;
+                height: 280px;
             }
+
+            .orbit3 {
+                width: 320px;
+                height: 320px;
+            }
+
+            .orbit4 {
+                width: 360px;
+                height: 360px;
+            }
+
+            .orbit5 {
+                width: 400px;
+                height: 400px;
+            }
+
+            .planet-container {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                animation: rotate linear infinite;
+            }
+
+            .planet-container.planet1 {
+                animation-duration: 30s;
+            }
+
+            .planet-container.planet2 {
+                animation-duration: 30s;
+                animation-delay: -6s;
+            }
+
+            .planet-container.planet3 {
+                animation-duration: 30s;
+                animation-delay: -12s;
+            }
+
+            .planet-container.planet4 {
+                animation-duration: 30s;
+                animation-delay: -18s;
+            }
+
+            .planet-container.planet5 {
+                animation-duration: 30s;
+                animation-delay: -24s;
+            }
+
+            .planet {
+                position: absolute;
+                top: 50%;
+                animation: counter-rotate linear infinite;
+                background: #fff;
+                width: 100px;
+                border-radius: 999px;
+            }
+
+            .planet.planet1 {
+                width: 100px;
+                height: 100px;
+                right: 10px;
+                transform: translateY(-50%);
+                animation-duration: 30s;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .planet.planet2 {
+                width: 100px;
+                height: 100px;
+                right: 30px;
+                transform: translateY(-50%);
+                animation-duration: 30s;
+                animation-delay: -6s;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .planet.planet3 {
+                width: 100px;
+                height: 100px;
+                right: 50px;
+                transform: translateY(-50%);
+                animation-duration: 30s;
+                animation-delay: -12s;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .planet.planet4 {
+                width: 100px;
+                height: 100px;
+                right: 70px;
+                transform: translateY(-50%);
+                animation-duration: 30s;
+                animation-delay: -18s;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .planet.planet5 {
+                width: 100px;
+                height: 100px;
+                right: 100px;
+                transform: translateY(-50%);
+                animation-duration: 30s;
+                animation-delay: -24s;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            @keyframes rotate {
+                from {
+                    transform: rotate(0deg);
+                }
+
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            @keyframes counter-rotate {
+                from {
+                    transform: translateY(-50%) rotate(0deg);
+                }
+
+                to {
+                    transform: translateY(-50%) rotate(-360deg);
+                }
+            }
+
+
         }
 
         @media (max-width: 1332px) {
@@ -927,12 +931,9 @@ a {
             .form-group {
                 display: flex;
                 flex-direction: column;
+                gap: 16px;
             }
 
-            .form-group label {
-                font-size: 0.9rem;
-                margin-bottom: 0.3rem;
-            }
 
             input,
             textarea {
@@ -954,18 +955,15 @@ a {
                 grid-column: span 2;
             }
 
+
             .submit-btn {
-                margin-top: 1rem;
-                background-color: var(--button-light-gdnt);
-                border: none;
-                padding: 0.7rem 1.5rem;
-                border-radius: 8px;
-                color: white;
+                margin-top: 16px;
+                background: var(--button-light-gdnt);
+                border-radius: 12px;
+                color: var(--white);
                 cursor: pointer;
-                font-size: 0.9rem;
                 display: flex;
                 align-items: center;
-                gap: 0.5rem;
             }
 
             .graphic-section {
@@ -1012,11 +1010,286 @@ a {
     }
 }
 
+.members {
+    background: var(--blue1);
+    min-height: 653px;
+
+    .container {
+        padding: 120px 16px;
+        position: relative;
+
+        .rotate360 {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            z-index: 3;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            background: var(--blue2);
+            border-radius: 999px;
+            width: 160px;
+            height: 160px;
+        }
+
+        .rotate360 img {
+            animation: spin 20s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+
+
+
+
+
+        .members-wrapper {
+            display: flex;
+            flex-direction: row;
+            gap: 88px;
+
+
+            .golden-fund-wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background: #001f4d;
+                max-width: 720px;
+
+
+                .profiles {
+                    display: flex;
+                }
+
+                .profile {
+                    width: 180px;
+                    height: 160px;
+                    background: #ccc;
+                }
+
+                .branding-section {
+                    background: #e0e0e0;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .branding-logo {
+                    font-size: 24px;
+                    font-weight: bold;
+                    text-align: center;
+                    padding: 20px 0;
+                    width: 100%;
+                }
+
+
+                .logo-item {
+                    width: 80px;
+                    height: 80px;
+                    background: #999;
+                    border-radius: 8px;
+                }
+
+                @keyframes bounceMove {
+                    0% {
+                        transform: translateX(0%);
+                    }
+
+                    100% {
+                        transform: translateX(-20%);
+                    }
+                }
+            }
+
+            .grid {
+                display: grid;
+                grid-template-columns: 1fr 3fr 2fr;
+                grid-template-rows: 1fr 1fr;
+                height: 218px;
+                width: 100%;
+
+                .left {
+                    background: var(--yellow);
+                    grid-row: span 2;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 120px;
+
+                    .slider {
+                        height: 100%;
+                        overflow: hidden;
+                        position: relative;
+                    }
+
+                    .slide-track {
+                        display: flex;
+                        flex-direction: column;
+                        animation: scrollDown 10s linear infinite;
+                        gap: 40px;
+                    }
+
+                    .slide {
+                        height: 100px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    @keyframes scrollDown {
+                        0% {
+                            transform: translateY(-280px);
+                        }
+
+                        100% {
+                            transform: translateY(0);
+                        }
+                    }
+                }
+
+
+
+                .center {
+                    grid-row: span 2;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: var(--green2);
+
+                    .slider-horizontal {
+                        width: 300px;
+                        overflow: hidden;
+                        position: relative;
+                    }
+
+                    .slide-horizontal {
+                        animation: slideLeftRight 5s linear infinite alternate;
+                        display: inline-block;
+                    }
+
+                    @keyframes slideLeftRight {
+                        0% {
+                            transform: translateX(0);
+                        }
+
+                        100% {
+                            transform: translateX(150px);
+                        }
+                    }
+
+                }
+
+                .top-right {
+                    background: var(--blue4);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-weight: bold;
+                    height: 100px;
+                    overflow: hidden;
+                    text-align: center;
+
+                    .slider-vertical {
+                        height: 100px;
+                        overflow: hidden;
+                        position: relative;
+                    }
+
+                    .slide-vertical {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                        animation: slideBottomToTop 5s linear infinite;
+                    }
+
+                    @keyframes slideBottomToTop {
+                        0% {
+                            transform: translateY(0);
+                        }
+
+                        100% {
+                            transform: translateY(-240px);
+                        }
+                    }
+                }
+
+
+
+                .bottom-right {
+                    background: var(--beige);
+                    text-align: center;
+                    position: relative;
+                    width: 300px;
+                    height: 120px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: row;
+
+                    .slider-horizontal-reverse {
+                        overflow: hidden;
+
+                    }
+
+                    .slide-horizontal-reverse {
+                        animation: slideRightLeft 2s linear infinite;
+                        gap: 20px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: row;
+                    }
+
+                    @keyframes slideRightLeft {
+                        0% {
+                            transform: translateX(0);
+                        }
+
+                        100% {
+                            transform: translateX(-240px);
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+.footer::before {
+    content: "";
+    background-image: url("./../images/footerbefore.svg");
+    width: 120px;
+    height: 240px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-960px, -50%);
+}
+
+.footer::after {
+    content: "";
+    background-image: url("./../images/footerafter.svg");
+    width: 120px;
+    height: 240px;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate(960px, -50%);
+}
 
 .footer {
     background: var(--footer-gdnt);
     color: var(--white);
     padding-top: 240px;
+    position: relative;
 
     .container {
 
@@ -1026,6 +1299,8 @@ a {
             flex-direction: row;
             z-index: -1;
             padding-bottom: 80px;
+
+
 
             .col {
                 width: 400px;

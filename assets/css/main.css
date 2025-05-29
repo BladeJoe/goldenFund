@@ -236,11 +236,11 @@ a {
   width: 100%;
 }
 
-.main {
+main {
   position: relative;
 }
-.main .section {
-  background-color: var(--white);
+main section {
+  background: var(--white);
 }
 
 .btn {
@@ -419,7 +419,7 @@ a {
 .hero .container {
   position: relative;
   z-index: 2;
-  padding-top: 332px;
+  padding-top: 400px;
 }
 .hero .container .hero-wrapper {
   max-width: 732px;
@@ -511,26 +511,29 @@ a {
   }
 }
 
-.about {
-  position: relative;
-  color: var(--black1);
-  width: 100%;
-}
-.about ::before {
+.about::before {
   content: "";
   position: absolute;
   inset: 0;
   background: url("./../images/backgorund-wave.png") center no-repeat var(--black8);
   background-size: cover;
-  opacity: 0.0001;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.about {
+  position: relative;
+  color: var(--black1);
+  z-index: 1;
 }
 .about .container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding: 120px 16px;
 }
-.about .about-wrapper {
+.about .container .about-wrapper {
   max-width: 792px;
   display: flex;
   flex-direction: column;
@@ -540,27 +543,27 @@ a {
   justify-content: center;
 }
 @media (max-width: 1332px) {
-  .about .about-wrapper {
+  .about .container .about-wrapper {
     align-items: center;
     margin: 0 auto;
     justify-content: center;
     text-align: center;
   }
 }
-.about .about-wrapper h3 {
+.about .container .about-wrapper h3 {
   font-size: 50px;
   font-weight: normal;
 }
-.about .about-wrapper h3 span {
+.about .container .about-wrapper h3 span {
   color: var(--blue5);
   font-weight: bold;
 }
-.about .about-wrapper .btn-about {
+.about .container .about-wrapper .btn-about {
   background: var(--button-light-gdnt);
   border-radius: 12px;
   gap: 10px;
 }
-.about .solar-system {
+.about .container .solar-system {
   width: 500px;
   height: 500px;
   position: relative;
@@ -568,7 +571,7 @@ a {
   overflow: hidden;
   display: flex;
 }
-.about .solar-system .sun {
+.about .container .solar-system .sun {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -582,7 +585,7 @@ a {
   transform: translate(-50%, -50%);
   z-index: 10;
 }
-.about .solar-system .orbit {
+.about .container .solar-system .orbit {
   position: absolute;
   border: 2px dashed var(--blue1);
   border-radius: 50%;
@@ -590,52 +593,52 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.about .solar-system .orbit1 {
+.about .container .solar-system .orbit1 {
   width: 240px;
   height: 240px;
 }
-.about .solar-system .orbit2 {
+.about .container .solar-system .orbit2 {
   width: 280px;
   height: 280px;
 }
-.about .solar-system .orbit3 {
+.about .container .solar-system .orbit3 {
   width: 320px;
   height: 320px;
 }
-.about .solar-system .orbit4 {
+.about .container .solar-system .orbit4 {
   width: 360px;
   height: 360px;
 }
-.about .solar-system .orbit5 {
+.about .container .solar-system .orbit5 {
   width: 400px;
   height: 400px;
 }
-.about .solar-system .planet-container {
+.about .container .solar-system .planet-container {
   position: absolute;
   width: 100%;
   height: 100%;
   animation: rotate linear infinite;
 }
-.about .solar-system .planet-container.planet1 {
-  animation-duration: 20s;
+.about .container .solar-system .planet-container.planet1 {
+  animation-duration: 30s;
 }
-.about .solar-system .planet-container.planet2 {
-  animation-duration: 20s;
-  animation-delay: -4s;
+.about .container .solar-system .planet-container.planet2 {
+  animation-duration: 30s;
+  animation-delay: -6s;
 }
-.about .solar-system .planet-container.planet3 {
-  animation-duration: 20s;
-  animation-delay: -8s;
-}
-.about .solar-system .planet-container.planet4 {
-  animation-duration: 20s;
+.about .container .solar-system .planet-container.planet3 {
+  animation-duration: 30s;
   animation-delay: -12s;
 }
-.about .solar-system .planet-container.planet5 {
-  animation-duration: 20s;
-  animation-delay: -16s;
+.about .container .solar-system .planet-container.planet4 {
+  animation-duration: 30s;
+  animation-delay: -18s;
 }
-.about .solar-system .planet {
+.about .container .solar-system .planet-container.planet5 {
+  animation-duration: 30s;
+  animation-delay: -24s;
+}
+.about .container .solar-system .planet {
   position: absolute;
   top: 50%;
   animation: counter-rotate linear infinite;
@@ -643,56 +646,56 @@ a {
   width: 100px;
   border-radius: 999px;
 }
-.about .solar-system .planet.planet1 {
+.about .container .solar-system .planet.planet1 {
   width: 100px;
   height: 100px;
   right: 10px;
   transform: translateY(-50%);
-  animation-duration: 20s;
+  animation-duration: 30s;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.about .solar-system .planet.planet2 {
+.about .container .solar-system .planet.planet2 {
   width: 100px;
   height: 100px;
   right: 30px;
   transform: translateY(-50%);
-  animation-duration: 20s;
-  animation-delay: -4s;
+  animation-duration: 30s;
+  animation-delay: -6s;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.about .solar-system .planet.planet3 {
+.about .container .solar-system .planet.planet3 {
   width: 100px;
   height: 100px;
   right: 50px;
   transform: translateY(-50%);
-  animation-duration: 20s;
-  animation-delay: -8s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.about .solar-system .planet.planet4 {
-  width: 100px;
-  height: 100px;
-  right: 70px;
-  transform: translateY(-50%);
-  animation-duration: 20s;
+  animation-duration: 30s;
   animation-delay: -12s;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.about .solar-system .planet.planet5 {
+.about .container .solar-system .planet.planet4 {
+  width: 100px;
+  height: 100px;
+  right: 70px;
+  transform: translateY(-50%);
+  animation-duration: 30s;
+  animation-delay: -18s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about .container .solar-system .planet.planet5 {
   width: 100px;
   height: 100px;
   right: 100px;
   transform: translateY(-50%);
-  animation-duration: 20s;
-  animation-delay: -16s;
+  animation-duration: 30s;
+  animation-delay: -24s;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -714,61 +717,61 @@ a {
   }
 }
 @media (max-width: 1332px) {
-  .about .solar-system {
+  .about .container {
     margin: 0 auto;
     display: flex;
   }
 }
 @media (max-width: 768px) {
-  .about .solar-system {
+  .about .container {
     width: 250px;
     height: 250px;
     margin: 0 auto;
   }
-  .about .solar-system img {
+  .about .container img {
     max-width: 50px;
   }
-  .about .solar-system .sun {
+  .about .container .sun {
     width: 50px;
     height: 50px;
   }
-  .about .solar-system .orbit1 {
+  .about .container .orbit1 {
     width: 120px;
     height: 120px;
   }
-  .about .solar-system .orbit2 {
+  .about .container .orbit2 {
     width: 140px;
     height: 140px;
   }
-  .about .solar-system .orbit3 {
+  .about .container .orbit3 {
     width: 160px;
     height: 160px;
   }
-  .about .solar-system .orbit4 {
+  .about .container .orbit4 {
     width: 180px;
     height: 180px;
   }
-  .about .solar-system .orbit5 {
+  .about .container .orbit5 {
     width: 200px;
     height: 200px;
   }
-  .about .solar-system .planet {
+  .about .container .planet {
     width: 50px !important;
     height: 50px !important;
   }
-  .about .solar-system .planet.planet1 {
+  .about .container .planet.planet1 {
     right: 5px;
   }
-  .about .solar-system .planet.planet2 {
+  .about .container .planet.planet2 {
     right: 15px;
   }
-  .about .solar-system .planet.planet3 {
+  .about .container .planet.planet3 {
     right: 25px;
   }
-  .about .solar-system .planet.planet4 {
+  .about .container .planet.planet4 {
     right: 35px;
   }
-  .about .solar-system .planet.planet5 {
+  .about .container .planet.planet5 {
     right: 50px;
   }
 }
@@ -806,10 +809,7 @@ a {
 .contact .container .contact-wrapper .form-group {
   display: flex;
   flex-direction: column;
-}
-.contact .container .contact-wrapper .form-group label {
-  font-size: 0.9rem;
-  margin-bottom: 0.3rem;
+  gap: 16px;
 }
 .contact .container .contact-wrapper input,
 .contact .container .contact-wrapper textarea {
@@ -828,17 +828,13 @@ a {
   grid-column: span 2;
 }
 .contact .container .contact-wrapper .submit-btn {
-  margin-top: 1rem;
-  background-color: var(--button-light-gdnt);
-  border: none;
-  padding: 0.7rem 1.5rem;
-  border-radius: 8px;
-  color: white;
+  margin-top: 16px;
+  background: var(--button-light-gdnt);
+  border-radius: 12px;
+  color: var(--white);
   cursor: pointer;
-  font-size: 0.9rem;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
 }
 .contact .container .contact-wrapper .graphic-section {
   width: 50%;
@@ -874,10 +870,236 @@ a {
   }
 }
 
+.members {
+  background: var(--blue1);
+  min-height: 653px;
+}
+.members .container {
+  padding: 120px 16px;
+  position: relative;
+}
+.members .container .rotate360 {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  z-index: 3;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background: var(--blue2);
+  border-radius: 999px;
+  width: 160px;
+  height: 160px;
+}
+.members .container .rotate360 img {
+  animation: spin 20s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.members .container .members-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 88px;
+}
+.members .container .members-wrapper .golden-fund-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #001f4d;
+  max-width: 720px;
+}
+.members .container .members-wrapper .golden-fund-wrapper .profiles {
+  display: flex;
+}
+.members .container .members-wrapper .golden-fund-wrapper .profile {
+  width: 180px;
+  height: 160px;
+  background: #ccc;
+}
+.members .container .members-wrapper .golden-fund-wrapper .branding-section {
+  background: #e0e0e0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.members .container .members-wrapper .golden-fund-wrapper .branding-logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+}
+.members .container .members-wrapper .golden-fund-wrapper .logo-item {
+  width: 80px;
+  height: 80px;
+  background: #999;
+  border-radius: 8px;
+}
+@keyframes bounceMove {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-20%);
+  }
+}
+.members .container .members-wrapper .grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  height: 218px;
+  width: 100%;
+}
+.members .container .members-wrapper .grid .left {
+  background: var(--yellow);
+  grid-row: span 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 120px;
+}
+.members .container .members-wrapper .grid .left .slider {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.members .container .members-wrapper .grid .left .slide-track {
+  display: flex;
+  flex-direction: column;
+  animation: scrollDown 10s linear infinite;
+  gap: 40px;
+}
+.members .container .members-wrapper .grid .left .slide {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@keyframes scrollDown {
+  0% {
+    transform: translateY(-280px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.members .container .members-wrapper .grid .center {
+  grid-row: span 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--green2);
+}
+.members .container .members-wrapper .grid .center .slider-horizontal {
+  width: 300px;
+  overflow: hidden;
+  position: relative;
+}
+.members .container .members-wrapper .grid .center .slide-horizontal {
+  animation: slideLeftRight 5s linear infinite alternate;
+  display: inline-block;
+}
+@keyframes slideLeftRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(150px);
+  }
+}
+.members .container .members-wrapper .grid .top-right {
+  background: var(--blue4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  height: 100px;
+  overflow: hidden;
+  text-align: center;
+}
+.members .container .members-wrapper .grid .top-right .slider-vertical {
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+}
+.members .container .members-wrapper .grid .top-right .slide-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: slideBottomToTop 5s linear infinite;
+}
+@keyframes slideBottomToTop {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-240px);
+  }
+}
+.members .container .members-wrapper .grid .bottom-right {
+  background: var(--beige);
+  text-align: center;
+  position: relative;
+  width: 300px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.members .container .members-wrapper .grid .bottom-right .slider-horizontal-reverse {
+  overflow: hidden;
+}
+.members .container .members-wrapper .grid .bottom-right .slide-horizontal-reverse {
+  animation: slideRightLeft 2s linear infinite;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+@keyframes slideRightLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-240px);
+  }
+}
+
+.footer::before {
+  content: "";
+  background-image: url("./../images/footerbefore.svg");
+  width: 120px;
+  height: 240px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-960px, -50%);
+}
+
+.footer::after {
+  content: "";
+  background-image: url("./../images/footerafter.svg");
+  width: 120px;
+  height: 240px;
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(960px, -50%);
+}
+
 .footer {
   background: var(--footer-gdnt);
   color: var(--white);
   padding-top: 240px;
+  position: relative;
 }
 .footer .container .footer-wrapper {
   display: flex;
