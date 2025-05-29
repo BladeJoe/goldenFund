@@ -88,14 +88,19 @@
     }
 }
 
+html {
+    overflow-x: hidden;
+
+}
+
 body {
     height: 100%;
     position: relative;
     margin: 0;
     width: 100vw;
+    overflow-x: hidden;
     font-family: "Lato", sans-serif;
     color: var(--white);
-    overflow-x: hidden;
 }
 
 button {
@@ -290,7 +295,7 @@ main {
     .container {
         display: flex;
         justify-content: space-between;
-        padding: 0;
+        padding: 0 16px;
 
         .inner-container {
             display: flex;
@@ -305,6 +310,41 @@ main {
                 flex-wrap: wrap;
             }
 
+            .divider {
+                width: 1px;
+                height: 32px;
+                background-color: rgba(255, 255, 255, 0.3);
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .contacts {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                font-size: 16px;
+                gap: 20px;
+
+                @media (max-width: 436px) {
+                    justify-content: space-around;
+                    flex-wrap: wrap;
+
+                    .divider {
+                        display: none;
+                    }
+                }
+
+
+                a {
+                    gap: 6px;
+                    color: var(--white);
+                    display: flex;
+                    align-items: center;
+                }
+
+            }
+
             .accessibility {
                 display: flex;
                 flex-direction: row;
@@ -314,28 +354,21 @@ main {
 
                 @media (max-width: 436px) {
                     gap: 8px;
-
                     justify-content: space-around;
                     flex-wrap: wrap;
                 }
 
-                li {
+                a {
+                    gap: 6px;
+                    color: var(--white);
                     display: flex;
                     align-items: center;
-                    gap: 1rem;
-                    border-left: 1px solid gray;
-                    padding: 0 20px;
-                    height: 24px;
-
-                    @media (max-width: 436px) {
-                        border-left: 1px solid var(--blue1);
-                    }
-                }
-
-                :first-child {
-                    border-left: 0;
                 }
             }
+
+
+
+
         }
     }
 }
@@ -350,14 +383,10 @@ main {
     backdrop-filter: blur(20px);
     background: #050D1C33;
 
-    @media (max-width:872px) {
-        top: 86px;
-    }
-
-
     .container {
         display: flex;
         justify-content: space-between;
+        padding: 0;
 
         @media (max-width: 768px) {
             display: none;
@@ -379,6 +408,10 @@ main {
                 justify-content: center;
                 gap: 24px;
                 flex-wrap: wrap;
+
+                li a {
+                    color: var(--white);
+                }
             }
 
             @media(max-width:1024px) {
@@ -425,7 +458,7 @@ main {
 }
 
 .hero {
-    max-height: 1060px;
+    max-height: 1100px;
     // min-height: calc(100vh - 52px); // OPTIONAL
     display: flex;
     flex-direction: column;
@@ -462,6 +495,10 @@ main {
         z-index: 2;
         padding-top: 400px;
 
+        @media(max-width:1024px) {
+
+            padding-top: 220px;
+        }
 
         .hero-wrapper {
             max-width: 732px;
@@ -566,16 +603,6 @@ main {
         }
     }
 
-    @media(max-width:1024px) {
-
-
-        max-height: 1060px;
-
-
-        .container {
-            padding-top: 220px;
-        }
-    }
 
 }
 
@@ -639,257 +666,264 @@ main {
             }
         }
 
-        .solar-system {
+        .solar-wrapper {
             width: 500px;
             height: 500px;
-            position: relative;
             border-radius: 10px;
             overflow: hidden;
             display: flex;
+            min-width: 379px;
 
+            .solar-system {
+                width: 500px;
+                height: 500px;
+                position: relative;
 
-            .sun {
-                width: 100px;
-                height: 100px;
-                border-radius: 50%;
-                position: absolute;
-                top: 50%;
-                background: #fff;
-                left: 50%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                transform: translate(-50%, -50%);
-                z-index: 10;
-            }
-
-            .orbit {
-                position: absolute;
-                border: 2px dashed var(--blue1);
-                border-radius: 50%;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
-
-            .orbit1 {
-                width: 240px;
-                height: 240px;
-            }
-
-            .orbit2 {
-                width: 280px;
-                height: 280px;
-            }
-
-            .orbit3 {
-                width: 320px;
-                height: 320px;
-            }
-
-            .orbit4 {
-                width: 360px;
-                height: 360px;
-            }
-
-            .orbit5 {
-                width: 400px;
-                height: 400px;
-            }
-
-            .planet-container {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                animation: rotate linear infinite;
-            }
-
-            .planet-container.planet1 {
-                animation-duration: 30s;
-            }
-
-            .planet-container.planet2 {
-                animation-duration: 30s;
-                animation-delay: -6s;
-            }
-
-            .planet-container.planet3 {
-                animation-duration: 30s;
-                animation-delay: -12s;
-            }
-
-            .planet-container.planet4 {
-                animation-duration: 30s;
-                animation-delay: -18s;
-            }
-
-            .planet-container.planet5 {
-                animation-duration: 30s;
-                animation-delay: -24s;
-            }
-
-            .planet {
-                position: absolute;
-                top: 50%;
-                animation: counter-rotate linear infinite;
-                background: #fff;
-                width: 100px;
-                border-radius: 999px;
-            }
-
-            .planet.planet1 {
-                width: 100px;
-                height: 100px;
-                right: 10px;
-                transform: translateY(-50%);
-                animation-duration: 30s;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .planet.planet2 {
-                width: 100px;
-                height: 100px;
-                right: 30px;
-                transform: translateY(-50%);
-                animation-duration: 30s;
-                animation-delay: -6s;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .planet.planet3 {
-                width: 100px;
-                height: 100px;
-                right: 50px;
-                transform: translateY(-50%);
-                animation-duration: 30s;
-                animation-delay: -12s;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .planet.planet4 {
-                width: 100px;
-                height: 100px;
-                right: 70px;
-                transform: translateY(-50%);
-                animation-duration: 30s;
-                animation-delay: -18s;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .planet.planet5 {
-                width: 100px;
-                height: 100px;
-                right: 100px;
-                transform: translateY(-50%);
-                animation-duration: 30s;
-                animation-delay: -24s;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            @keyframes rotate {
-                from {
-                    transform: rotate(0deg);
+                .sun {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 50%;
+                    background: #fff;
+                    left: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transform: translate(-50%, -50%);
+                    z-index: 10;
                 }
 
-                to {
-                    transform: rotate(360deg);
+                .orbit {
+                    position: absolute;
+                    border: 2px dashed var(--blue1);
+                    border-radius: 50%;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                    &1 {
+                        width: 240px;
+                        height: 240px;
+                    }
+
+                    &2 {
+                        width: 280px;
+                        height: 280px;
+                    }
+
+                    &3 {
+                        width: 320px;
+                        height: 320px;
+                    }
+
+                    &4 {
+                        width: 360px;
+                        height: 360px;
+                    }
+
+                    &5 {
+                        width: 400px;
+                        height: 400px;
+                    }
                 }
+
+
+                .planet-container {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    animation: rotate 30s linear infinite;
+
+                    &.planet2 {
+                        animation-delay: -6s;
+                    }
+
+                    &.planet3 {
+                        animation-delay: -12s;
+                    }
+
+                    &.planet4 {
+                        animation-delay: -18s;
+                    }
+
+                    &.planet5 {
+                        animation-delay: -24s;
+                    }
+                }
+
+
+                .planet {
+                    position: absolute;
+                    top: 50%;
+                    width: 100px;
+                    height: 100px;
+                    transform: translateY(-50%);
+                    animation: counter-rotate 30s linear infinite;
+                    background: #fff;
+                    border-radius: 999px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    &.planet1 {
+                        right: 10px;
+                    }
+
+                    &.planet2 {
+                        right: 30px;
+                        animation-delay: -6s;
+                    }
+
+                    &.planet3 {
+                        right: 50px;
+                        animation-delay: -12s;
+                    }
+
+                    &.planet4 {
+                        right: 70px;
+                        animation-delay: -18s;
+                    }
+
+                    &.planet5 {
+                        right: 100px;
+                        animation-delay: -24s;
+                    }
+                }
+
+                @keyframes rotate {
+                    from {
+                        transform: rotate(0deg);
+                    }
+
+                    to {
+                        transform: rotate(360deg);
+                    }
+                }
+
+                @keyframes counter-rotate {
+                    from {
+                        transform: translateY(-50%) rotate(0deg);
+                    }
+
+                    to {
+                        transform: translateY(-50%) rotate(-360deg);
+                    }
+                }
+
+
+                @media (max-width: 1332px) {
+                    margin: 0 auto;
+                    display: flex;
+                }
+
+                @media (max-width: 532px) {
+                    width: 379px;
+                    /* 250 / 0.66 */
+                    height: 379px;
+
+                    .sun {
+                        width: 76px;
+                        /* 50 / 0.66 */
+                        height: 76px;
+                    }
+
+                    .orbit {
+                        &1 {
+                            width: 182px;
+                            /* 120 / 0.66 */
+                            height: 182px;
+                        }
+
+                        &2 {
+                            width: 212px;
+                            /* 140 / 0.66 */
+                            height: 212px;
+                        }
+
+                        &3 {
+                            width: 242px;
+                            /* 160 / 0.66 */
+                            height: 242px;
+                        }
+
+                        &4 {
+                            width: 273px;
+                            /* 180 / 0.66 */
+                            height: 273px;
+                        }
+
+                        &5 {
+                            width: 303px;
+                            /* 200 / 0.66 */
+                            height: 303px;
+                        }
+                    }
+
+                    .planet {
+                        width: 65px;
+                        /* 50 / 0.66 */
+                        height: 65px;
+
+                        &.planet1 {
+                            right: 7.5px;
+                            /* 5 / 0.66 */
+                        }
+
+                        &.planet2 {
+                            right: 22.7px;
+                            /* 15 / 0.66 */
+                            animation-delay: -6s;
+                        }
+
+                        &.planet3 {
+                            right: 37.9px;
+                            /* 25 / 0.66 */
+                            animation-delay: -12s;
+                        }
+
+                        &.planet4 {
+                            right: 53px;
+                            /* 35 / 0.66 */
+                            animation-delay: -18s;
+                        }
+
+                        &.planet5 {
+                            right: 75.7px;
+                            /* 50 / 0.66 */
+                            animation-delay: -24s;
+                        }
+                    }
+
+                    .planet img {
+                        width: 75%;
+                        /* 50 / 0.66 */
+                        height: 75%;
+                    }
+                }
+
+
+
+
+
+
             }
 
-            @keyframes counter-rotate {
-                from {
-                    transform: translateY(-50%) rotate(0deg);
-                }
 
-                to {
-                    transform: translateY(-50%) rotate(-360deg);
-                }
+            @media (max-width: 1332px) {
+                margin: 0 auto;
+                display: flex;
+            }
+
+            @media (max-width:532px) {
+                margin: 0;
+                margin-left: -16px;
             }
 
 
         }
 
-        @media (max-width: 1332px) {
-            margin: 0 auto;
-            display: flex;
-        }
-
-        @media (max-width: 768px) {
-            width: 250px;
-            height: 250px;
-            margin: 0 auto;
-
-            img {
-                max-width: 50px;
-            }
-
-            .sun {
-                width: 50px;
-                height: 50px;
-            }
-
-            .orbit1 {
-                width: 120px;
-                height: 120px;
-            }
-
-            .orbit2 {
-                width: 140px;
-                height: 140px;
-            }
-
-            .orbit3 {
-                width: 160px;
-                height: 160px;
-            }
-
-            .orbit4 {
-                width: 180px;
-                height: 180px;
-            }
-
-            .orbit5 {
-                width: 200px;
-                height: 200px;
-            }
-
-            .planet {
-                width: 50px !important;
-                height: 50px !important;
-            }
-
-            .planet.planet1 {
-                right: 5px;
-            }
-
-            .planet.planet2 {
-                right: 15px;
-            }
-
-            .planet.planet3 {
-                right: 25px;
-            }
-
-            .planet.planet4 {
-                right: 35px;
-            }
-
-            .planet.planet5 {
-                right: 50px;
-            }
-        }
     }
-
 }
 
 .contact {
@@ -1047,6 +1081,30 @@ main {
             display: flex;
             flex-direction: row;
             gap: 88px;
+            align-items: center;
+
+            @media (max-width: 1632px) {
+                justify-content: center;
+                flex-wrap: wrap;
+                flex-direction: column;
+
+            }
+
+            @media (max-width: 768px) {
+                justify-content: center;
+                flex-direction: column;
+
+                .golden-fund-wrapper {
+                    transform: scale(75%);
+                }
+            }
+
+            @media (max-width: 540px) {
+
+                .golden-fund-wrapper {
+                    transform: scale(50%);
+                }
+            }
 
             .golden-fund-wrapper {
                 display: flex;
@@ -1054,6 +1112,9 @@ main {
                 align-items: center;
                 background: #001f4d;
                 max-width: 720px;
+
+
+
 
 
                 .profiles {
@@ -1258,6 +1319,14 @@ main {
                 flex-direction: column;
                 align-items: start;
                 justify-content: space-between;
+                max-width: 792px;
+
+                @media (max-width: 1632px) {
+                    text-align: center;
+                    justify-content: center;
+                    align-items: center;
+
+                }
 
                 h3 {
                     font-weight: normal;
