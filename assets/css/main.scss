@@ -1517,14 +1517,15 @@ main {
                 flex-direction: row;
                 flex-wrap: wrap;
                 justify-content: center;
-
+                clip-path: inset(1px);
+                gap: -1px;
 
                 .newscard {
                     width: 533px;
                     height: 450px;
                     overflow: hidden;
                     position: relative;
-                    border: 1px solid #0B255627;
+                    border: 0.1px solid #0B255627;
                     padding: 20px;
 
                     .image-wrapper {
