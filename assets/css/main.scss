@@ -271,8 +271,15 @@ a {
 .container {
     max-width: 1632px;
     margin: 0 auto;
-    padding: 0 16px;
+    padding: 120px 16px;
     width: 100%;
+
+
+    @media(max-width:1024px) {
+
+        padding: 50px 8px;
+
+    }
 }
 
 .highlight-title {
@@ -663,8 +670,6 @@ main {
         justify-content: space-between;
         flex-wrap: wrap;
 
-        padding: 120px 16px;
-
         .about-wrapper {
             max-width: 792px;
             display: flex;
@@ -959,7 +964,6 @@ main {
     }
 }
 
-
 .members {
     background: var(--blue1);
     position: relative;
@@ -969,7 +973,6 @@ main {
         margin: 0 auto;
 
         .container {
-            padding: 120px 16px;
             position: relative;
 
             .rotate360 {
@@ -1013,18 +1016,16 @@ main {
                 @media (max-width: 768px) {
                     justify-content: center;
                     flex-direction: column;
+                    padding-top: 200px;
 
                     .golden-fund-wrapper {
-                        transform: scale(75%);
+                        position: absolute;
+                        top: 0;
+                        right: 50%;
+                        transform: scale(50%) translateX(100%);
                     }
                 }
 
-                @media (max-width: 540px) {
-
-                    .golden-fund-wrapper {
-                        transform: scale(50%);
-                    }
-                }
 
                 .golden-fund-wrapper {
                     display: flex;
@@ -1239,8 +1240,9 @@ main {
                     flex-direction: column;
                     align-items: start;
                     justify-content: space-between;
+                    gap: 16px;
                     max-width: 792px;
-                    height: 378px;
+                    min-height: 378px;
 
                     @media (max-width: 1632px) {
                         text-align: center;
@@ -1264,6 +1266,7 @@ main {
                             line-height: 1;
                             margin-top: 2px;
                             text-align: center;
+
                         }
                     }
 
@@ -1321,7 +1324,6 @@ main {
     color: var(--gray);
 
     .container {
-        padding: 120px 16px;
 
         .inner-wrapper {
             display: flex;
@@ -1376,7 +1378,7 @@ main {
 
                 > img {
                     @media (max-width:768px) {
-                        width: 100%;
+                        width: calc(100vw - 32px);
                     }
                 }
 
@@ -1398,8 +1400,11 @@ main {
                     gap: 10px;
 
                     @media (max-width:768px) {
+                        transform: scale(0.75) translateX(-66%);
+                    }
+
+                    @media (max-width:375px) {
                         transform: scale(0.5) translateX(-100%);
-                        bottom: 0;
                     }
 
                     .inner-text-wrapper {
@@ -1414,7 +1419,6 @@ main {
 
 .infographics {
     .container {
-        padding: 120px 16px;
 
         .inner-wrapper {
             display: flex;
@@ -1495,10 +1499,16 @@ main {
 
 .news {
     .container {
-        padding: 120px 16px;
         width: 100%;
 
         .inner-wrapper {
+            @media(max-width:1024px) {
+
+                text-align: center;
+
+
+            }
+
             span {
                 color: var(--blue5);
                 margin-bottom: 12px;
@@ -1518,6 +1528,14 @@ main {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                flex-wrap: wrap;
+
+                @media(max-width:1024px) {
+
+                    justify-content: center;
+
+
+                }
 
                 a {
                     color: var(--blue5);
@@ -1687,8 +1705,6 @@ main {
 }
 
 .alliance {
-    padding: 120px 16px;
-    padding-bottom: 156px;
 
     .container {
         max-width: 1600px;
@@ -1855,6 +1871,7 @@ main {
     margin-bottom: -160px;
 
     .container {
+        padding-bottom: 0;
 
         .contact-wrapper {
             display: flex;
@@ -2007,7 +2024,12 @@ main {
     padding-top: 240px;
     position: relative;
 
+    @media(max-width:1024px) {
+        padding-top: 180px;
+    }
+
     .container {
+        padding: 0 16px;
 
         .footer-wrapper {
             display: flex;
