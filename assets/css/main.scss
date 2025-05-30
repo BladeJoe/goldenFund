@@ -7,7 +7,6 @@
     --black6: #DEE1EB;
     --black7: #F0F1F5;
     --black8: #F6F7FB;
-
     --white: #ffffff;
 
     --blue1: #0B2556;
@@ -310,7 +309,7 @@ main {
     position: relative;
 
     section {
-        background: var(--white);
+        background: var(--black8);
     }
 }
 
@@ -450,7 +449,8 @@ main {
                 display: flex;
                 justify-content: center;
                 gap: 24px;
-                flex-wrap: wrap;
+                text-align: center;
+                align-items: center;
 
                 li a {
                     color: var(--white);
@@ -768,7 +768,7 @@ main {
     inset: 0;
     background: url("./../images/backgorund-wave.png") center no-repeat var(--black8);
     background-size: cover;
-    opacity: 0.3;
+    opacity: 0.15;
     z-index: -1;
 }
 
@@ -1568,7 +1568,7 @@ main {
                 flex-wrap: wrap;
 
                 .card {
-                    width: 307px;
+                    width: 388px;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
@@ -1983,6 +1983,202 @@ main {
     }
 }
 
+.partners {
+
+    .container {
+        color: var(--text);
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        overflow: hidden;
+        padding: 120px 16px;
+
+        .inner-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: start;
+            gap: 16px;
+
+            @media (max-width: 1600px) {
+                justify-content: space-between;
+                align-items: center;
+                text-align: center;
+                max-width: 100%;
+            }
+
+            div {
+                display: flex;
+                gap: 12px;
+                flex-direction: column;
+
+                h3 {
+                    @extend h4;
+                    font-weight: normal;
+
+                    span {
+                        @extend h4;
+                        font-weight: bold;
+                    }
+                }
+
+                span {
+                    @extend .body-text-4;
+                    @extend .highlight-title;
+
+                }
+
+            }
+
+            @media (max-width: 1124px) {
+                justify-content: space-between;
+                align-items: center;
+                text-align: center;
+                max-width: 100%;
+
+                h3 {
+                    padding-bottom: 200px;
+                }
+            }
+
+        }
+
+        .horizontal-carousel {
+
+            .slider-track {
+                display: flex;
+                flex-direction: row;
+                gap: 16px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .slide {
+                width: 253px;
+                height: 172px;
+                border-radius: 20px;
+                border: 1px solid #ffffff33;
+                background-color: var(--white);
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                flex-shrink: 0;
+
+                .link {
+                    color: var(--blue5);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 8px;
+
+                    // &:hover {
+                    //      text-decoration: 1px underline var(--blue5); //OPTIONAL
+                    // }
+                }
+            }
+
+            @media (max-width: 1124px) {
+                top: 165px;
+                height: auto;
+
+
+            }
+
+            @media (max-width: 598px) {
+                top: 220px;
+            }
+
+        }
+
+
+    }
+}
+
+.faq {
+    .container {
+        h3 {
+            color: var(--text);
+            text-align: center;
+            padding-bottom: 24px;
+
+            span {
+
+                @extend .title-blue;
+            }
+        }
+
+        .faq-item {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+            color: var(--black1);
+            background-color: var(--white);
+            border: none;
+            width: 100%;
+
+            * {
+                transition: all 0.5s ease-out;
+            }
+
+            .question {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+
+                @extend .subtitle-2;
+
+                .plus {
+                    font-size: 48px;
+                    line-height: 28px;
+                }
+
+                .plus.active {
+                    transition: all 0.3s linear;
+                    transform: rotate(-45deg);
+                }
+            }
+
+            hr {
+                width: 0;
+                border-width: 0;
+                background-color: rgba(255, 255, 255, 1);
+                padding: 0;
+                margin: 0;
+                transition: all 0.2s ease-out;
+
+                &.active {
+                    margin: 20px 0;
+                    padding: 1px;
+                    width: 100%;
+                    display: block;
+                }
+            }
+
+            .answer {
+                @extend .body-text-2;
+                text-align: start;
+                height: 0;
+                overflow: hidden;
+
+                &.active {
+                    height: 50px;
+                }
+            }
+
+            &.active {
+                background: var(--member-gdnt);
+                color: white;
+            }
+        }
+    }
+}
+
 .contact {
     margin-bottom: -160px;
 
@@ -2346,10 +2542,17 @@ main {
                 top: 0;
                 transform: translate(-50%, -50%);
 
-                img {
-                    background-color: #091733;
-                    border-radius: 50%;
-                    padding: 0 40px;
+                &:after {
+                    content: "";
+                    height: 2px;
+                    width: 220px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    z-index: -1;
+                    background-color: #091736;
+                    transform: translate(-50%, -50%);
+
                 }
             }
 

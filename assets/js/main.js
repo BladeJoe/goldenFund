@@ -80,3 +80,16 @@ function openNavMenu() {
     }
 }
 
+function faqActivate(e) {
+    const item = e.currentTarget;
+    item.classList.toggle("active");
+    [...item.children].forEach(child => {
+        child.classList.toggle("active");
+        [...child.children].forEach(grandchild => grandchild.classList.toggle("active"));
+    });
+}
+
+
+document.querySelectorAll(".faq-item").forEach(el =>
+    el.addEventListener("click", faqActivate)
+);
