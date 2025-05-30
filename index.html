@@ -70,7 +70,7 @@
     <nav class="nav">
         <div class="container">
 
-            <div class="nav-buttons ">
+            <div class="nav-buttons">
                 <button class="btn nav-btn " id="nav-menu" onclick="openNavMenu()" aria-label="Open navigation">
                     <img src="./assets/images/menudots.svg" alt="" height="20" width="20">
                 </button>
@@ -84,24 +84,24 @@
                         </span>
                         <ul class="nav-menu-inner-wrapper hidden">
                             <li>
-                                <a href="#">О платформe<img src="./assets/images/arrownext.svg" width="11" height="11"
+                                <a href="#section">О платформe<img src="./assets/images/arrownext.svg" width="11"
+                                        height="11" alt="" /></a>
+                            </li>
+                            <li>
+                                <a href="#footer">История<img src="./assets/images/arrownext.svg" width="11" height="11"
                                         alt="" /></a>
                             </li>
                             <li>
-                                <a href="#">История<img src="./assets/images/arrownext.svg" width="11" height="11"
-                                        alt="" /></a>
+                                <a href="#hero">Миссия, цели, ценности<img src="./assets/images/arrownext.svg"
+                                        width="11" height="11" alt="" /></a>
                             </li>
                             <li>
-                                <a href="#">Миссия, цели, ценности<img src="./assets/images/arrownext.svg" width="11"
-                                        height="11" alt="" /></a>
+                                <a href="#main">Полный состав и структура<img src="./assets/images/arrownext.svg"
+                                        width="11" height="11" alt="" /></a>
                             </li>
                             <li>
-                                <a href="#">Полный состав и структура<img src="./assets/images/arrownext.svg" width="11"
-                                        height="11" alt="" /></a>
-                            </li>
-                            <li>
-                                <a href="#">Исполнительный офис<img src="./assets/images/arrownext.svg" width="11"
-                                        height="11" alt="" /></a>
+                                <a href="#alliance">Исполнительный офис<img src="./assets/images/arrownext.svg"
+                                        width="11" height="11" alt="" /></a>
                             </li>
                         </ul>
                     </li>
@@ -142,11 +142,11 @@
                 </ul>
             </div>
 
-            <div class="nav-buttons">
+            <div class="nav-buttons nav-right">
                 <button class="btn nav-btn" aria-label="Search website">
                     <img src="./assets/images/magnifer.svg" width="22" height="22" alt="">
                 </button>
-                <button class="cabinet btn" aria-label="Open account">
+                <button class="btn" aria-label="Open account">
                     <img src="./assets/images/profile.svg" width="22" height="22" alt="">
                     Кабинет
                 </button>
@@ -156,7 +156,7 @@
 
     <main class="main">
 
-        <section class="section hero" data-aos="fade-zoom-in">
+        <section id="hero" class="section hero" data-aos="fade-zoom-in">
             <div class="video-wrapper">
                 <video id="video" autoplay loop muted preload="auto" poster="./assets/images/hero-poster.jpg">
                     <source src="./assets/videos/slider-mobile.mp4" type="video/mp4" media="(max-width: 768px)">
@@ -204,7 +204,7 @@
             </div>
         </section>
 
-        <section class="section about">
+        <section id="about" class="section about">
             <div class="container">
                 <div class="about-wrapper">
                     <span class="body   title-blue">О СООБЩЕСТВЕ</span>
@@ -266,7 +266,7 @@
                 </div>
         </section>
 
-        <section class="section members">
+        <section id="members" class="section members">
             <div class="inner-wrapper">
                 <div class="container">
                     <div class="rotate360">
@@ -355,9 +355,9 @@
 
                         <div class="member-text">
                             <span>ЧЛЕНЫ</span>
-                            <h3>Члены сообщества<br>
+                            <h2>Члены сообщества<br>
                                 <span>поддержки одаренной молодежи</span>
-                            </h3>
+                            </h2>
                             <p>
                                 Cообщество объединяет выпускников Президентских школ, Международной школы Аль-Беруни,
                                 Университета «Новый Узбекистан», стипендиатов фонда «Эл-юрт умиди», участников
@@ -375,12 +375,12 @@
             </div>
         </section>
 
-        <section class="section speech">
+        <section id="speech" class="section speech">
             <div class="container">
                 <div class="inner-wrapper">
                     <div class="text">
-                        <h3> <span>Послание Президента</span>
-                            Республики Узбекистан</h3>
+                        <h2><span>Послание Президента</span>
+                            Республики Узбекистан</h2>
                         <p>Мы разработали стратегию развития нового Узбекистана и широко обсудили ее с народом в ходе
                             предвыборной кампании. В этом важном концептуальном документе в целях обеспечения
                             последовательности и преемственности наших преобразований основная идея - «От стратегии
@@ -419,14 +419,14 @@
             </div>
         </section>
 
-        <section class="section infographics">
+        <section id="infographics" class="section infographics">
             <div class="container">
                 <div class="inner-wrapper">
                     <span>ИНФОГРАФИКА</span>
-                    <h3>
+                    <h2>
                         <span class="title-blue">Ключевые показатели</span><br>
                         сообщества
-                    </h3>
+                    </h2>
                     <p>Обзор роста, активности и вовлечённости участников за выбранный период</p>
                     <div class="card-wrapper">
                         <div class="card">
@@ -454,185 +454,187 @@
             </div>
         </section>
 
-        <section class="section news">
+        <section id="news" class="section news">
             <div class="container">
                 <div class="inner-wrapper">
                     <span>НОВОСТИ</span>
                     <div>
-                        <h3>Чем заняты <span class="title-blue"> члены организации</span></h3>
+                        <h2>Чем заняты <span class="title-blue"> члены организации</span></h2>
                         <a href="#">Смотреть больше <img src="./assets/images/arrownextblue.svg" width="18" height="18"
                                 alt=""></a>
                     </div>
 
+                    <div class="out">
 
-                    <div class="newscard-wrapper">
+                        <div class="newscard-wrapper">
 
-                        <div class="newscard">
-                            <div class="image-wrapper">
-                                <img class="newscard-img" loading="lazy" fetchpriority="high"
-                                    src="./assets/images/newscard-img-1.png" width="493" height="247" alt="">
-                            </div>
-                            <div class="newscard-data">
-
-                                <div class="details">
-                                    <span>
-                                        <img src="./assets/images/calendar.svg" alt="" width="22" height="22">
-                                        <p>9 мая 2025 г</p>
-                                    </span>
-                                    <span>
-                                        <img src="./assets/images/views.svg" alt="" width="22" height="22">
-                                        <p>85</p>
-                                    </span>
+                            <div class="newscard">
+                                <div class="image-wrapper">
+                                    <img class="newscard-img" loading="lazy" fetchpriority="high"
+                                        src="./assets/images/newscard-img-1.png" width="493" height="247" alt="">
                                 </div>
-                                <h4>Встреча участников программы «Эл‑юрт умиди» с представителями ООН</h4>
-                                <p>Стипендиаты фонда обсудили перспективы сотрудничества и реализации проектов
-                                    устойчивого
-                                    развития в Узбекистане.</p>
-                                <button class="btn">Подробно <img src="./assets/images/arrownextwhite.svg" alt=""
-                                        width="18" height="18"></button>
-                            </div>
-                        </div>
-                        <div class="newscard">
-                            <div class="image-wrapper">
-                                <img class="newscard-img" src="./assets/images/newscard-img-1.png" width="493"
-                                    height="247" alt="">
-                            </div>
-                            <div class="newscard-data">
+                                <div class="newscard-data">
 
-                                <div class="details">
-                                    <span>
-                                        <img src="./assets/images/calendar.svg" alt="" width="22" height="22">
-                                        <p>9 мая 2025 г</p>
-                                    </span>
-                                    <span>
-                                        <img src="./assets/images/views.svg" alt="" width="22" height="22">
-                                        <p>85</p>
-                                    </span>
+                                    <div class="details">
+                                        <span>
+                                            <img src="./assets/images/calendar.svg" alt="" width="22" height="22">
+                                            <p>9 мая 2025 г</p>
+                                        </span>
+                                        <span>
+                                            <img src="./assets/images/views.svg" alt="" width="22" height="22">
+                                            <p>85</p>
+                                        </span>
+                                    </div>
+                                    <h4>Встреча участников программы «Эл‑юрт умиди» с представителями ООН</h4>
+                                    <p>Стипендиаты фонда обсудили перспективы сотрудничества и реализации проектов
+                                        устойчивого
+                                        развития в Узбекистане.</p>
+                                    <button class="btn">Подробно <img src="./assets/images/arrownextwhite.svg" alt=""
+                                            width="18" height="18"></button>
                                 </div>
-                                <h4>Встреча участников программы «Эл‑юрт умиди» с представителями ООН</h4>
-                                <p>Стипендиаты фонда обсудили перспективы сотрудничества и реализации проектов
-                                    устойчивого
-                                    развития в Узбекистане.</p>
-                                <button class="btn">Подробно <img src="./assets/images/arrownextwhite.svg" alt=""
-                                        width="18" height="18"></button>
                             </div>
-                        </div>
-
-                        <div class="newscard">
-                            <div class="image-wrapper">
-                                <img class="newscard-img" src="./assets/images/newscard-img-1.png" width="493"
-                                    height="247" alt="">
-                            </div>
-                            <div class="newscard-data">
-
-                                <div class="details">
-                                    <span>
-                                        <img src="./assets/images/calendar.svg" alt="" width="22" height="22">
-                                        <p>9 мая 2025 г</p>
-                                    </span>
-                                    <span>
-                                        <img src="./assets/images/views.svg" alt="" width="22" height="22">
-                                        <p>85</p>
-                                    </span>
+                            <div class="newscard">
+                                <div class="image-wrapper">
+                                    <img class="newscard-img" src="./assets/images/newscard-img-1.png" width="493"
+                                        height="247" alt="">
                                 </div>
-                                <h4>Встреча участников программы «Эл‑юрт умиди» с представителями ООН</h4>
-                                <p>Стипендиаты фонда обсудили перспективы сотрудничества и реализации проектов
-                                    устойчивого
-                                    развития в Узбекистане.</p>
-                                <button class="btn">Подробно <img src="./assets/images/arrownextwhite.svg" alt=""
-                                        width="18" height="18"></button>
-                            </div>
-                        </div>
+                                <div class="newscard-data">
 
-                        <div class="newscard">
-                            <div class="image-wrapper">
-                                <img class="newscard-img" src="./assets/images/newscard-img-1.png" width="493"
-                                    height="247" alt="">
-                            </div>
-                            <div class="newscard-data">
-
-                                <div class="details">
-                                    <span>
-                                        <img src="./assets/images/calendar.svg" alt="" width="22" height="22">
-                                        <p>9 мая 2025 г</p>
-                                    </span>
-                                    <span>
-                                        <img src="./assets/images/views.svg" alt="" width="22" height="22">
-                                        <p>85</p>
-                                    </span>
+                                    <div class="details">
+                                        <span>
+                                            <img src="./assets/images/calendar.svg" alt="" width="22" height="22">
+                                            <p>9 мая 2025 г</p>
+                                        </span>
+                                        <span>
+                                            <img src="./assets/images/views.svg" alt="" width="22" height="22">
+                                            <p>85</p>
+                                        </span>
+                                    </div>
+                                    <h4>Встреча участников программы «Эл‑юрт умиди» с представителями ООН</h4>
+                                    <p>Стипендиаты фонда обсудили перспективы сотрудничества и реализации проектов
+                                        устойчивого
+                                        развития в Узбекистане.</p>
+                                    <button class="btn">Подробно <img src="./assets/images/arrownextwhite.svg" alt=""
+                                            width="18" height="18"></button>
                                 </div>
-                                <h4>Встреча участников программы «Эл‑юрт умиди» с представителями ООН</h4>
-                                <p>Стипендиаты фонда обсудили перспективы сотрудничества и реализации проектов
-                                    устойчивого
-                                    развития в Узбекистане.</p>
-                                <button class="btn">Подробно <img src="./assets/images/arrownextwhite.svg" alt=""
-                                        width="18" height="18"></button>
                             </div>
-                        </div>
 
-                        <div class="newscard">
-                            <div class="image-wrapper">
-                                <img class="newscard-img" src="./assets/images/newscard-img-1.png" width="493"
-                                    height="247" alt="">
-                            </div>
-                            <div class="newscard-data">
-
-                                <div class="details">
-                                    <span>
-                                        <img src="./assets/images/calendar.svg" alt="" width="22" height="22">
-                                        <p>9 мая 2025 г</p>
-                                    </span>
-                                    <span>
-                                        <img src="./assets/images/views.svg" alt="" width="22" height="22">
-                                        <p>85</p>
-                                    </span>
+                            <div class="newscard">
+                                <div class="image-wrapper">
+                                    <img class="newscard-img" src="./assets/images/newscard-img-1.png" width="493"
+                                        height="247" alt="">
                                 </div>
-                                <h4>Встреча участников программы «Эл‑юрт умиди» с представителями ООН</h4>
-                                <p>Стипендиаты фонда обсудили перспективы сотрудничества и реализации проектов
-                                    устойчивого
-                                    развития в Узбекистане.</p>
-                                <button class="btn">Подробно <img src="./assets/images/arrownextwhite.svg" alt=""
-                                        width="18" height="18"></button>
-                            </div>
-                        </div>
+                                <div class="newscard-data">
 
-                        <div class="newscard">
-                            <div class="image-wrapper">
-                                <img class="newscard-img" src="./assets/images/newscard-img-1.png" width="493"
-                                    height="247" alt="">
-                            </div>
-                            <div class="newscard-data">
-
-                                <div class="details">
-                                    <span>
-                                        <img src="./assets/images/calendar.svg" alt="" width="22" height="22">
-                                        <p>9 мая 2025 г</p>
-                                    </span>
-                                    <span>
-                                        <img src="./assets/images/views.svg" alt="" width="22" height="22">
-                                        <p>85</p>
-                                    </span>
+                                    <div class="details">
+                                        <span>
+                                            <img src="./assets/images/calendar.svg" alt="" width="22" height="22">
+                                            <p>9 мая 2025 г</p>
+                                        </span>
+                                        <span>
+                                            <img src="./assets/images/views.svg" alt="" width="22" height="22">
+                                            <p>85</p>
+                                        </span>
+                                    </div>
+                                    <h4>Встреча участников программы «Эл‑юрт умиди» с представителями ООН</h4>
+                                    <p>Стипендиаты фонда обсудили перспективы сотрудничества и реализации проектов
+                                        устойчивого
+                                        развития в Узбекистане.</p>
+                                    <button class="btn">Подробно <img src="./assets/images/arrownextwhite.svg" alt=""
+                                            width="18" height="18"></button>
                                 </div>
-                                <h4>Встреча участников программы «Эл‑юрт умиди» с представителями ООН</h4>
-                                <p>Стипендиаты фонда обсудили перспективы сотрудничества и реализации проектов
-                                    устойчивого
-                                    развития в Узбекистане.</p>
-                                <button class="btn">Подробно <img src="./assets/images/arrownextwhite.svg" alt=""
-                                        width="18" height="18"></button>
                             </div>
-                        </div>
 
+                            <div class="newscard">
+                                <div class="image-wrapper">
+                                    <img class="newscard-img" src="./assets/images/newscard-img-1.png" width="493"
+                                        height="247" alt="">
+                                </div>
+                                <div class="newscard-data">
+
+                                    <div class="details">
+                                        <span>
+                                            <img src="./assets/images/calendar.svg" alt="" width="22" height="22">
+                                            <p>9 мая 2025 г</p>
+                                        </span>
+                                        <span>
+                                            <img src="./assets/images/views.svg" alt="" width="22" height="22">
+                                            <p>85</p>
+                                        </span>
+                                    </div>
+                                    <h4>Встреча участников программы «Эл‑юрт умиди» с представителями ООН</h4>
+                                    <p>Стипендиаты фонда обсудили перспективы сотрудничества и реализации проектов
+                                        устойчивого
+                                        развития в Узбекистане.</p>
+                                    <button class="btn">Подробно <img src="./assets/images/arrownextwhite.svg" alt=""
+                                            width="18" height="18"></button>
+                                </div>
+                            </div>
+
+                            <div class="newscard">
+                                <div class="image-wrapper">
+                                    <img class="newscard-img" src="./assets/images/newscard-img-1.png" width="493"
+                                        height="247" alt="">
+                                </div>
+                                <div class="newscard-data">
+
+                                    <div class="details">
+                                        <span>
+                                            <img src="./assets/images/calendar.svg" alt="" width="22" height="22">
+                                            <p>9 мая 2025 г</p>
+                                        </span>
+                                        <span>
+                                            <img src="./assets/images/views.svg" alt="" width="22" height="22">
+                                            <p>85</p>
+                                        </span>
+                                    </div>
+                                    <h4>Встреча участников программы «Эл‑юрт умиди» с представителями ООН</h4>
+                                    <p>Стипендиаты фонда обсудили перспективы сотрудничества и реализации проектов
+                                        устойчивого
+                                        развития в Узбекистане.</p>
+                                    <button class="btn">Подробно <img src="./assets/images/arrownextwhite.svg" alt=""
+                                            width="18" height="18"></button>
+                                </div>
+                            </div>
+
+                            <div class="newscard">
+                                <div class="image-wrapper">
+                                    <img class="newscard-img" src="./assets/images/newscard-img-1.png" width="493"
+                                        height="247" alt="">
+                                </div>
+                                <div class="newscard-data">
+
+                                    <div class="details">
+                                        <span>
+                                            <img src="./assets/images/calendar.svg" alt="" width="22" height="22">
+                                            <p>9 мая 2025 г</p>
+                                        </span>
+                                        <span>
+                                            <img src="./assets/images/views.svg" alt="" width="22" height="22">
+                                            <p>85</p>
+                                        </span>
+                                    </div>
+                                    <h4>Встреча участников программы «Эл‑юрт умиди» с представителями ООН</h4>
+                                    <p>Стипендиаты фонда обсудили перспективы сотрудничества и реализации проектов
+                                        устойчивого
+                                        развития в Узбекистане.</p>
+                                    <button class="btn">Подробно <img src="./assets/images/arrownextwhite.svg" alt=""
+                                            width="18" height="18"></button>
+                                </div>
+                            </div>
+
+                        </div>
 
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section alliance">
+        <section id="alliance" class="section alliance">
             <div class="container">
                 <div class="inner-wrapper">
                     <span>ПАРТНЁРЫ</span>
-                    <h3>Альянс <span class="highlight-title"> Партнёры</span></h3>
+                    <h2>Альянс <span class="highlight-title"> Партнёры</span></h2>
                     <p>Наши партнеры — это компании и организации, с которыми мы строим
                         долгосрочные и взаимовыгодные
                         отношения. Благодаря партнерству мы реализуем масштабные проекты и достигаем высоких
@@ -671,7 +673,7 @@
                             <img src="./assets/images/click-logo.png" width="200" height="51" alt="">
                         </div>
                         <div class="slide">
-                            <img src="./assets/images/uzcard-logo.png" width="200" height="51" alt="">
+                            <img src="./assets/images/uzcard-logo.png" width="200" height="auto" alt="">
                         </div>
                         <div class="slide">
                             <img src="./assets/images/uzum-logo.png" width="200" height="57" alt="">
@@ -684,12 +686,12 @@
             </div>
         </section>
 
-        <section class="section partners">
+        <section id="partners" class="section partners">
             <div class="container">
                 <div class="inner-wrapper">
                     <div>
                         <span>ПАРТНЁРЫ</span>
-                        <h3>Альянс <span class="highlight-title"> Партнёры</span></h3>
+                        <h2>Университеты<span class="highlight-title"> Партнёры</span></h2>
                     </div>
                     <div class="horizontal-carousel">
                         <div class="slider-track">
@@ -722,9 +724,9 @@
                 </div>
         </section>
 
-        <section class="section faq">
+        <section id="faq" class="section faq">
             <div class="container">
-                <h3>Часто <span>задаваемые вопросы</span></h3>
+                <h2>Часто <span>задаваемые вопросы</span></h2>
 
                 <div class="faq-wrapper">
 
@@ -794,11 +796,11 @@
             </div>
         </section>
 
-        <section class="section contact">
+        <section id="contact" class="section contact">
             <div class="container">
                 <div class="contact-wrapper">
                     <div class="form-section">
-                        <h3>Есть вопросы?</h3>
+                        <h2>Есть вопросы?</h2>
                         <p class="body-text-3">Свяжитесь с нами — мы всегда на связи и готовы помочь</p>
 
                         <div class="form-grid">
