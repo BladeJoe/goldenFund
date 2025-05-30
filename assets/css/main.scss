@@ -1370,6 +1370,16 @@ main {
                 height: 474px;
                 position: relative;
 
+                @media (max-width:768px) {
+                    height: auto;
+                }
+
+                > img {
+                    @media (max-width:768px) {
+                        width: 100%;
+                    }
+                }
+
                 .inner-wrapper {
                     width: 396px;
                     border-radius: 99px;
@@ -1386,6 +1396,11 @@ main {
                     align-items: center;
                     justify-content: start;
                     gap: 10px;
+
+                    @media (max-width:768px) {
+                        transform: scale(0.5) translateX(-100%);
+                        bottom: 0;
+                    }
 
                     .inner-text-wrapper {
                         display: flex;
@@ -1481,6 +1496,7 @@ main {
 .news {
     .container {
         padding: 120px 16px;
+        width: 100%;
 
         .inner-wrapper {
             span {
@@ -1519,7 +1535,7 @@ main {
                 flex-wrap: wrap;
                 justify-content: center;
                 clip-path: inset(1px);
-                gap: -1px;
+                margin: 0 auto;
 
                 .newscard {
                     width: 533px;
@@ -1678,11 +1694,12 @@ main {
         max-width: 1600px;
         border-radius: 20px;
         background: var(--partners-gdnt);
-        height: 100%;
-        height: 484px;
+
+        min-height: 484px;
         padding: 60px;
         display: flex;
         flex-direction: row;
+
         position: relative;
         overflow: hidden;
 
@@ -1692,7 +1709,7 @@ main {
             max-width: 732px;
             justify-content: space-between;
             align-items: start;
-            height: 100%;
+            z-index: 4;
 
             h3 {
                 @extend h4;
@@ -1709,6 +1726,7 @@ main {
             }
 
             p {
+                padding-bottom: 20px;
                 font-size: 18px;
             }
 
@@ -1719,17 +1737,26 @@ main {
                 font-size: 19px;
                 gap: 8px;
             }
+
+            @media (max-width: 1124px) {
+                justify-content: space-between;
+                align-items: center;
+                text-align: center;
+                max-width: 100%;
+
+                h3 {
+                    padding-bottom: 200px;
+                }
+            }
+
         }
 
         .vertical-carousel1 {
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            align-items: center;
             position: absolute;
             gap: 20px;
-            left: calc(50% + 214px);
+            right: 60px;
             top: 0;
+            z-index: 1;
             height: 484px;
 
             .slider-track {
@@ -1746,9 +1773,25 @@ main {
                 border: 1px solid #ffffff33;
                 display: flex;
                 justify-content: center;
+                flex-direction: column;
                 align-items: center;
                 flex-shrink: 0;
             }
+
+            @media (max-width: 1124px) {
+                top: 165px;
+                height: auto;
+
+                .slider-track {
+                    flex-direction: row;
+                    animation: scroll-horizontal 10s linear infinite alternate;
+                }
+            }
+
+            @media (max-width: 598px) {
+                top: 220px;
+            }
+
         }
 
         .vertical-carousel2 {
@@ -1758,9 +1801,13 @@ main {
             align-items: center;
             position: absolute;
             gap: 20px;
-            left: calc(50% + 484px);
+            right: 330px;
             top: 0;
             height: 484px;
+
+            @media (max-width: 1400px) {
+                display: none;
+            }
 
             .slider-track {
                 display: flex;
@@ -1788,6 +1835,16 @@ main {
 
             100% {
                 transform: translateY(-50%);
+            }
+        }
+
+        @keyframes scroll-horizontal {
+            0% {
+                transform: translateX(83%);
+            }
+
+            100% {
+                transform: translateX(-40%);
             }
         }
 
@@ -1878,22 +1935,27 @@ main {
                 display: flex;
                 justify-content: end;
                 align-items: center;
+
                 position: relative;
             }
 
-            @media (max-width: 960px) {
+            @media (max-width: 1024px) {
                 .contact-container {
                     flex-direction: column;
+                    position: relative;
                 }
 
                 .graphic-section {
-                    display: none;
+                    width: 0;
                 }
 
-                .placeholder-graphic {
-                    width: 100%;
-                    height: 100%;
-                    border-radius: 0;
+                .graphic-section img {
+                    position: absolute;
+                    opacity: .12;
+                    right: 0;
+                    top: 0;
+                    width: 100vw;
+
                 }
 
                 .form-section {
