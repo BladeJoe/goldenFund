@@ -8,7 +8,10 @@
     <meta name="author" content="xbm" />
     <meta name="description" content="Golden Fund of Nation" />
     <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon" />
-    <link href="./assets/css/aos.css" rel="stylesheet">
+    <link rel="preload" href="./assets/css/aos.css">
+    <link rel="preload" href="./assets/css/main.css">
+    <link rel="preload" href="./videos/slider.mp4" as="video">
+    <link rel="stylesheet" href="./assets/css/aos.css">
     <link rel="stylesheet" href="./assets/css/main.css" />
 </head>
 
@@ -108,9 +111,10 @@
 
     <main class="main">
 
-        <section class="section hero" data-aos="fade-zoom-in" data-aos-duration="1000">
+        <section class="section hero" data-aos="fade-zoom-in">
             <div class="video-wrapper">
-                <video id="video" autoplay loop muted preload="auto">
+                <video id="video" autoplay loop muted preload="auto" poster="./assets/images/hero-poster.jpg">
+                    <source src="./assets/videos/slider-mobile.mp4" type="video/mp4" media="(max-width: 768px)">
                     <source src="./assets/videos/slider.mp4" type="video/mp4">
                 </video>
                 <div class="video-overlay"></div>

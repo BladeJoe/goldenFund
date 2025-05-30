@@ -499,6 +499,28 @@ main {
 
 }
 
+.hero::before {
+    content: "";
+    background-image: url("./../images/footerbefore.svg");
+    width: 120px;
+    height: 240px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-960px, -50%);
+}
+
+.hero::after {
+    content: "";
+    background-image: url("./../images/footerafter.svg");
+    width: 120px;
+    height: 240px;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate(960px, -50%);
+}
+
 .hero {
     max-height: 1100px;
     // min-height: calc(100vh - 52px); // OPTIONAL
