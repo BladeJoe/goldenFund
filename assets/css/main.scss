@@ -8,6 +8,7 @@
     --black7: #F0F1F5;
     --black8: #F6F7FB;
     --white: #ffffff;
+    --whiteish: #EAECF2;
 
     --blue1: #0B2556;
     --blue2: #1A3975;
@@ -92,6 +93,8 @@
 html {
     overflow-x: hidden;
 
+    height: 100%;
+
 }
 
 body {
@@ -102,6 +105,9 @@ body {
     overflow-x: hidden;
     font-family: "Lato", sans-serif;
     color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     ::selection {
         background: var(--blue6);
@@ -499,8 +505,7 @@ main {
     z-index: 3;
     display: flex;
     align-items: center;
-    backdrop-filter: blur(20px);
-    background: #07051C14;
+    background: var(--whiteish);
 
     @media (max-width: 739px) {
         top: 96px;
@@ -542,15 +547,13 @@ main {
                 align-items: center;
 
                 li a {
-                    color: var(--white);
+                    color: var(--text);
                 }
 
 
             }
 
             @media(max-width:1024px) {
-
-                // min-width: 533px;
 
                 ul {
                     flex-direction: column;
@@ -582,18 +585,15 @@ main {
             }
 
             .nav-btn {
-                background: #ffffff1a;
                 height: 48px;
+                background: var(--whiteish);
+
                 width: 48px;
                 border: 0;
-                backdrop-filter: blur(20px);
+                backdrop-filter: none;
 
                 &:hover {
                     opacity: 0.8;
-                }
-
-                &:active {
-                    opacity: 0.5;
                 }
             }
         }
@@ -688,6 +688,101 @@ main {
 
 
 }
+
+.nav.index {
+    backdrop-filter: blur(20px);
+    background: #07051C14;
+
+
+    .container {
+
+
+        .nav-main {
+            ul {
+
+                li a {
+                    color: var(--white);
+                }
+
+
+            }
+        }
+
+        .nav-buttons {
+            .nav-btn {
+                background: #ffffff1a;
+                backdrop-filter: blur(20px);
+            }
+        }
+
+        .nav-menu-wrapper {
+            background-color: var(--white);
+            color: var(--black1);
+
+            ul {
+
+
+                li {
+                    gap: 8px;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    position: relative;
+                    cursor: pointer;
+
+
+                    span {
+                        padding: 10px 0;
+                        color: var(--black2);
+                        display: flex;
+                        gap: 8px;
+                        align-items: center;
+                    }
+
+                    .nav-menu-inner-wrapper {
+                        position: absolute;
+                        top: 0;
+                        left: calc(50% + 88px);
+                        border-radius: 20px 16px;
+                        background-color: var(--white);
+                        color: var(--black1);
+                        padding: 10px;
+                        display: flex;
+                        flex-direction: column;
+                        max-width: 100vw;
+                        z-index: 6;
+
+                        @media (max-width:768px) {
+                            left: 0;
+                            transform: translate(10%, 50%);
+                        }
+
+                        li {
+                            width: 100%;
+                            padding: 10px;
+                            white-space: nowrap;
+
+                            a {
+                                color: var(--black2);
+                                display: flex;
+                                gap: 4px;
+                                align-items: center;
+
+                                &:hover {
+                                    text-decoration: 1px solid underline;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
 
 .hero::before {
     content: "";
@@ -2511,8 +2606,13 @@ main {
 .footer {
     background: var(--footer-gdnt);
     color: var(--white);
-    padding-top: 240px;
+    padding-top: 100px;
     position: relative;
+
+    &.index {
+        padding-top: 240px;
+
+    }
 
     @media(max-width:1024px) {
         padding-top: 180px;
@@ -2552,7 +2652,7 @@ main {
                     gap: 6px;
 
                     a {
-                        color: var(--blue5);
+                        color: var(--white);
                     }
                 }
 
