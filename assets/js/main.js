@@ -4,7 +4,7 @@ AOS.init()
 
 const menu = document.getElementById("navMenuWrapper")
 const allSubmenus = () => menu.querySelectorAll(".nav-menu-inner-wrapper")
-let timeoutDuration = window.innerWidth < 1280 ? 100000 : 500
+let timeoutDuration = window.innerWidth < 1280 ? 1000 : 500
 
 let closeTimeout
 let openTimeout
@@ -21,7 +21,7 @@ function faqActivate(e) {
 }
 
 window.addEventListener("resize", () => {
-    timeoutDuration = window.innerWidth < 1280 ? 100000 : 500
+    timeoutDuration = window.innerWidth < 1280 ? 1500 : 500
 
 })
 
@@ -94,4 +94,15 @@ function openNavMenu() {
 
         menu.dataset.listenerAdded = "true"
     }
+}
+
+function openSearchBar() {
+    document.querySelector('.nav-main').classList.add('hidden');
+    document.querySelector('.nav-search-wrapper').classList.remove('hidden');
+}
+function closeSearchBar() {
+    document.querySelector('.nav-main').classList.remove('hidden');
+    document.querySelector('.nav-search-wrapper').classList.add('hidden');
+    document.getElementById('nav-search-bar').value = '';
+
 }
