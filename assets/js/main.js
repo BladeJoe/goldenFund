@@ -4,7 +4,7 @@ AOS.init()
 
 const menu = document.getElementById("navMenuWrapper")
 const allSubmenus = () => menu.querySelectorAll(".nav-menu-inner-wrapper")
-let timeoutDuration = window.innerWidth < 1280 ? 100000 : 500
+let timeoutDuration = window.innerWidth < 1280 ? 3000 : 500
 
 let closeTimeout
 let openTimeout
@@ -17,37 +17,47 @@ function faqActivate(e) {
 }
 
 window.addEventListener("resize", () => {
-    timeoutDuration = window.innerWidth < 1280 ? 100000 : 500
+    timeoutDuration = window.innerWidth < 1280 ? 3000 : 500
 
 })
 
 document.querySelectorAll(".faq-item").forEach(el =>
     el.addEventListener("click", faqActivate)
 )
+function initAboutDropdownToggle() {
+    const trigger = document.querySelector('.nav-menu-about-dropdown')
+    const dropdown = document.querySelector('.nav-menu-about-wrapper')
+
+    if (!trigger || !dropdown) return
+
+    trigger.addEventListener('click', () => {
+        dropdown.classList.toggle('hidden')
+        menu.classList.add("hidden")
+    })
+}
+
+initAboutDropdownToggle()
 
 function openNavMenu() {
     menu.classList.toggle("hidden")
-
+    document.querySelector('.nav-menu-about-wrapper').classList.add('hidden')
     if (!menu.dataset.listenerAdded) {
         menu.addEventListener("mouseover", (e) => {
             const targetSpan = e.target.closest("li > span")
             if (targetSpan) {
-                clearTimeout(openTimeout)
-                openTimeout = setTimeout(() => {
-                    menu.classList.remove("hidden")
-                    const clickedLi = targetSpan.closest("li")
-                    const submenu = clickedLi?.querySelector(".nav-menu-inner-wrapper")
-                    if (submenu) {
-                        const submenuId = submenu.dataset.menuId || Date.now().toString()
-                        submenu.dataset.menuId = submenuId
-                        if (submenuId !== currentOpenMenuId) {
-                            allSubmenus().forEach(el => el.classList.add("hidden"))
-                            submenu.classList.remove("hidden")
-                            currentOpenMenuId = submenuId
-                        }
-                        if (!trackArea.includes(submenu)) trackArea.push(submenu)
+                menu.classList.remove("hidden")
+                const clickedLi = targetSpan.closest("li")
+                const submenu = clickedLi?.querySelector(".nav-menu-inner-wrapper")
+                if (submenu) {
+                    const submenuId = submenu.dataset.menuId || Date.now().toString()
+                    submenu.dataset.menuId = submenuId
+                    if (submenuId !== currentOpenMenuId) {
+                        allSubmenus().forEach(el => el.classList.add("hidden"))
+                        submenu.classList.remove("hidden")
+                        currentOpenMenuId = submenuId
                     }
-                }, 20)
+                    if (!trackArea.includes(submenu)) trackArea.push(submenu)
+                }
             } else {
                 clearTimeout(openTimeout)
             }
