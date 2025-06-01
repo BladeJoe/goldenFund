@@ -832,9 +832,14 @@ main {
     width: 84px;
     height: 167px;
     position: absolute;
-    left: 0;
+    left: 50%;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translate(-960px, -50%);
+
+    @media (min-width:1920px) {
+        left: 0;
+        transform: translateY(-50%);
+    }
 }
 
 .breadcrumbs {
@@ -847,7 +852,7 @@ main {
 
     .container {
         display: flex;
-        padding: 0;
+        padding: 0 0 0 16px;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
@@ -929,6 +934,11 @@ main {
     left: 50%;
     top: 50%;
     transform: translate(-960px, -50%);
+
+    @media (min-width:1920px) {
+        left: 0;
+        transform: translateY(-50%);
+    }
 }
 
 .hero::after {
@@ -1773,18 +1783,22 @@ main {
         background: url("./../images/member-bg-shadow.svg") no-repeat center center;
         background-size: cover;
         pointer-events: none;
-        right: calc(50% - 1360px);
+        transform: translateX(50%);
+        right: 0;
         opacity: 0.6;
+
     }
 
     .inner-wrapper::before {
         top: 0;
-        background-position: center bottom;
+        background-position: right bottom;
+
     }
 
     .inner-wrapper::after {
         bottom: 0;
-        background-position: center top;
+        background-position: right top;
+
     }
 
 
@@ -2721,6 +2735,11 @@ main {
     left: 50%;
     top: 50%;
     transform: translate(-960px, -50%);
+
+    @media (min-width:1920px) {
+        left: 0;
+        transform: translateY(-50%);
+    }
 }
 
 .footer::after {
@@ -2732,6 +2751,11 @@ main {
     right: 50%;
     top: 50%;
     transform: translate(960px, -50%);
+
+    @media (min-width:1920px) {
+        right: 0;
+        transform: translateY(-50%);
+    }
 }
 
 .footer {
