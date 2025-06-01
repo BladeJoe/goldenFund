@@ -9,7 +9,7 @@
     --black8: #F6F7FB;
     --white: #ffffff;
     --whiteish: #EAECF2;
-
+    --link: #9ca7bb;
     --blue1: #0B2556;
     --blue2: #1A3975;
     --blue3: #00538E;
@@ -266,6 +266,10 @@ a {
     -o-user-drag: none;
     -webkit-touch-callout: none;
     text-decoration: none;
+
+    &:hover {
+        text-decoration: 1px solid underline;
+    }
 }
 
 .subtitle-1 {
@@ -503,7 +507,6 @@ main {
 
 
 .nav {
-    position: absolute;
     top: 52px;
     width: 100%;
     z-index: 3;
@@ -645,6 +648,7 @@ main {
             padding: 10px;
             position: absolute;
             top: 32px;
+            z-index: 3;
             padding: 10px;
             left: calc(50% - 736px);
             border-radius: 20px 16px;
@@ -733,6 +737,7 @@ main {
     backdrop-filter: blur(20px);
     background: #07051C14;
 
+    position: absolute;
 
     .container {
 
@@ -821,12 +826,103 @@ main {
 
 }
 
+.breadcrumbs::before {
+    content: "";
+    background: url("./../images/breadcrumb-before.svg") center no-repeat;
+    width: 84px;
+    height: 167px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.breadcrumbs {
+    background-color: #0e2b5c;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    .container {
+        display: flex;
+        padding: 0;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .image {
+            position: relative;
+
+            .main,
+            .helper {
+
+                height: auto;
+
+                &:last-of-type {
+                    max-width: 550px;
+                    height: auto;
+                }
+            }
+
+            .helper {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+
+        .wrapper {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+
+        }
+
+        .breadcrumb {
+            .inner-wrapper {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+
+
+            a {
+                color: var(--link);
+                @extend .body-text-3;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            p {
+                color: white;
+                font-size: 16px;
+                @extend .body-text-3;
+                font-weight: 500;
+                text-decoration: none;
+            }
+
+            p:last-child {
+                font-size: 28px;
+                font-weight: 700;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+
 
 
 
 .hero::before {
     content: "";
-    background-image: url("./../images/footerbefore.svg");
+    background-image: url("./../images/patternleft.svg");
     width: 120px;
     height: 240px;
     position: absolute;
@@ -837,7 +933,7 @@ main {
 
 .hero::after {
     content: "";
-    background-image: url("./../images/footerafter.svg");
+    background-image: url("./../images/patternright.svg");
     width: 120px;
     height: 240px;
     position: absolute;
@@ -2409,6 +2505,8 @@ main {
 
 .faq {
     .container {
+        max-width: 1330px;
+
         h2 {
             color: var(--text);
             text-align: center;
@@ -2430,67 +2528,60 @@ main {
             background-color: var(--white);
             border: none;
             width: 100%;
-
-            * {
-                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            }
+            height: 68.8px;
+            overflow: hidden;
+            gap: 100px;
+            transition: height 0.3s ease;
 
             .question {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 width: 100%;
-
                 @extend .subtitle-2;
 
                 .plus {
                     font-size: 48px;
                     line-height: 28px;
-                    transition: transform 0.4s ease-in-out;
-                }
-
-                .plus.active {
-                    transform: rotate(-45deg);
+                    transition: transform 0.3s ease;
                 }
             }
 
             hr {
-                width: 0;
-                border-width: 0;
-                background-color: rgba(255, 255, 255, 1);
-                padding: 0;
                 margin: 0;
-                transition: width 0.4s ease, margin 0.4s ease, padding 0.4s ease;
-                transition-delay: 0.1s;
-
-                &.active {
-                    margin: 20px 0;
-                    padding: 0.5px;
-                    width: 100%;
-                    display: block;
-                }
+                padding: 0;
+                border: 0;
+                width: 0;
+                transition: margin 0.3s ease, border-color 0.3s ease, width 0.3s ease;
             }
 
             .answer {
                 @extend .body-text-2;
-                text-align: start;
-                height: 0;
-                overflow: hidden;
-                transition: height 0.4s ease, padding 0.3s ease;
-
-                &.active {
-                    height: 50px;
-                }
             }
 
             &.active {
                 background: var(--member-gdnt);
                 color: white;
-                transition: background 0.4s ease, color 0.4s ease;
+                gap: 0;
+                height: auto;
+
+                .question {
+                    .plus {
+                        transform: rotate(-45deg);
+                    }
+                }
+
+                hr {
+                    margin: 20px 0;
+                    border: 1px solid var(--link);
+                    width: 100%;
+                }
+
             }
         }
     }
 }
+
 
 .contact {
     margin-bottom: -160px;
@@ -2623,7 +2714,7 @@ main {
 
 .footer::before {
     content: "";
-    background-image: url("./../images/footerbefore.svg");
+    background-image: url("./../images/patternleft.svg");
     width: 120px;
     height: 240px;
     position: absolute;
@@ -2634,7 +2725,7 @@ main {
 
 .footer::after {
     content: "";
-    background-image: url("./../images/footerafter.svg");
+    background-image: url("./../images/patternright.svg");
     width: 120px;
     height: 240px;
     position: absolute;

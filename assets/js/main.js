@@ -4,7 +4,7 @@ AOS.init()
 
 const menu = document.getElementById("navMenuWrapper")
 const allSubmenus = () => menu.querySelectorAll(".nav-menu-inner-wrapper")
-let timeoutDuration = window.innerWidth < 1280 ? 1000 : 500
+let timeoutDuration = window.innerWidth < 1280 ? 100000 : 500
 
 let closeTimeout
 let openTimeout
@@ -12,16 +12,12 @@ let currentOpenMenuId = null
 let trackArea = [menu]
 
 function faqActivate(e) {
-    const item = e.currentTarget;
-    item.classList.toggle("active");
-    [...item.children].forEach(child => {
-        child.classList.toggle("active");
-        [...child.children].forEach(grandchild => grandchild.classList.toggle("active"));
-    });
+    e.currentTarget.classList.toggle("active");
+
 }
 
 window.addEventListener("resize", () => {
-    timeoutDuration = window.innerWidth < 1280 ? 1500 : 500
+    timeoutDuration = window.innerWidth < 1280 ? 100000 : 500
 
 })
 
@@ -95,6 +91,9 @@ function openNavMenu() {
         menu.dataset.listenerAdded = "true"
     }
 }
+
+// searchbar
+
 
 function openSearchBar() {
     document.querySelector('.nav-main').classList.add('hidden');
