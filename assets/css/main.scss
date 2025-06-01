@@ -110,12 +110,12 @@ body {
     justify-content: space-between;
 
     ::selection {
-        background: var(--blue6);
+        background: var(--yellow);
         color: var(--white);
     }
 
     ::-moz-selection {
-        background: var(--blue6);
+        background: var(--yellow);
         color: var(--white);
     }
 }

@@ -208,17 +208,39 @@
 
     <style>
         .section.login {
-            padding: 120px 0;
+            padding: 80px 20px;
+            position: relative;
+        }
+
+        .login::before {
+            content: "";
+            background: url("./assets/images/login-pattern-before.png") no-repeat;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 0;
+        }
+
+        .login::after {
+            content: "";
+            background: url("./assets/images/login-pattern-after.svg") no-repeat right top;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 0;
         }
 
         p,
         h3 {
             color: black;
-
         }
 
         .login-container {
-            max-width: 1000px;
+            max-width: 920px;
             margin: 0 auto;
             text-align: center;
         }
@@ -235,25 +257,27 @@
 
         .wrapper {
             display: flex;
+            flex-wrap: wrap-reverse;
+            justify-content: center;
             background: #f5f7fa;
             border-radius: 12px;
             overflow: hidden;
-            height: 400px;
             font-size: 19px;
+            gap: 16px;
         }
 
-        .wrapper * {
-            font-size: 19px;
+        .form-box,
+        .info-box {
+            flex: 1 1 100%;
+            max-width: 100%;
+            background: #fff;
+            padding: 10px;
         }
 
         .form-box {
-            flex: 1;
-            padding: 10px;
-            background: #fff;
             display: flex;
             flex-direction: column;
             position: relative;
-            width: 450px;
         }
 
         .tabs {
@@ -276,8 +300,7 @@
             transition: transform 0.4s ease;
             z-index: 0;
             border-radius: 8px;
-            box-shadow: 0px 2px 8px 0px rgba(16, 44, 87, 0.2);
-
+            box-shadow: 0px 2px 8px rgba(16, 44, 87, 0.2);
         }
 
         .tabs button {
@@ -288,7 +311,6 @@
             cursor: pointer;
             position: relative;
             z-index: 1;
-            text-align: center;
             font-weight: 500;
             display: flex;
             justify-content: center;
@@ -308,9 +330,6 @@
         }
 
         .tab-content {
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
             opacity: 0;
             color: lightslategrey;
@@ -345,12 +364,16 @@
 
         .login-btn {
             background: linear-gradient(180deg, #1C84CF 0%, #0F6DB2 100%);
-            color: var(--white);
+            color: white;
             padding: 12px;
             border: none;
             border-radius: 6px;
             cursor: pointer;
             width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 19px;
         }
 
         .register-link {
@@ -361,27 +384,43 @@
         }
 
         .info-box {
-            width: 50%;
             position: relative;
             overflow: hidden;
+            background: #004c99;
+            border-radius: 20px;
+            color: #fff;
+            padding: 0;
         }
 
         .bg-carousel {
             display: flex;
             width: 400%;
             height: 100%;
-            transition: transform 0.6s ease;
+            transition: transform 0.4s ease;
         }
 
         .slide {
             width: 25%;
-            background: #004c99;
-            color: #fff;
+            min-height: 200px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             padding: 30px;
+            position: relative;
+            z-index: 1;
+            background: linear-gradient(270deg, #254D9A 0%, #1A3975 100%);
+
+        }
+
+        .slide::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                url("./assets/images/login-bg-pattern.svg") repeat;
+            opacity: 0.03;
+            z-index: -1;
         }
 
         .slide .logo {
@@ -392,13 +431,53 @@
         }
 
         .slide p {
-            font-size: 16px;
-            line-height: 1.5;
+            font-size: 19px;
+            line-height: 1.3;
+            font-weight: 500;
             text-align: center;
+            color: white;
         }
 
         .slide strong {
-            color: #76c0ff;
+            color: linear-gradient(180deg, #68C0FF 50.39%, #1C84CF 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+            font-size: 32px;
+        }
+
+        @media (min-width: 768px) {
+
+            .form-box,
+            .info-box {
+                flex: 1 1 45%;
+                max-width: 452px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .tabs button {
+                font-size: 14px;
+                padding: 8px 4px;
+            }
+
+            .tab-content label,
+            .tab-content input {
+                font-size: 16px;
+            }
+
+            .tab-content input {
+                padding: 10px;
+            }
+
+            .login-btn {
+                padding: 10px;
+            }
+
+            .wrapper {
+                gap: 8px;
+            }
         }
     </style>
 
