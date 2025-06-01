@@ -13,201 +13,447 @@
 </head>
 
 <body>
-    <div>
-        <header class="header">
-            <div class="container">
-                <div class="inner-container">
-                    <div class="contacts">
-                        <a href="tel:+998712024111">
-                            <img src="./assets/images/call.svg" alt="" aria-label="call">
-                            <span>+998 71 202 41 11</span>
-                        </a>
-                        </li>
-                        <div class="divider"></div>
-                        <a href="mailto:info@newuu.uz">
-                            <img src="assets/images/mail.svg" alt="" aria-label="email">
-                            <span>info@newuu.uz</span>
-                        </a>
+    <header class="header">
+        <div class="container">
+            <div class="inner-container">
+                <div class="contacts">
+                    <a href="tel:+998712024111">
+                        <img src="./assets/images/call.svg" alt="" aria-label="call">
+                        <span>+998 71 202 41 11</span>
+                    </a>
+                    </li>
+                    <div class="divider"></div>
+                    <a href="mailto:info@newuu.uz">
+                        <img src="assets/images/mail.svg" alt="" aria-label="email">
+                        <span>info@newuu.uz</span>
+                    </a>
+                </div>
+                <div class="accessibility">
+
+                    <a href="#" aria-label="Increase visibility">
+                        <img src="./assets/images/visibility.svg" width="22" height="22" alt="">
+                    </a>
+                    <a href="#" aria-label="Mobile version">
+                        <img src="./assets/images/smartphone.svg" width="22" height="22" alt="">
+                    </a>
+                    <a href="#" aria-label="Read aloud">
+                        <img src="./assets/images/readaloud.svg" width="22" height="22" alt="">
+                    </a>
+                    <div class="divider"></div>
+                    <a href="#" aria-label="Instagram">
+                        <img src="./assets/images/instagram.svg" width="22" height="22" alt="">
+                    </a>
+                    <a href="#" aria-label="Telegram">
+                        <img src="./assets/images/telegram.svg" width="22" height="22" alt="">
+                    </a>
+                    <a href="#" aria-label="YouTube">
+                        <img src="./assets/images/youtube.svg" width="22" height="22" alt="">
+                    </a>
+                    <a href="#" aria-label="Facebook">
+                        <img src="./assets/images/facebook.svg" width="22" height="22" alt="">
+                    </a>
+                    <div class="divider"></div>
+                    <div>
+
+                        <label for="language" class="sr-only">язык</label>
+                        <select name="lang" id="language">
+                            <option value="ru">🇷🇺 RUS</option>
+                            <option value="uz">🇺🇿 UZB</option>
+                        </select>
                     </div>
-                    <div class="accessibility">
+                </div>
+            </div>
 
-                        <a href="#" aria-label="Increase visibility">
-                            <img src="./assets/images/visibility.svg" width="22" height="22" alt="">
-                        </a>
-                        <a href="#" aria-label="Mobile version">
-                            <img src="./assets/images/smartphone.svg" width="22" height="22" alt="">
-                        </a>
-                        <a href="#" aria-label="Read aloud">
-                            <img src="./assets/images/readaloud.svg" width="22" height="22" alt="">
-                        </a>
-                        <div class="divider"></div>
-                        <a href="#" aria-label="Instagram">
-                            <img src="./assets/images/instagram.svg" width="22" height="22" alt="">
-                        </a>
-                        <a href="#" aria-label="Telegram">
-                            <img src="./assets/images/telegram.svg" width="22" height="22" alt="">
-                        </a>
-                        <a href="#" aria-label="YouTube">
-                            <img src="./assets/images/youtube.svg" width="22" height="22" alt="">
-                        </a>
-                        <a href="#" aria-label="Facebook">
-                            <img src="./assets/images/facebook.svg" width="22" height="22" alt="">
-                        </a>
-                        <div class="divider"></div>
-                        <div>
+        </div>
+    </header>
 
-                            <label for="language" class="sr-only">язык</label>
-                            <select name="lang" id="language">
-                                <option value="ru">🇷🇺 RUS</option>
-                                <option value="uz">🇺🇿 UZB</option>
-                            </select>
+    <nav class="nav  ">
+        <div class="container nav-container">
+
+            <div class="nav-buttons">
+                <button class="btn nav-btn " id="nav-menu" onclick="openNavMenu()" aria-label="Open navigation">
+                    <img id="menuIcon" alt="menu icon" height="20" width="20">
+                    <script>
+                        document.getElementById('menuIcon').src =
+                            location.pathname === '/' || location.pathname === '' || location.pathname === '/index.html'
+                                ? './assets/images/menudots-light.svg'
+                                : './assets/images/menudots-dark.svg';
+                    </script>
+
+                </button>
+            </div>
+            <label for="menu-item" class="sr-only">123</label>
+            <div class="nav-menu-wrapper hidden" id="navMenuWrapper">
+                <ul>
+                    <li>
+                        <span>O сообществе
+                            <img src="./assets/images/arrownext.svg" width="11" height="11" alt="" />
+                        </span>
+                        <ul class="nav-menu-inner-wrapper hidden">
+                            <li>
+                                <a href="./about-platform.html">О платформe<img src="./assets/images/arrownext.svg"
+                                        width="11" height="11" alt="" /></a>
+                            </li>
+                            <li>
+                                <a href="./about-history.html">История<img src="./assets/images/arrownext.svg"
+                                        width="11" height="11" alt="" /></a>
+                            </li>
+                            <li>
+                                <a href="./about-mission.html">Миссия, цели, ценности<img
+                                        src="./assets/images/arrownext.svg" width="11" height="11" alt="" /></a>
+                            </li>
+                            <li>
+                                <a href="./about-structure.html">Полный состав и структура<img
+                                        src="./assets/images/arrownext.svg" width="11" height="11" alt="" /></a>
+                            </li>
+                            <li>
+                                <a href="./about-exec.html">Исполнительный офис<img src="./assets/images/arrownext.svg"
+                                        width="11" height="11" alt="" /></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>Контакты
+                            <img src="./assets/images/arrownext.svg" width="11" height="11" alt="" />
+                        </span>
+                        <ul class="nav-menu-inner-wrapper hidden">
+                            <li><a href="./faq.html">FAQ<img src="./assets/images/arrownext.svg" width="11" height="11"
+                                        alt="" /></a></li>
+                            <li><a href="#">Номер телефона<img src="./assets/images/arrownext.svg" width="11"
+                                        height="11" alt="" /></a></li>
+                            <li><a href="#">Адрес<img src="./assets/images/arrownext.svg" width="11" height="11"
+                                        alt="" /></a></li>
+                            <li><a href="#">Социальные сети<img src="./assets/images/arrownext.svg" width="11"
+                                        height="11" alt="" /></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav-main">
+                <ul class="left">
+                    <li>
+                        <span class="nav-menu-about-dropdown">O сообществе
+                            <img src="./../assets/images/arrownext.svg" width="11" height="11" alt="" />
+                        </span>
+                        <ul class="nav-menu-about-wrapper hidden">
+                            <li>
+                                <a href="./about-platform.html">О платформe<img src="./../assets/images/arrownext.svg"
+                                        width="11" height="11" alt="" /></a>
+                            </li>
+                            <li>
+                                <a href="./about-history.html">История<img src="./../assets/images/arrownext.svg"
+                                        width="11" height="11" alt="" /></a>
+                            </li>
+                            <li>
+                                <a href="./about-mission.html">Миссия, цели, ценности<img
+                                        src="./../assets/images/arrownext.svg" width="11" height="11" alt="" /></a>
+                            </li>
+                            <li>
+                                <a href="./about-structure.html">Полный состав и структура<img
+                                        src="./../assets/images/arrownext.svg" width="11" height="11" alt="" /></a>
+                            </li>
+                            <li>
+                                <a href="./about-exec.html">Исполнительный офис<img
+                                        src="./../assets/images/arrownext.svg" width="11" height="11" alt="" /></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="./../news.html">Новости</a>
+                    </li>
+                    <li>
+                        <a href="./../members.html">Члены</a>
+                    </li>
+                </ul>
+                <a href="/"><img src="./assets/images/president-school-logo.png" width="140" height="140" alt=""
+                        class="nav-logo"></a>
+
+                <ul class="right">
+                    <li><a href="./alliance-partners.html">Альянс партнёры</a></li>
+                    <li><a href="./contact.html">Контакты</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-buttons nav-right">
+                <button class="btn nav-btn searchIcon " onclick="openSearchBar()" aria-label="Search website">
+                    <img id="magnifierIcon" alt="search icon" height="20" width="20">
+                    <script>
+                        document.getElementById('magnifierIcon').src =
+                            location.pathname === '/' || location.pathname === '' || location.pathname === '/index.html'
+                                ? './assets/images/magnifier-light.svg'
+                                : './assets/images/magnifier-dark.svg';
+                    </script>
+
+                </button>
+
+                <a class="btn" aria-label="Cabinet" href="login.html">
+                    <img src="./assets/images/profile.svg" width="22" height="22" alt="">
+                    Кабинет
+                </a>
+            </div>
+
+        </div>
+
+        <div class="nav-search-wrapper hidden">
+            <div class="container">
+
+                <input type="text" class="nav-search-bar" name="nav-search-bar" id="nav-search-bar" placeholder="search"
+                    value="">
+                <button class="nav-close-btn" onclick="closeSearchBar()">✖️
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <style>
+        .section.login {
+            padding: 120px 0;
+        }
+
+        p,
+        h3 {
+            color: black;
+            
+        }
+
+        .login-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .login-container h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .login-container p {
+            margin-bottom: 30px;
+            color: #666;
+        }
+
+        .wrapper {
+            display: flex;
+            background: #f5f7fa;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 400px;
+            font-size: 19px;
+        }
+
+        .wrapper * {
+            font-size: 19px;
+        }
+
+        .form-box {
+            flex: 1;
+            padding: 10px;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            width: 450px;
+        }
+
+        .tabs {
+            display: flex;
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #e9e9e9;
+            padding: 4px 0;
+        }
+
+        .tabs::before {
+            content: '';
+            position: absolute;
+            margin: 4px;
+            top: 0;
+            bottom: 0;
+            width: 25%;
+            background: #fff;
+            transition: transform 0.4s ease;
+            z-index: 0;
+            border-radius: 8px;
+            box-shadow: 0px 2px 8px 0px rgba(16, 44, 87, 0.2);
+
+        }
+
+        .tabs button {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            transition: color 0.3s ease;
+        }
+
+        .tabs button.active {
+            color: #007bdb;
+            font-weight: 600;
+        }
+
+        .tab-contents {
+            position: relative;
+            flex: 1;
+        }
+
+        .tab-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            color: lightslategrey;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: opacity 0.4s ease, transform 0.4s ease, visibility 0s linear 0.4s;
+        }
+
+        .tab-content.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            transition-delay: 0s;
+            z-index: 1;
+        }
+
+        .tab-content label {
+            display: block;
+            text-align: left;
+            margin: 10px 0 5px;
+            font-size: 18px;
+        }
+
+        .tab-content input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        .login-btn {
+            background: linear-gradient(180deg, #1C84CF 0%, #0F6DB2 100%);
+            color: var(--white);
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .register-link {
+            display: block;
+            margin-top: 15px;
+            color: rgba(28, 132, 207, 1);
+            text-decoration: none;
+        }
+
+        .info-box {
+            width: 50%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bg-carousel {
+            display: flex;
+            width: 400%;
+            height: 100%;
+            transition: transform 0.6s ease;
+        }
+
+        .slide {
+            width: 25%;
+            background: #004c99;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+
+        .slide .logo {
+            width: 100px;
+            height: 100px;
+            background: url('./assets/images/president-school-logo.png') center/contain no-repeat;
+            margin-bottom: 20px;
+        }
+
+        .slide p {
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .slide strong {
+            color: #76c0ff;
+        }
+    </style>
+
+    <main class="main">
+        <section class="section login">
+            <div class="login-container">
+                <h3>Авторизоваться</h3>
+                <p>Выберите один из способов входа</p>
+                <div class="wrapper">
+                    <div class="form-box">
+                        <div class="tabs" id="tabWrapper">
+                            <button class="tab active">Логин</button>
+                            <button class="tab">One ID</button>
+                            <button class="tab">ЭЦП</button>
+                            <button class="tab">QR-код</button>
+                        </div>
+                        <div class="tab-contents">
+                            <form class="tab-content active">
+                                <label>Логин:</label>
+                                <input type="text" placeholder="Введите" />
+                                <label>Пароль:</label>
+                                <input type="password" placeholder="Введите" />
+                                <button type="submit" class="login-btn">Войти</button>
+                                <a href="#" class="register-link">Зарегистрироваться</a>
+                            </form>
+                            <div class="tab-content">Форма One ID (пока пусто)</div>
+                            <div class="tab-content">Форма ЭЦП (пока пусто)</div>
+                            <div class="tab-content">Форма QR-код (пока пусто)</div>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <div class="bg-carousel" id="carousel">
+                            <div class="slide">
+                                <div class="logo"></div>
+                                <p>Президентское сообщество поддержки<br /><strong>Одаренной Молодежи</strong></p>
+                            </div>
+                            <div class="slide">
+                                <div class="logo"></div>
+                                <p>Вход через<br /><strong>One ID</strong></p>
+                            </div>
+                            <div class="slide">
+                                <div class="logo"></div>
+                                <p>Вход через<br /><strong>ЭЦП</strong></p>
+                            </div>
+                            <div class="slide">
+                                <div class="logo"></div>
+                                <p>Вход через<br /><strong>QR-код</strong></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-
             </div>
-        </header>
+        </section>
 
-        <nav class="nav  ">
-            <div class="container nav-container">
-
-                <div class="nav-buttons">
-                    <button class="btn nav-btn " id="nav-menu" onclick="openNavMenu()" aria-label="Open navigation">
-                        <img id="menuIcon" alt="menu icon" height="20" width="20">
-                        <script>
-                            document.getElementById('menuIcon').src =
-                                location.pathname === '/' || location.pathname === '' || location.pathname === '/index.html'
-                                    ? './assets/images/menudots-light.svg'
-                                    : './assets/images/menudots-dark.svg';
-                        </script>
-
-                    </button>
-                </div>
-                <label for="menu-item" class="sr-only">123</label>
-                <div class="nav-menu-wrapper hidden" id="navMenuWrapper">
-                    <ul>
-                        <li>
-                            <span>O сообществе
-                                <img src="./assets/images/arrownext.svg" width="11" height="11" alt="" />
-                            </span>
-                            <ul class="nav-menu-inner-wrapper hidden">
-                                <li>
-                                    <a href="./about-platform.html">О платформe<img src="./assets/images/arrownext.svg"
-                                            width="11" height="11" alt="" /></a>
-                                </li>
-                                <li>
-                                    <a href="./about-history.html">История<img src="./assets/images/arrownext.svg"
-                                            width="11" height="11" alt="" /></a>
-                                </li>
-                                <li>
-                                    <a href="./about-mission.html">Миссия, цели, ценности<img
-                                            src="./assets/images/arrownext.svg" width="11" height="11" alt="" /></a>
-                                </li>
-                                <li>
-                                    <a href="./about-structure.html">Полный состав и структура<img
-                                            src="./assets/images/arrownext.svg" width="11" height="11" alt="" /></a>
-                                </li>
-                                <li>
-                                    <a href="./about-exec.html">Исполнительный офис<img
-                                            src="./assets/images/arrownext.svg" width="11" height="11" alt="" /></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <span>Контакты
-                                <img src="./assets/images/arrownext.svg" width="11" height="11" alt="" />
-                            </span>
-                            <ul class="nav-menu-inner-wrapper hidden">
-                                <li><a href="./faq.html">FAQ<img src="./assets/images/arrownext.svg" width="11"
-                                            height="11" alt="" /></a></li>
-                                <li><a href="#">Номер телефона<img src="./assets/images/arrownext.svg" width="11"
-                                            height="11" alt="" /></a></li>
-                                <li><a href="#">Адрес<img src="./assets/images/arrownext.svg" width="11" height="11"
-                                            alt="" /></a></li>
-                                <li><a href="#">Социальные сети<img src="./assets/images/arrownext.svg" width="11"
-                                            height="11" alt="" /></a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="nav-main">
-                    <ul class="left">
-                        <li>
-                            <span class="nav-menu-about-dropdown">O сообществе
-                                <img src="./../assets/images/arrownext.svg" width="11" height="11" alt="" />
-                            </span>
-                            <ul class="nav-menu-about-wrapper hidden">
-                                <li>
-                                    <a href="./about-platform.html">О платформe<img
-                                            src="./../assets/images/arrownext.svg" width="11" height="11" alt="" /></a>
-                                </li>
-                                <li>
-                                    <a href="./about-history.html">История<img src="./../assets/images/arrownext.svg"
-                                            width="11" height="11" alt="" /></a>
-                                </li>
-                                <li>
-                                    <a href="./about-mission.html">Миссия, цели, ценности<img
-                                            src="./../assets/images/arrownext.svg" width="11" height="11" alt="" /></a>
-                                </li>
-                                <li>
-                                    <a href="./about-structure.html">Полный состав и структура<img
-                                            src="./../assets/images/arrownext.svg" width="11" height="11" alt="" /></a>
-                                </li>
-                                <li>
-                                    <a href="./about-exec.html">Исполнительный офис<img
-                                            src="./../assets/images/arrownext.svg" width="11" height="11" alt="" /></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="./../news.html">Новости</a>
-                        </li>
-                        <li>
-                            <a href="./../members.html">Члены</a>
-                        </li>
-                    </ul>
-                    <a href="/"><img src="./assets/images/president-school-logo.png" width="140" height="140" alt=""
-                            class="nav-logo"></a>
-
-                    <ul class="right">
-                        <li><a href="./alliance-partners.html">Альянс партнёры</a></li>
-                        <li><a href="./contact.html">Контакты</a></li>
-                    </ul>
-                </div>
-
-                <div class="nav-buttons nav-right">
-                    <button class="btn nav-btn searchIcon " onclick="openSearchBar()" aria-label="Search website">
-                        <img id="magnifierIcon" alt="search icon" height="20" width="20">
-                        <script>
-                            document.getElementById('magnifierIcon').src =
-                                location.pathname === '/' || location.pathname === '' || location.pathname === '/index.html'
-                                    ? './assets/images/magnifier-light.svg'
-                                    : './assets/images/magnifier-dark.svg';
-                        </script>
-
-                    </button>
-
-                    <a class="btn" aria-label="Cabinet" href="login.html">
-                        <img src="./assets/images/profile.svg" width="22" height="22" alt="">
-                        Кабинет
-                    </a>
-                </div>
-
-            </div>
-
-            <div class="nav-search-wrapper hidden">
-                <div class="container">
-
-                    <input type="text" class="nav-search-bar" name="nav-search-bar" id="nav-search-bar"
-                        placeholder="search" value="">
-                    <button class="nav-close-btn" onclick="closeSearchBar()">✖️
-                    </button>
-                </div>
-            </div>
-        </nav>
-    </div>
-
+    </main>
     <footer class="footer">
         <div class="container">
             <div class="footer-wrapper">
@@ -292,7 +538,35 @@
     <script src="./assets/js/aos.js"></script>
 
     <script src="./assets/js/main.js"></script>
+    <script>
+        const tabs = document.querySelectorAll('.tab');
+        const contents = document.querySelectorAll('.tab-content');
+        const carousel = document.getElementById('carousel');
+        const tabHighlight = document.querySelector('.tabs::before'); // obviously won't work; we move it manually
+        const tabsWrapper = document.getElementById('tabWrapper');
 
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                contents.forEach(c => c.classList.remove('active'));
+                tab.classList.add('active');
+                contents[index].classList.add('active');
+                carousel.style.transform = `translateX(-${index * 25}%)`;
+                tabsWrapper.style.setProperty('--tab-index', index);
+                document.querySelector('.tabs::before') // lol, not real
+            });
+        });
+
+        // dynamic moving tab background
+        const style = document.createElement('style');
+        style.innerHTML = `
+      .tabs::before {
+        transform: translateX(calc(var(--tab-index, 0) * 100%));
+      }
+    `;
+        document.head.appendChild(style);
+        tabsWrapper.style.setProperty('--tab-index', 0);
+    </script>
 </body>
 
 </html>
