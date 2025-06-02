@@ -70,15 +70,13 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    scroll-snap-type: y mandatory;
-
     scrollbar-width: thin;
+    scroll-behavior: smooth !important;
 
     &::before {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        scroll-behavior: smooth;
         scrollbar-width: thin;
     }
 
@@ -86,7 +84,6 @@
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        scroll-behavior: smooth;
         scrollbar-width: thin;
     }
 }
@@ -109,6 +106,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    scroll-snap-type: y proximity;
 
     ::selection {
         background: var(--yellow);
@@ -177,33 +175,31 @@ ol {
 
 h1 {
     line-height: 1;
-    font-weight: bold;
     font-size: 74px;
 }
 
 h2 {
     line-height: 1.2;
-    font-weight: bold;
     font-size: 40px;
 
+    span {
+        font-weight: bold;
+    }
 }
 
 h3 {
     line-height: 1.2;
-    font-weight: bold;
     font-size: 50px;
 }
 
 h4 {
     line-height: 1.2;
-    font-weight: bold;
     font-size: 50px;
 }
 
 h5 {
     line-height: 1.2;
     font-size: 40px;
-    font-weight: bold;
 }
 
 @media (max-width: 960px) {
@@ -396,7 +392,6 @@ a {
 
 .title-blue {
     color: var(--blue5);
-    font-weight: bold;
 }
 
 main {
@@ -1181,6 +1176,12 @@ main {
 
             span {
                 color: var(--blue5);
+            }
+
+            h2 {
+                font-weight: normal;
+
+
             }
 
             .btn-about {
