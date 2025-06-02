@@ -3133,7 +3133,7 @@ main {
 
             a {
                 color: var(--blue5);
-                font-size: 20px;
+                font-size: 18px;
                 text-decoration: underline 1px;
 
                 &:hover {
@@ -3144,6 +3144,8 @@ main {
             .social-icons {
                 display: flex;
                 gap: 8px;
+                margin-top: 8px;
+                flex-direction: row;
 
                 a {
                     display: flex;
@@ -3161,6 +3163,12 @@ main {
                 max-width: 388px;
                 width: 100%;
                 height: 150px;
+            }
+
+            div {
+                display: flex;
+                gap: 8px;
+                flex-direction: column;
             }
         }
 
