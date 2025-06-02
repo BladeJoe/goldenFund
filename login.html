@@ -11,6 +11,269 @@
     <link rel="stylesheet" href="./assets/css/aos.css">
     <link rel="stylesheet" href="./assets/css/main.css" />
 </head>
+<style>
+    .section.login {
+        padding: 80px 20px;
+        position: relative;
+    }
+
+    /* .login::before {
+            content: "";
+            background: url("./assets/images/login-pattern-before.png") no-repeat;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 0;
+        }
+
+        .login::after {
+            content: "";
+            background: url("./assets/images/login-pattern-after.svg") no-repeat right top;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 0;
+        } */
+
+    p,
+    h3 {
+        color: black;
+    }
+
+    .login-container {
+        max-width: 920px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .login-container h3 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .login-container p {
+        margin-bottom: 30px;
+        color: var(--black3);
+    }
+
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        background: #f5f7fa;
+        overflow: hidden;
+        font-size: 19px;
+        gap: 16px;
+    }
+
+    .form-box,
+    .info-box {
+        width: 452px;
+        height: 453px;
+        background: #fff;
+        border-radius: 20px;
+        padding: 10px;
+    }
+
+    .form-box {
+        display: flex;
+        padding: 16px;
+        flex-direction: column;
+    }
+
+    .tabs {
+        display: flex;
+        position: relative;
+        border-radius: 8px;
+        overflow: hidden;
+        background: #e9e9e9;
+        padding: 4px 0;
+    }
+
+    .tabs::before {
+        content: '';
+        position: absolute;
+        margin: 4px;
+        top: 0;
+        bottom: 0;
+        width: 25%;
+        background: #fff;
+        transition: transform 0.4s ease;
+        z-index: 0;
+        border-radius: 8px;
+        box-shadow: 0px 2px 8px rgba(16, 44, 87, 0.2);
+    }
+
+    .tabs button {
+        flex: 1;
+        padding: 10px;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        transition: color 0.3s ease;
+    }
+
+    .tabs button.active {
+        color: #007bdb;
+        font-weight: 600;
+    }
+
+    .tab-contents {
+        position: relative;
+        flex: 1;
+    }
+
+    .tab-content {
+        width: 100%;
+        color: var(--text);
+        display: none;
+        transition: opacity 0.4s ease, transform 0.4s ease, visibility 0s linear 0.4s;
+        justify-content: space-between;
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .tab-content.active {
+        display: flex;
+        transition-delay: 0s;
+        z-index: 1;
+    }
+
+    .tab-content label {
+        display: block;
+        text-align: left;
+        margin: 10px 0 5px;
+        font-size: 18px;
+    }
+
+    .tab-content input,
+    .tab-content select {
+        width: 100%;
+        padding: 12px;
+        font-size: 18px;
+        border: 1px solid var(--black7);
+        border-radius: 6px;
+        background-color: var(--black8);
+    }
+
+    .inner-wrapper-centered {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .login-btn {
+        background: linear-gradient(180deg, #1c84cf 0%, #0F6DB2 100%);
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 19px;
+        font-weight: 500;
+    }
+
+    .register-link {
+
+        display: block;
+        margin-top: 12px;
+        padding: 12px;
+        text-align: center;
+        color: rgba(28, 132, 207, 1);
+        background: rgba(28, 132, 207, 0.1);
+        text-decoration: none;
+
+    }
+
+    .info-box {
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(228.37deg, #254D9A 2.94%, #1A3975 97.06%);
+        border-radius: 20px;
+        width: 452px;
+        height: 453px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .info-box::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        background: url("./assets/images/login-bg-pattern.svg") repeat;
+        opacity: 3%;
+    }
+
+    .side p {
+        font-size: 19px;
+        line-height: 1.3;
+        font-weight: 500;
+        text-align: center;
+        color: white;
+    }
+
+    .side span {
+        color: linear-gradient(180deg, #68C0FF 50.39%, #1C84CF 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+        font-size: 32px;
+    }
+
+    @media (min-width: 768px) {
+
+        .form-box,
+        .info-box {
+            flex: 1 1 45%;
+            max-width: 452px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .tabs button {
+            font-size: 14px;
+            padding: 8px 4px;
+        }
+
+        .tab-content label,
+        .tab-content input {
+            font-size: 16px;
+        }
+
+        .tab-content input {
+            padding: 10px;
+        }
+
+        .login-btn {
+            padding: 10px;
+        }
+
+        .wrapper {
+            gap: 8px;
+        }
+    }
+</style>
 
 <body>
     <header class="header">
@@ -134,36 +397,36 @@
                 <ul class="left">
                     <li>
                         <span class="nav-menu-about-dropdown">O сообществе
-                            <img src="./../assets/images/arrownext.svg" width="11" height="11" alt="" />
+                            <img src="./assets/images/arrownext.svg" width="11" height="11" alt="" />
                         </span>
                         <ul class="nav-menu-about-wrapper hidden">
                             <li>
-                                <a href="./about-platform.html">О платформe<img src="./../assets/images/arrownext.svg"
+                                <a href="./about-platform.html">О платформe<img src="./assets/images/arrownext.svg"
                                         width="11" height="11" alt="" /></a>
                             </li>
                             <li>
-                                <a href="./about-history.html">История<img src="./../assets/images/arrownext.svg"
+                                <a href="./about-history.html">История<img src="./assets/images/arrownext.svg"
                                         width="11" height="11" alt="" /></a>
                             </li>
                             <li>
                                 <a href="./about-mission.html">Миссия, цели, ценности<img
-                                        src="./../assets/images/arrownext.svg" width="11" height="11" alt="" /></a>
+                                        src="./assets/images/arrownext.svg" width="11" height="11" alt="" /></a>
                             </li>
                             <li>
                                 <a href="./about-structure.html">Полный состав и структура<img
-                                        src="./../assets/images/arrownext.svg" width="11" height="11" alt="" /></a>
+                                        src="./assets/images/arrownext.svg" width="11" height="11" alt="" /></a>
                             </li>
                             <li>
-                                <a href="./about-exec.html">Исполнительный офис<img
-                                        src="./../assets/images/arrownext.svg" width="11" height="11" alt="" /></a>
+                                <a href="./about-exec.html">Исполнительный офис<img src="./assets/images/arrownext.svg"
+                                        width="11" height="11" alt="" /></a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="./../news.html">Новости</a>
+                        <a href="./news.html">Новости</a>
                     </li>
                     <li>
-                        <a href="./../members.html">Члены</a>
+                        <a href="./members.html">Члены</a>
                     </li>
                 </ul>
                 <a href="/"><img src="./assets/images/president-school-logo.png" width="140" height="140" alt=""
@@ -195,291 +458,17 @@
 
         </div>
 
-        <div class="nav-search-wrapper hidden">
-            <div class="container">
 
-                <input type="text" class="nav-search-bar" name="nav-search-bar" id="nav-search-bar" placeholder="search"
-                    value="">
-                <button class="nav-close-btn" onclick="closeSearchBar()">✖️
-                </button>
-            </div>
-        </div>
     </nav>
+    <div class="nav-search-wrapper hidden">
+        <div class="container">
 
-    <style>
-        .section.login {
-            padding: 80px 20px;
-            position: relative;
-        }
-
-        .login::before {
-            content: "";
-            background: url("./assets/images/login-pattern-before.png") no-repeat;
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            left: 0;
-            top: 0;
-            z-index: 0;
-        }
-
-        .login::after {
-            content: "";
-            background: url("./assets/images/login-pattern-after.svg") no-repeat right top;
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            right: 0;
-            top: 0;
-            z-index: 0;
-        }
-
-        p,
-        h3 {
-            color: black;
-        }
-
-        .login-container {
-            max-width: 920px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .login-container h3 {
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
-
-        .login-container p {
-            margin-bottom: 30px;
-            color: #666;
-        }
-
-        .wrapper {
-            display: flex;
-            flex-wrap: wrap-reverse;
-            justify-content: center;
-            background: #f5f7fa;
-            border-radius: 12px;
-            overflow: hidden;
-            font-size: 19px;
-            gap: 16px;
-        }
-
-        .form-box,
-        .info-box {
-            flex: 1 1 100%;
-            max-width: 100%;
-            background: #fff;
-            padding: 10px;
-        }
-
-        .form-box {
-            display: flex;
-            flex-direction: column;
-            position: relative;
-        }
-
-        .tabs {
-            display: flex;
-            position: relative;
-            border-radius: 8px;
-            overflow: hidden;
-            background: #e9e9e9;
-            padding: 4px 0;
-        }
-
-        .tabs::before {
-            content: '';
-            position: absolute;
-            margin: 4px;
-            top: 0;
-            bottom: 0;
-            width: 25%;
-            background: #fff;
-            transition: transform 0.4s ease;
-            z-index: 0;
-            border-radius: 8px;
-            box-shadow: 0px 2px 8px rgba(16, 44, 87, 0.2);
-        }
-
-        .tabs button {
-            flex: 1;
-            padding: 10px;
-            border: none;
-            background: transparent;
-            cursor: pointer;
-            position: relative;
-            z-index: 1;
-            font-weight: 500;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            transition: color 0.3s ease;
-        }
-
-        .tabs button.active {
-            color: #007bdb;
-            font-weight: 600;
-        }
-
-        .tab-contents {
-            position: relative;
-            flex: 1;
-        }
-
-        .tab-content {
-            width: 100%;
-            opacity: 0;
-            color: lightslategrey;
-            visibility: hidden;
-            transform: translateY(20px);
-            transition: opacity 0.4s ease, transform 0.4s ease, visibility 0s linear 0.4s;
-        }
-
-        .tab-content.active {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-            transition-delay: 0s;
-            z-index: 1;
-        }
-
-        .tab-content label {
-            display: block;
-            text-align: left;
-            margin: 10px 0 5px;
-            font-size: 18px;
-        }
-
-        .tab-content input {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 10px;
-            font-size: 18px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-        }
-
-        .login-btn {
-            background: linear-gradient(180deg, #1C84CF 0%, #0F6DB2 100%);
-            color: white;
-            padding: 12px;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 19px;
-        }
-
-        .register-link {
-            display: block;
-            margin-top: 15px;
-            color: rgba(28, 132, 207, 1);
-            text-decoration: none;
-        }
-
-        .info-box {
-            position: relative;
-            overflow: hidden;
-            background: #004c99;
-            border-radius: 20px;
-            color: #fff;
-            padding: 0;
-        }
-
-        .bg-carousel {
-            display: flex;
-            width: 400%;
-            height: 100%;
-            transition: transform 0.4s ease;
-        }
-
-        .slide {
-            width: 25%;
-            min-height: 200px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 30px;
-            position: relative;
-            z-index: 1;
-            background: linear-gradient(270deg, #254D9A 0%, #1A3975 100%);
-
-        }
-
-        .slide::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background:
-                url("./assets/images/login-bg-pattern.svg") repeat;
-            opacity: 0.03;
-            z-index: -1;
-        }
-
-        .slide .logo {
-            width: 100px;
-            height: 100px;
-            background: url('./assets/images/president-school-logo.png') center/contain no-repeat;
-            margin-bottom: 20px;
-        }
-
-        .slide p {
-            font-size: 19px;
-            line-height: 1.3;
-            font-weight: 500;
-            text-align: center;
-            color: white;
-        }
-
-        .slide strong {
-            color: linear-gradient(180deg, #68C0FF 50.39%, #1C84CF 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            font-size: 32px;
-        }
-
-        @media (min-width: 768px) {
-
-            .form-box,
-            .info-box {
-                flex: 1 1 45%;
-                max-width: 452px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .tabs button {
-                font-size: 14px;
-                padding: 8px 4px;
-            }
-
-            .tab-content label,
-            .tab-content input {
-                font-size: 16px;
-            }
-
-            .tab-content input {
-                padding: 10px;
-            }
-
-            .login-btn {
-                padding: 10px;
-            }
-
-            .wrapper {
-                gap: 8px;
-            }
-        }
-    </style>
+            <input type="text" class="nav-search-bar" name="nav-search-bar" id="nav-search-bar" placeholder="search"
+                value="">
+            <button class="nav-close-btn" onclick="closeSearchBar()">✖️
+            </button>
+        </div>
+    </div>
 
     <main class="main">
         <section class="section login">
@@ -496,36 +485,81 @@
                         </div>
                         <div class="tab-contents">
                             <form class="tab-content active">
-                                <label>Логин:</label>
-                                <input type="text" placeholder="Введите" />
-                                <label>Пароль:</label>
-                                <input type="password" placeholder="Введите" />
-                                <button type="submit" class="login-btn">Войти</button>
-                                <a href="#" class="register-link">Зарегистрироваться</a>
+                                <div class="inner-wrapper">
+                                    <label>Логин:</label>
+                                    <input type="text" placeholder="Введите" />
+                                    <label>Пароль:</label>
+                                    <input type="password" placeholder="Введите" />
+                                </div>
+                                <div class="inner-wrapper">
+
+                                    <button type="submit" class="login-btn">Войти</button>
+                                    <a href="#" class="register-link">Зарегистрироваться</a>
+                                </div>
                             </form>
-                            <div class="tab-content">Форма One ID (пока пусто)</div>
-                            <div class="tab-content">Форма ЭЦП (пока пусто)</div>
-                            <div class="tab-content">Форма QR-код (пока пусто)</div>
+                            <div class="tab-content">
+                                <div class="inner-wrapper-centered">
+                                    <img src="./assets/images/oneid.svg" width="175" height="194" alt="">
+                                </div>
+                                <p>Через единую систему авторизации OneID</p>
+                                <div>
+                                    <button type="submit" class="login-btn">Войти</button>
+                                    <a href="#" class="register-link">Зарегистрироваться</a>
+                                </div>
+                            </div>
+                            <div class="tab-content">
+                                <div>
+                                    <label for="ues">ЕЦП:</label>
+                                    <select name="ues" id="ues">
+                                        <option value="1">Выбрать</option>
+                                    </select>
+                                </div>
+
+                                <div class="inner-wrapper">
+                                    <div class="inner-wrapper">
+
+                                    </div>
+                                    <button type="submit" class="login-btn">Войти</button>
+                                    <a href="#" class="register-link">Зарегистрироваться</a>
+                                </div>
+                            </div>
+                            <div class="tab-content">
+                                <div class="inner-wrapper-centered">
+                                    <svg width="160" height="160" viewBox="0 0 160 160" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_703_10433)">
+                                            <path
+                                                d="M53.3333 0H60.9524V7.61905H53.3333V0ZM60.9524 0H68.5714V7.61905H60.9524V0ZM76.1905 0H83.8095V7.61905H76.1905V0ZM83.8095 0H91.4286V7.61905H83.8095V0ZM99.0476 0H106.667V7.61905H99.0476V0ZM7.61905 7.61905H15.2381V15.2381H7.61905V7.61905ZM15.2381 7.61905H22.8571V15.2381H15.2381V7.61905ZM22.8571 7.61905H30.4762V15.2381H22.8571V7.61905ZM30.4762 7.61905H38.0952V15.2381H30.4762V7.61905ZM38.0952 7.61905H45.7143V15.2381H38.0952V7.61905ZM53.3333 7.61905H60.9524V15.2381H53.3333V7.61905ZM68.5714 7.61905H76.1905V15.2381H68.5714V7.61905ZM76.1905 7.61905H83.8095V15.2381H76.1905V7.61905ZM91.4286 7.61905H99.0476V15.2381H91.4286V7.61905ZM99.0476 7.61905H106.667V15.2381H99.0476V7.61905ZM114.286 7.61905H121.905V15.2381H114.286V7.61905ZM121.905 7.61905H129.524V15.2381H121.905V7.61905ZM129.524 7.61905H137.143V15.2381H129.524V7.61905ZM137.143 7.61905H144.762V15.2381H137.143V7.61905ZM144.762 7.61905H152.381V15.2381H144.762V7.61905ZM7.61905 15.2381H15.2381V22.8571H7.61905V15.2381ZM38.0952 15.2381H45.7143V22.8571H38.0952V15.2381ZM53.3333 15.2381H60.9524V22.8571H53.3333V15.2381ZM60.9524 15.2381H68.5714V22.8571H60.9524V15.2381ZM76.1905 15.2381H83.8095V22.8571H76.1905V15.2381ZM83.8095 15.2381H91.4286V22.8571H83.8095V15.2381ZM91.4286 15.2381H99.0476V22.8571H91.4286V15.2381ZM99.0476 15.2381H106.667V22.8571H99.0476V15.2381ZM114.286 15.2381H121.905V22.8571H114.286V15.2381ZM144.762 15.2381H152.381V22.8571H144.762V15.2381ZM7.61905 22.8571H15.2381V30.4762H7.61905V22.8571ZM38.0952 22.8571H45.7143V30.4762H38.0952V22.8571ZM53.3333 22.8571H60.9524V30.4762H53.3333V22.8571ZM68.5714 22.8571H76.1905V30.4762H68.5714V22.8571ZM76.1905 22.8571H83.8095V30.4762H76.1905V22.8571ZM91.4286 22.8571H99.0476V30.4762H91.4286V22.8571ZM99.0476 22.8571H106.667V30.4762H99.0476V22.8571ZM114.286 22.8571H121.905V30.4762H114.286V22.8571ZM144.762 22.8571H152.381V30.4762H144.762V22.8571ZM7.61905 30.4762H15.2381V38.0952H7.61905V30.4762ZM38.0952 30.4762H45.7143V38.0952H38.0952V30.4762ZM53.3333 30.4762H60.9524V38.0952H53.3333V30.4762ZM60.9524 30.4762H68.5714V38.0952H60.9524V30.4762ZM68.5714 30.4762H76.1905V38.0952H68.5714V30.4762ZM99.0476 30.4762H106.667V38.0952H99.0476V30.4762ZM114.286 30.4762H121.905V38.0952H114.286V30.4762ZM144.762 30.4762H152.381V38.0952H144.762V30.4762ZM7.61905 38.0952H15.2381V45.7143H7.61905V38.0952ZM15.2381 38.0952H22.8571V45.7143H15.2381V38.0952ZM22.8571 38.0952H30.4762V45.7143H22.8571V38.0952ZM30.4762 38.0952H38.0952V45.7143H30.4762V38.0952ZM38.0952 38.0952H45.7143V45.7143H38.0952V38.0952ZM53.3333 38.0952H60.9524V45.7143H53.3333V38.0952ZM83.8095 38.0952H91.4286V45.7143H83.8095V38.0952ZM99.0476 38.0952H106.667V45.7143H99.0476V38.0952ZM114.286 38.0952H121.905V45.7143H114.286V38.0952ZM121.905 38.0952H129.524V45.7143H121.905V38.0952ZM129.524 38.0952H137.143V45.7143H129.524V38.0952ZM137.143 38.0952H144.762V45.7143H137.143V38.0952ZM144.762 38.0952H152.381V45.7143H144.762V38.0952ZM53.3333 45.7143H60.9524V53.3333H53.3333V45.7143ZM68.5714 45.7143H76.1905V53.3333H68.5714V45.7143ZM83.8095 45.7143H91.4286V53.3333H83.8095V45.7143ZM99.0476 45.7143H106.667V53.3333H99.0476V45.7143ZM0 53.3333H7.61905V60.9524H0V53.3333ZM7.61905 53.3333H15.2381V60.9524H7.61905V53.3333ZM15.2381 53.3333H22.8571V60.9524H15.2381V53.3333ZM22.8571 53.3333H30.4762V60.9524H22.8571V53.3333ZM30.4762 53.3333H38.0952V60.9524H30.4762V53.3333ZM38.0952 53.3333H45.7143V60.9524H38.0952V53.3333ZM45.7143 53.3333H53.3333V60.9524H45.7143V53.3333ZM53.3333 53.3333H60.9524V60.9524H53.3333V53.3333ZM60.9524 53.3333H68.5714V60.9524H60.9524V53.3333ZM68.5714 53.3333H76.1905V60.9524H68.5714V53.3333ZM99.0476 53.3333H106.667V60.9524H99.0476V53.3333ZM106.667 53.3333H114.286V60.9524H106.667V53.3333ZM114.286 53.3333H121.905V60.9524H114.286V53.3333ZM121.905 53.3333H129.524V60.9524H121.905V53.3333ZM129.524 53.3333H137.143V60.9524H129.524V53.3333ZM137.143 53.3333H144.762V60.9524H137.143V53.3333ZM144.762 53.3333H152.381V60.9524H144.762V53.3333ZM152.381 53.3333H160V60.9524H152.381V53.3333ZM38.0952 60.9524H45.7143V68.5714H38.0952V60.9524ZM76.1905 60.9524H83.8095V68.5714H76.1905V60.9524ZM83.8095 60.9524H91.4286V68.5714H83.8095V60.9524ZM106.667 60.9524H114.286V68.5714H106.667V60.9524ZM121.905 60.9524H129.524V68.5714H121.905V60.9524ZM137.143 60.9524H144.762V68.5714H137.143V60.9524ZM152.381 60.9524H160V68.5714H152.381V60.9524ZM0 68.5714H7.61905V76.1905H0V68.5714ZM15.2381 68.5714H22.8571V76.1905H15.2381V68.5714ZM22.8571 68.5714H30.4762V76.1905H22.8571V68.5714ZM30.4762 68.5714H38.0952V76.1905H30.4762V68.5714ZM38.0952 68.5714H45.7143V76.1905H38.0952V68.5714ZM45.7143 68.5714H53.3333V76.1905H45.7143V68.5714ZM68.5714 68.5714H76.1905V76.1905H68.5714V68.5714ZM76.1905 68.5714H83.8095V76.1905H76.1905V68.5714ZM83.8095 68.5714H91.4286V76.1905H83.8095V68.5714ZM99.0476 68.5714H106.667V76.1905H99.0476V68.5714ZM106.667 68.5714H114.286V76.1905H106.667V68.5714ZM121.905 68.5714H129.524V76.1905H121.905V68.5714ZM129.524 68.5714H137.143V76.1905H129.524V68.5714ZM0 76.1905H7.61905V83.8095H0V76.1905ZM7.61905 76.1905H15.2381V83.8095H7.61905V76.1905ZM15.2381 76.1905H22.8571V83.8095H15.2381V76.1905ZM38.0952 76.1905H45.7143V83.8095H38.0952V76.1905ZM60.9524 76.1905H68.5714V83.8095H60.9524V76.1905ZM91.4286 76.1905H99.0476V83.8095H91.4286V76.1905ZM106.667 76.1905H114.286V83.8095H106.667V76.1905ZM114.286 76.1905H121.905V83.8095H114.286V76.1905ZM137.143 76.1905H144.762V83.8095H137.143V76.1905ZM144.762 76.1905H152.381V83.8095H144.762V76.1905ZM152.381 76.1905H160V83.8095H152.381V76.1905ZM7.61905 83.8095H15.2381V91.4286H7.61905V83.8095ZM30.4762 83.8095H38.0952V91.4286H30.4762V83.8095ZM45.7143 83.8095H53.3333V91.4286H45.7143V83.8095ZM76.1905 83.8095H83.8095V91.4286H76.1905V83.8095ZM83.8095 83.8095H91.4286V91.4286H83.8095V83.8095ZM91.4286 83.8095H99.0476V91.4286H91.4286V83.8095ZM99.0476 83.8095H106.667V91.4286H99.0476V83.8095ZM106.667 83.8095H114.286V91.4286H106.667V83.8095ZM129.524 83.8095H137.143V91.4286H129.524V83.8095ZM152.381 83.8095H160V91.4286H152.381V83.8095ZM22.8571 91.4286H30.4762V99.0476H22.8571V91.4286ZM30.4762 91.4286H38.0952V99.0476H30.4762V91.4286ZM76.1905 91.4286H83.8095V99.0476H76.1905V91.4286ZM91.4286 91.4286H99.0476V99.0476H91.4286V91.4286ZM106.667 91.4286H114.286V99.0476H106.667V91.4286ZM114.286 91.4286H121.905V99.0476H114.286V91.4286ZM137.143 91.4286H144.762V99.0476H137.143V91.4286ZM152.381 91.4286H160V99.0476H152.381V91.4286ZM0 99.0476H7.61905V106.667H0V99.0476ZM7.61905 99.0476H15.2381V106.667H7.61905V99.0476ZM15.2381 99.0476H22.8571V106.667H15.2381V99.0476ZM22.8571 99.0476H30.4762V106.667H22.8571V99.0476ZM30.4762 99.0476H38.0952V106.667H30.4762V99.0476ZM38.0952 99.0476H45.7143V106.667H38.0952V99.0476ZM45.7143 99.0476H53.3333V106.667H45.7143V99.0476ZM53.3333 99.0476H60.9524V106.667H53.3333V99.0476ZM68.5714 99.0476H76.1905V106.667H68.5714V99.0476ZM76.1905 99.0476H83.8095V106.667H76.1905V99.0476ZM114.286 99.0476H121.905V106.667H114.286V99.0476ZM121.905 99.0476H129.524V106.667H121.905V99.0476ZM129.524 99.0476H137.143V106.667H129.524V99.0476ZM144.762 99.0476H152.381V106.667H144.762V99.0476ZM53.3333 106.667H60.9524V114.286H53.3333V106.667ZM76.1905 106.667H83.8095V114.286H76.1905V106.667ZM83.8095 106.667H91.4286V114.286H83.8095V106.667ZM99.0476 106.667H106.667V114.286H99.0476V106.667ZM121.905 106.667H129.524V114.286H121.905V106.667ZM129.524 106.667H137.143V114.286H129.524V106.667ZM152.381 106.667H160V114.286H152.381V106.667ZM7.61905 114.286H15.2381V121.905H7.61905V114.286ZM15.2381 114.286H22.8571V121.905H15.2381V114.286ZM22.8571 114.286H30.4762V121.905H22.8571V114.286ZM30.4762 114.286H38.0952V121.905H30.4762V114.286ZM38.0952 114.286H45.7143V121.905H38.0952V114.286ZM53.3333 114.286H60.9524V121.905H53.3333V114.286ZM60.9524 114.286H68.5714V121.905H60.9524V114.286ZM68.5714 114.286H76.1905V121.905H68.5714V114.286ZM114.286 114.286H121.905V121.905H114.286V114.286ZM121.905 114.286H129.524V121.905H121.905V114.286ZM129.524 114.286H137.143V121.905H129.524V114.286ZM144.762 114.286H152.381V121.905H144.762V114.286ZM152.381 114.286H160V121.905H152.381V114.286ZM7.61905 121.905H15.2381V129.524H7.61905V121.905ZM38.0952 121.905H45.7143V129.524H38.0952V121.905ZM53.3333 121.905H60.9524V129.524H53.3333V121.905ZM68.5714 121.905H76.1905V129.524H68.5714V121.905ZM83.8095 121.905H91.4286V129.524H83.8095V121.905ZM99.0476 121.905H106.667V129.524H99.0476V121.905ZM106.667 121.905H114.286V129.524H106.667V121.905ZM121.905 121.905H129.524V129.524H121.905V121.905ZM137.143 121.905H144.762V129.524H137.143V121.905ZM152.381 121.905H160V129.524H152.381V121.905ZM7.61905 129.524H15.2381V137.143H7.61905V129.524ZM38.0952 129.524H45.7143V137.143H38.0952V129.524ZM53.3333 129.524H60.9524V137.143H53.3333V129.524ZM83.8095 129.524H91.4286V137.143H83.8095V129.524ZM99.0476 129.524H106.667V137.143H99.0476V129.524ZM106.667 129.524H114.286V137.143H106.667V129.524ZM121.905 129.524H129.524V137.143H121.905V129.524ZM137.143 129.524H144.762V137.143H137.143V129.524ZM144.762 129.524H152.381V137.143H144.762V129.524ZM152.381 129.524H160V137.143H152.381V129.524ZM7.61905 137.143H15.2381V144.762H7.61905V137.143ZM38.0952 137.143H45.7143V144.762H38.0952V137.143ZM53.3333 137.143H60.9524V144.762H53.3333V137.143ZM68.5714 137.143H76.1905V144.762H68.5714V137.143ZM76.1905 137.143H83.8095V144.762H76.1905V137.143ZM91.4286 137.143H99.0476V144.762H91.4286V137.143ZM106.667 137.143H114.286V144.762H106.667V137.143ZM114.286 137.143H121.905V144.762H114.286V137.143ZM144.762 137.143H152.381V144.762H144.762V137.143ZM152.381 137.143H160V144.762H152.381V137.143ZM7.61905 144.762H15.2381V152.381H7.61905V144.762ZM15.2381 144.762H22.8571V152.381H15.2381V144.762ZM22.8571 144.762H30.4762V152.381H22.8571V144.762ZM30.4762 144.762H38.0952V152.381H30.4762V144.762ZM38.0952 144.762H45.7143V152.381H38.0952V144.762ZM53.3333 144.762H60.9524V152.381H53.3333V144.762ZM83.8095 144.762H91.4286V152.381H83.8095V144.762ZM91.4286 144.762H99.0476V152.381H91.4286V144.762ZM99.0476 144.762H106.667V152.381H99.0476V144.762ZM106.667 144.762H114.286V152.381H106.667V144.762ZM129.524 144.762H137.143V152.381H129.524V144.762ZM144.762 144.762H152.381V152.381H144.762V144.762ZM152.381 144.762H160V152.381H152.381V144.762ZM53.3333 152.381H60.9524V160H53.3333V152.381ZM68.5714 152.381H76.1905V160H68.5714V152.381ZM91.4286 152.381H99.0476V160H91.4286V152.381ZM106.667 152.381H114.286V160H106.667V152.381ZM114.286 152.381H121.905V160H114.286V152.381ZM129.524 152.381H137.143V160H129.524V152.381ZM152.381 152.381H160V160H152.381V152.381Z"
+                                                fill="white" />
+                                            <path
+                                                d="M0 0H7.61905V7.61905H0V0ZM7.61905 0H15.2381V7.61905H7.61905V0ZM15.2381 0H22.8571V7.61905H15.2381V0ZM22.8571 0H30.4762V7.61905H22.8571V0ZM30.4762 0H38.0952V7.61905H30.4762V0ZM38.0952 0H45.7143V7.61905H38.0952V0ZM45.7143 0H53.3333V7.61905H45.7143V0ZM68.5714 0H76.1905V7.61905H68.5714V0ZM91.4286 0H99.0476V7.61905H91.4286V0ZM106.667 0H114.286V7.61905H106.667V0ZM114.286 0H121.905V7.61905H114.286V0ZM121.905 0H129.524V7.61905H121.905V0ZM129.524 0H137.143V7.61905H129.524V0ZM137.143 0H144.762V7.61905H137.143V0ZM144.762 0H152.381V7.61905H144.762V0ZM152.381 0H160V7.61905H152.381V0ZM0 7.61905H7.61905V15.2381H0V7.61905ZM45.7143 7.61905H53.3333V15.2381H45.7143V7.61905ZM60.9524 7.61905H68.5714V15.2381H60.9524V7.61905ZM83.8095 7.61905H91.4286V15.2381H83.8095V7.61905ZM106.667 7.61905H114.286V15.2381H106.667V7.61905ZM152.381 7.61905H160V15.2381H152.381V7.61905ZM0 15.2381H7.61905V22.8571H0V15.2381ZM15.2381 15.2381H22.8571V22.8571H15.2381V15.2381ZM22.8571 15.2381H30.4762V22.8571H22.8571V15.2381ZM30.4762 15.2381H38.0952V22.8571H30.4762V15.2381ZM45.7143 15.2381H53.3333V22.8571H45.7143V15.2381ZM68.5714 15.2381H76.1905V22.8571H68.5714V15.2381ZM106.667 15.2381H114.286V22.8571H106.667V15.2381ZM121.905 15.2381H129.524V22.8571H121.905V15.2381ZM129.524 15.2381H137.143V22.8571H129.524V15.2381ZM137.143 15.2381H144.762V22.8571H137.143V15.2381ZM152.381 15.2381H160V22.8571H152.381V15.2381ZM0 22.8571H7.61905V30.4762H0V22.8571ZM15.2381 22.8571H22.8571V30.4762H15.2381V22.8571ZM22.8571 22.8571H30.4762V30.4762H22.8571V22.8571ZM30.4762 22.8571H38.0952V30.4762H30.4762V22.8571ZM45.7143 22.8571H53.3333V30.4762H45.7143V22.8571ZM60.9524 22.8571H68.5714V30.4762H60.9524V22.8571ZM83.8095 22.8571H91.4286V30.4762H83.8095V22.8571ZM106.667 22.8571H114.286V30.4762H106.667V22.8571ZM121.905 22.8571H129.524V30.4762H121.905V22.8571ZM129.524 22.8571H137.143V30.4762H129.524V22.8571ZM137.143 22.8571H144.762V30.4762H137.143V22.8571ZM152.381 22.8571H160V30.4762H152.381V22.8571ZM0 30.4762H7.61905V38.0952H0V30.4762ZM15.2381 30.4762H22.8571V38.0952H15.2381V30.4762ZM22.8571 30.4762H30.4762V38.0952H22.8571V30.4762ZM30.4762 30.4762H38.0952V38.0952H30.4762V30.4762ZM45.7143 30.4762H53.3333V38.0952H45.7143V30.4762ZM76.1905 30.4762H83.8095V38.0952H76.1905V30.4762ZM83.8095 30.4762H91.4286V38.0952H83.8095V30.4762ZM91.4286 30.4762H99.0476V38.0952H91.4286V30.4762ZM106.667 30.4762H114.286V38.0952H106.667V30.4762ZM121.905 30.4762H129.524V38.0952H121.905V30.4762ZM129.524 30.4762H137.143V38.0952H129.524V30.4762ZM137.143 30.4762H144.762V38.0952H137.143V30.4762ZM152.381 30.4762H160V38.0952H152.381V30.4762ZM0 38.0952H7.61905V45.7143H0V38.0952ZM45.7143 38.0952H53.3333V45.7143H45.7143V38.0952ZM60.9524 38.0952H68.5714V45.7143H60.9524V38.0952ZM68.5714 38.0952H76.1905V45.7143H68.5714V38.0952ZM76.1905 38.0952H83.8095V45.7143H76.1905V38.0952ZM91.4286 38.0952H99.0476V45.7143H91.4286V38.0952ZM106.667 38.0952H114.286V45.7143H106.667V38.0952ZM152.381 38.0952H160V45.7143H152.381V38.0952ZM0 45.7143H7.61905V53.3333H0V45.7143ZM7.61905 45.7143H15.2381V53.3333H7.61905V45.7143ZM15.2381 45.7143H22.8571V53.3333H15.2381V45.7143ZM22.8571 45.7143H30.4762V53.3333H22.8571V45.7143ZM30.4762 45.7143H38.0952V53.3333H30.4762V45.7143ZM38.0952 45.7143H45.7143V53.3333H38.0952V45.7143ZM45.7143 45.7143H53.3333V53.3333H45.7143V45.7143ZM60.9524 45.7143H68.5714V53.3333H60.9524V45.7143ZM76.1905 45.7143H83.8095V53.3333H76.1905V45.7143ZM91.4286 45.7143H99.0476V53.3333H91.4286V45.7143ZM106.667 45.7143H114.286V53.3333H106.667V45.7143ZM114.286 45.7143H121.905V53.3333H114.286V45.7143ZM121.905 45.7143H129.524V53.3333H121.905V45.7143ZM129.524 45.7143H137.143V53.3333H129.524V45.7143ZM137.143 45.7143H144.762V53.3333H137.143V45.7143ZM144.762 45.7143H152.381V53.3333H144.762V45.7143ZM152.381 45.7143H160V53.3333H152.381V45.7143ZM76.1905 53.3333H83.8095V60.9524H76.1905V53.3333ZM83.8095 53.3333H91.4286V60.9524H83.8095V53.3333ZM91.4286 53.3333H99.0476V60.9524H91.4286V53.3333ZM0 60.9524H7.61905V68.5714H0V60.9524ZM7.61905 60.9524H15.2381V68.5714H7.61905V60.9524ZM15.2381 60.9524H22.8571V68.5714H15.2381V60.9524ZM22.8571 60.9524H30.4762V68.5714H22.8571V60.9524ZM30.4762 60.9524H38.0952V68.5714H30.4762V60.9524ZM45.7143 60.9524H53.3333V68.5714H45.7143V60.9524ZM53.3333 60.9524H60.9524V68.5714H53.3333V60.9524ZM60.9524 60.9524H68.5714V68.5714H60.9524V60.9524ZM68.5714 60.9524H76.1905V68.5714H68.5714V60.9524ZM91.4286 60.9524H99.0476V68.5714H91.4286V60.9524ZM99.0476 60.9524H106.667V68.5714H99.0476V60.9524ZM114.286 60.9524H121.905V68.5714H114.286V60.9524ZM129.524 60.9524H137.143V68.5714H129.524V60.9524ZM144.762 60.9524H152.381V68.5714H144.762V60.9524ZM7.61905 68.5714H15.2381V76.1905H7.61905V68.5714ZM53.3333 68.5714H60.9524V76.1905H53.3333V68.5714ZM60.9524 68.5714H68.5714V76.1905H60.9524V68.5714ZM91.4286 68.5714H99.0476V76.1905H91.4286V68.5714ZM114.286 68.5714H121.905V76.1905H114.286V68.5714ZM137.143 68.5714H144.762V76.1905H137.143V68.5714ZM144.762 68.5714H152.381V76.1905H144.762V68.5714ZM152.381 68.5714H160V76.1905H152.381V68.5714ZM22.8571 76.1905H30.4762V83.8095H22.8571V76.1905ZM30.4762 76.1905H38.0952V83.8095H30.4762V76.1905ZM45.7143 76.1905H53.3333V83.8095H45.7143V76.1905ZM53.3333 76.1905H60.9524V83.8095H53.3333V76.1905ZM68.5714 76.1905H76.1905V83.8095H68.5714V76.1905ZM76.1905 76.1905H83.8095V83.8095H76.1905V76.1905ZM83.8095 76.1905H91.4286V83.8095H83.8095V76.1905ZM99.0476 76.1905H106.667V83.8095H99.0476V76.1905ZM121.905 76.1905H129.524V83.8095H121.905V76.1905ZM129.524 76.1905H137.143V83.8095H129.524V76.1905ZM0 83.8095H7.61905V91.4286H0V83.8095ZM15.2381 83.8095H22.8571V91.4286H15.2381V83.8095ZM22.8571 83.8095H30.4762V91.4286H22.8571V83.8095ZM38.0952 83.8095H45.7143V91.4286H38.0952V83.8095ZM53.3333 83.8095H60.9524V91.4286H53.3333V83.8095ZM60.9524 83.8095H68.5714V91.4286H60.9524V83.8095ZM68.5714 83.8095H76.1905V91.4286H68.5714V83.8095ZM114.286 83.8095H121.905V91.4286H114.286V83.8095ZM121.905 83.8095H129.524V91.4286H121.905V83.8095ZM137.143 83.8095H144.762V91.4286H137.143V83.8095ZM144.762 83.8095H152.381V91.4286H144.762V83.8095ZM0 91.4286H7.61905V99.0476H0V91.4286ZM7.61905 91.4286H15.2381V99.0476H7.61905V91.4286ZM15.2381 91.4286H22.8571V99.0476H15.2381V91.4286ZM38.0952 91.4286H45.7143V99.0476H38.0952V91.4286ZM45.7143 91.4286H53.3333V99.0476H45.7143V91.4286ZM53.3333 91.4286H60.9524V99.0476H53.3333V91.4286ZM60.9524 91.4286H68.5714V99.0476H60.9524V91.4286ZM68.5714 91.4286H76.1905V99.0476H68.5714V91.4286ZM83.8095 91.4286H91.4286V99.0476H83.8095V91.4286ZM99.0476 91.4286H106.667V99.0476H99.0476V91.4286ZM121.905 91.4286H129.524V99.0476H121.905V91.4286ZM129.524 91.4286H137.143V99.0476H129.524V91.4286ZM144.762 91.4286H152.381V99.0476H144.762V91.4286ZM60.9524 99.0476H68.5714V106.667H60.9524V99.0476ZM83.8095 99.0476H91.4286V106.667H83.8095V99.0476ZM91.4286 99.0476H99.0476V106.667H91.4286V99.0476ZM99.0476 99.0476H106.667V106.667H99.0476V99.0476ZM106.667 99.0476H114.286V106.667H106.667V99.0476ZM137.143 99.0476H144.762V106.667H137.143V99.0476ZM152.381 99.0476H160V106.667H152.381V99.0476ZM0 106.667H7.61905V114.286H0V106.667ZM7.61905 106.667H15.2381V114.286H7.61905V106.667ZM15.2381 106.667H22.8571V114.286H15.2381V106.667ZM22.8571 106.667H30.4762V114.286H22.8571V106.667ZM30.4762 106.667H38.0952V114.286H30.4762V106.667ZM38.0952 106.667H45.7143V114.286H38.0952V106.667ZM45.7143 106.667H53.3333V114.286H45.7143V106.667ZM60.9524 106.667H68.5714V114.286H60.9524V106.667ZM68.5714 106.667H76.1905V114.286H68.5714V106.667ZM91.4286 106.667H99.0476V114.286H91.4286V106.667ZM106.667 106.667H114.286V114.286H106.667V106.667ZM114.286 106.667H121.905V114.286H114.286V106.667ZM137.143 106.667H144.762V114.286H137.143V106.667ZM144.762 106.667H152.381V114.286H144.762V106.667ZM0 114.286H7.61905V121.905H0V114.286ZM45.7143 114.286H53.3333V121.905H45.7143V114.286ZM76.1905 114.286H83.8095V121.905H76.1905V114.286ZM83.8095 114.286H91.4286V121.905H83.8095V114.286ZM91.4286 114.286H99.0476V121.905H91.4286V114.286ZM99.0476 114.286H106.667V121.905H99.0476V114.286ZM106.667 114.286H114.286V121.905H106.667V114.286ZM137.143 114.286H144.762V121.905H137.143V114.286ZM0 121.905H7.61905V129.524H0V121.905ZM15.2381 121.905H22.8571V129.524H15.2381V121.905ZM22.8571 121.905H30.4762V129.524H22.8571V121.905ZM30.4762 121.905H38.0952V129.524H30.4762V121.905ZM45.7143 121.905H53.3333V129.524H45.7143V121.905ZM60.9524 121.905H68.5714V129.524H60.9524V121.905ZM76.1905 121.905H83.8095V129.524H76.1905V121.905ZM91.4286 121.905H99.0476V129.524H91.4286V121.905ZM114.286 121.905H121.905V129.524H114.286V121.905ZM129.524 121.905H137.143V129.524H129.524V121.905ZM144.762 121.905H152.381V129.524H144.762V121.905ZM0 129.524H7.61905V137.143H0V129.524ZM15.2381 129.524H22.8571V137.143H15.2381V129.524ZM22.8571 129.524H30.4762V137.143H22.8571V129.524ZM30.4762 129.524H38.0952V137.143H30.4762V129.524ZM45.7143 129.524H53.3333V137.143H45.7143V129.524ZM60.9524 129.524H68.5714V137.143H60.9524V129.524ZM68.5714 129.524H76.1905V137.143H68.5714V129.524ZM76.1905 129.524H83.8095V137.143H76.1905V129.524ZM91.4286 129.524H99.0476V137.143H91.4286V129.524ZM114.286 129.524H121.905V137.143H114.286V129.524ZM129.524 129.524H137.143V137.143H129.524V129.524ZM0 137.143H7.61905V144.762H0V137.143ZM15.2381 137.143H22.8571V144.762H15.2381V137.143ZM22.8571 137.143H30.4762V144.762H22.8571V137.143ZM30.4762 137.143H38.0952V144.762H30.4762V137.143ZM45.7143 137.143H53.3333V144.762H45.7143V137.143ZM60.9524 137.143H68.5714V144.762H60.9524V137.143ZM83.8095 137.143H91.4286V144.762H83.8095V137.143ZM99.0476 137.143H106.667V144.762H99.0476V137.143ZM121.905 137.143H129.524V144.762H121.905V137.143ZM129.524 137.143H137.143V144.762H129.524V137.143ZM137.143 137.143H144.762V144.762H137.143V137.143ZM0 144.762H7.61905V152.381H0V144.762ZM45.7143 144.762H53.3333V152.381H45.7143V144.762ZM60.9524 144.762H68.5714V152.381H60.9524V144.762ZM68.5714 144.762H76.1905V152.381H68.5714V144.762ZM76.1905 144.762H83.8095V152.381H76.1905V144.762ZM114.286 144.762H121.905V152.381H114.286V144.762ZM121.905 144.762H129.524V152.381H121.905V144.762ZM137.143 144.762H144.762V152.381H137.143V144.762ZM0 152.381H7.61905V160H0V152.381ZM7.61905 152.381H15.2381V160H7.61905V152.381ZM15.2381 152.381H22.8571V160H15.2381V152.381ZM22.8571 152.381H30.4762V160H22.8571V152.381ZM30.4762 152.381H38.0952V160H30.4762V152.381ZM38.0952 152.381H45.7143V160H38.0952V152.381ZM45.7143 152.381H53.3333V160H45.7143V152.381ZM60.9524 152.381H68.5714V160H60.9524V152.381ZM76.1905 152.381H83.8095V160H76.1905V152.381ZM83.8095 152.381H91.4286V160H83.8095V152.381ZM99.0476 152.381H106.667V160H99.0476V152.381ZM121.905 152.381H129.524V160H121.905V152.381ZM137.143 152.381H144.762V160H137.143V152.381ZM144.762 152.381H152.381V160H144.762V152.381Z"
+                                                fill="black" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_703_10433">
+                                                <rect width="160" height="160" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                                <p>Отсканируйте QR-код в приложении.
+                                    QR-код будет обновлен через <spa id="time">0:13</span></p>
+
+                                <div class="inner-wrapper">
+                                    <button type="submit" class="login-btn">Войти</button>
+                                    <a href="#" class="register-link">Зарегистрироваться</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="info-box">
-                        <div class="bg-carousel" id="carousel">
-                            <div class="slide">
-                                <div class="logo"></div>
-                                <p>Президентское сообщество поддержки<br /><strong>Одаренной Молодежи</strong></p>
-                            </div>
-                            <div class="slide">
-                                <div class="logo"></div>
-                                <p>Вход через<br /><strong>One ID</strong></p>
-                            </div>
-                            <div class="slide">
-                                <div class="logo"></div>
-                                <p>Вход через<br /><strong>ЭЦП</strong></p>
-                            </div>
-                            <div class="slide">
-                                <div class="logo"></div>
-                                <p>Вход через<br /><strong>QR-код</strong></p>
-                            </div>
+                        <div class="side">
+                            <img src="./assets/images/president-school-logo.png" width="140" height="140" alt="">
+                            <p>Президентское сообщество поддержки <br>
+                                <span class="highlight-title">Одаренной Молодежи</span>
+                            </p>
+
+
                         </div>
                     </div>
                 </div>
@@ -620,7 +654,6 @@
     <script>
         const tabs = document.querySelectorAll('.tab');
         const contents = document.querySelectorAll('.tab-content');
-        const carousel = document.getElementById('carousel');
         const tabHighlight = document.querySelector('.tabs::before'); // obviously won't work; we move it manually
         const tabsWrapper = document.getElementById('tabWrapper');
 
@@ -630,13 +663,10 @@
                 contents.forEach(c => c.classList.remove('active'));
                 tab.classList.add('active');
                 contents[index].classList.add('active');
-                carousel.style.transform = `translateX(-${index * 25}%)`;
                 tabsWrapper.style.setProperty('--tab-index', index);
-                document.querySelector('.tabs::before') // lol, not real
             });
         });
 
-        // dynamic moving tab background
         const style = document.createElement('style');
         style.innerHTML = `
       .tabs::before {

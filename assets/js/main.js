@@ -106,11 +106,11 @@ function openNavMenu() {
 
 
 function openSearchBar() {
-    document.querySelector('.nav-main').classList.add('hidden');
+    document.querySelector('.nav').classList.add('hidden');
     document.querySelector('.nav-search-wrapper').classList.remove('hidden');
 }
 function closeSearchBar() {
-    document.querySelector('.nav-main').classList.remove('hidden');
+    document.querySelector('.nav').classList.remove('hidden');
     document.querySelector('.nav-search-wrapper').classList.add('hidden');
     document.getElementById('nav-search-bar').value = '';
 

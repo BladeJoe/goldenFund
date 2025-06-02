@@ -75,7 +75,7 @@
                     <img id="menuIcon" alt="menu icon" height="20" width="20">
                     <script>
                         document.getElementById('menuIcon').src =
-                            location.pathname === '/' || location.pathname === ''
+                            location.pathname === '/' || location.pathname === '' || location.pathname === '/index.html'
                                 ? './assets/images/menudots-light.svg'
                                 : './assets/images/menudots-dark.svg';
                     </script>
@@ -134,36 +134,36 @@
                 <ul class="left">
                     <li>
                         <span class="nav-menu-about-dropdown">O сообществе
-                            <img src="./../assets/images/arrownextwhite.svg" width="11" height="11" alt="" />
+                            <img src="./assets/images/arrownextwhite.svg" width="11" height="11" alt="" />
                         </span>
                         <ul class="nav-menu-about-wrapper hidden">
                             <li>
-                                <a href="./about-platform.html">О платформe<img src="./../assets/images/arrownext.svg"
+                                <a href="./about-platform.html">О платформe<img src="./assets/images/arrownext.svg"
                                         width="11" height="11" alt="" /></a>
                             </li>
                             <li>
-                                <a href="./about-history.html">История<img src="./../assets/images/arrownext.svg"
+                                <a href="./about-history.html">История<img src="./assets/images/arrownext.svg"
                                         width="11" height="11" alt="" /></a>
                             </li>
                             <li>
                                 <a href="./about-mission.html">Миссия, цели, ценности<img
-                                        src="./../assets/images/arrownext.svg" width="11" height="11" alt="" /></a>
+                                        src="./assets/images/arrownext.svg" width="11" height="11" alt="" /></a>
                             </li>
                             <li>
                                 <a href="./about-structure.html">Полный состав и структура<img
-                                        src="./../assets/images/arrownext.svg" width="11" height="11" alt="" /></a>
+                                        src="./assets/images/arrownext.svg" width="11" height="11" alt="" /></a>
                             </li>
                             <li>
-                                <a href="./about-exec.html">Исполнительный офис<img
-                                        src="./../assets/images/arrownext.svg" width="11" height="11" alt="" /></a>
+                                <a href="./about-exec.html">Исполнительный офис<img src="./assets/images/arrownext.svg"
+                                        width="11" height="11" alt="" /></a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="./../news.html">Новости</a>
+                        <a href="./news.html">Новости</a>
                     </li>
                     <li>
-                        <a href="./../members.html">Члены</a>
+                        <a href="./members.html">Члены</a>
                     </li>
                 </ul>
                 <a href="/"><img src="./assets/images/president-school-logo.png" width="140" height="140" alt=""
@@ -195,16 +195,17 @@
 
         </div>
 
-        <div class="nav-search-wrapper hidden">
-            <div class="container">
 
-                <input type="text" class="nav-search-bar" name="nav-search-bar" id="nav-search-bar" placeholder="search"
-                    value="">
-                <button class="nav-close-btn" onclick="closeSearchBar()">✖️
-                </button>
-            </div>
-        </div>
     </nav>
+    <div class="nav-search-wrapper hidden">
+        <div class="container">
+
+            <input type="text" class="nav-search-bar" name="nav-search-bar" id="nav-search-bar" placeholder="search"
+                value="">
+            <button class="nav-close-btn" onclick="closeSearchBar()">✖️
+            </button>
+        </div>
+    </div>
 
     <main class="main">
 
