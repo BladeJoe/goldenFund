@@ -2,6 +2,7 @@ document.querySelectorAll('img').forEach(img => img.ondragstart = () => false)
 
 AOS.init()
 
+
 const menu = document.getElementById("navMenuWrapper")
 const allSubmenus = () => menu.querySelectorAll(".nav-menu-inner-wrapper")
 let timeoutDuration = window.innerWidth < 1280 ? 3000 : 500
@@ -13,7 +14,6 @@ let trackArea = [menu]
 
 function faqActivate(e) {
     e.currentTarget.classList.toggle("active");
-
 }
 
 window.addEventListener("resize", () => {
@@ -106,12 +106,37 @@ function openNavMenu() {
 
 
 function openSearchBar() {
-    document.querySelector('.nav').classList.add('hidden');
+    document.querySelector('.nav-container').classList.add('hidden');
     document.querySelector('.nav-search-wrapper').classList.remove('hidden');
 }
 function closeSearchBar() {
-    document.querySelector('.nav').classList.remove('hidden');
+    document.querySelector('.nav-container').classList.remove('hidden');
     document.querySelector('.nav-search-wrapper').classList.add('hidden');
     document.getElementById('nav-search-bar').value = '';
 
 }
+
+
+// lenis smooth scroll
+
+const lenis = new Lenis({
+    duration: 1,
+    easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    smoothWheel: true,
+    syncTouch: true,
+    gestureOrientation: 'vertical',
+    touchMultiplier: 2,
+    wheelMultiplier: 1.2,
+    autoResize: true,
+    lerp: 0.1,
+    smoothTouch: false,
+});
+function raf(time) {
+    lenis.raf(time)
+    requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
+
+
+

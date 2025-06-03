@@ -13,61 +13,88 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" data-aos="fade-zoom-in">
         <div class="container">
             <div class="inner-container">
                 <div class="contacts">
                     <a href="tel:+998712024111">
                         <img src="./assets/images/call.svg" alt="" aria-label="call">
-                        <span>+998 71 202 41 11</span>
+                        <span class="mobile-hidden">+998 71 202 41 11</span>
                     </a>
                     </li>
                     <div class="divider"></div>
                     <a href="mailto:info@newuu.uz">
                         <img src="assets/images/mail.svg" alt="" aria-label="email">
-                        <span>info@newuu.uz</span>
+                        <span class="mobile-hidden">info@newuu.uz</span>
                     </a>
                 </div>
-                <div class="accessibility">
-
-                    <a href="#" aria-label="Increase visibility">
-                        <img src="./assets/images/visibility.svg" width="22" height="22" alt="">
-                    </a>
-                    <a href="#" aria-label="Mobile version">
-                        <img src="./assets/images/smartphone.svg" width="22" height="22" alt="">
-                    </a>
-                    <a href="#" aria-label="Read aloud">
-                        <img src="./assets/images/readaloud.svg" width="22" height="22" alt="">
-                    </a>
-                    <div class="divider"></div>
-                    <a href="#" aria-label="Instagram">
-                        <img src="./assets/images/instagram.svg" width="22" height="22" alt="">
-                    </a>
-                    <a href="#" aria-label="Telegram">
-                        <img src="./assets/images/telegram.svg" width="22" height="22" alt="">
-                    </a>
-                    <a href="#" aria-label="YouTube">
-                        <img src="./assets/images/youtube.svg" width="22" height="22" alt="">
-                    </a>
-                    <a href="#" aria-label="Facebook">
-                        <img src="./assets/images/facebook.svg" width="22" height="22" alt="">
-                    </a>
-                    <div class="divider"></div>
-                    <div>
-
-                        <label for="language" class="sr-only">язык</label>
-                        <select name="lang" id="language">
-                            <option value="ru">🇷🇺 RUS</option>
-                            <option value="uz">🇺🇿 UZB</option>
-                        </select>
+                <div class="right">
+                    <div class="accessibility mobile-hidden">
+                        <a href="#" aria-label="Increase visibility">
+                            <img src="./assets/images/visibility.svg" width="22" height="22" alt="">
+                        </a>
+                        <a href="#" aria-label="Mobile version">
+                            <img src="./assets/images/smartphone.svg" width="22" height="22" alt="">
+                        </a>
+                        <a href="#" aria-label="Read aloud">
+                            <img src="./assets/images/readaloud.svg" width="22" height="22" alt="">
+                        </a>
                     </div>
+                    <div class="divider mobile-hidden"></div>
+                    <div class="socials mobile-hidden-sm">
+                        <a href="#" aria-label="Instagram">
+                            <img src="./assets/images/instagram.svg" width="22" height="22" alt="">
+                        </a>
+                        <a href="#" aria-label="Telegram">
+                            <img src="./assets/images/telegram.svg" width="22" height="22" alt="">
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <img src="./assets/images/youtube.svg" width="22" height="22" alt="">
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <img src="./assets/images/facebook.svg" width="22" height="22" alt="">
+                        </a>
+                    </div>
+                    <div class="divider mobile-hidden-sm"></div>
+                    <label for="language" class="sr-only">язык</label>
+                    <select name="lang" id="language">
+                        <option value="EN"><span class="flag">🇬🇧</span> ENG</option>
+                        <option value="RU"><span class="flag">🇷🇺</span> РУС</option>
+                        <option value="UZ"><span class="flag">🇺🇿</span> UZB</option>
+                    </select>
+                    <!--
+                      <div class="lang-select">
+                        <img class="lang-flag" src="https://flagcdn.com/w40/gb.png" alt="flag">
+                        <select id="language-select">
+                            <option value="ru" data-flag="ru">РУС</option>
+                            <option value="en" data-flag="gb">ENG</option>
+                            <option value="uz" data-flag="uz">UZB</option>
+                        </select>
+                        <svg class="select__arrow" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0L5 6L10 0H0Z" fill="white" />
+                        </svg>
+                    </div>
+
+
+                    <script>const select = document.getElementById('language-select');
+                        const flagImg = document.querySelector('.lang-flag');
+
+                        const updateFlag = () => {
+                            const code = select.options[select.selectedIndex].dataset.flag;
+                            flagImg.src = `https://flagcdn.com/w40/${code}.png`;
+                        };
+
+                        select.addEventListener('change', updateFlag);
+                        updateFlag();
+                    </script>   -->
                 </div>
             </div>
+        </div>
 
         </div>
     </header>
 
-    <nav class="nav  ">
+    <nav class="nav">
         <div class="container nav-container">
 
             <div class="nav-buttons">
@@ -82,7 +109,7 @@
 
                 </button>
             </div>
-            <label for="menu-item" class="sr-only">123</label>
+
             <div class="nav-menu-wrapper hidden" id="navMenuWrapper">
                 <ul>
                     <li>
@@ -195,17 +222,17 @@
 
         </div>
 
-
-    </nav>
-    <div class="nav-search-wrapper hidden">
-        <div class="container">
-
-            <input type="text" class="nav-search-bar" name="nav-search-bar" id="nav-search-bar" placeholder="search"
-                value="">
-            <button class="nav-close-btn" onclick="closeSearchBar()">✖️
-            </button>
+        <div class="nav-search-wrapper hidden">
+            <div class="container">
+                <input type="text" class="nav-search-bar" name="nav-search-bar" id="nav-search-bar" placeholder="search"
+                    value="">
+                <button class="nav-close-btn" onclick="closeSearchBar()">✖️
+                </button>
+            </div>
         </div>
-    </div>
+    </nav>
+
+
 
     <div class="nav-search-wrapper hidden">
         <div class="container">
@@ -245,36 +272,35 @@
             <div class="container">
                 <div class="contact-form-wrapper">
                     <div class="contact-form">
-                        <p class="subtitle-1">Есть вопросы?</p>
-                        <p class="body-text-3">Свяжитесь с нами — мы всегда на связи и готовы помочь</p>
+                        <div>
+                            <h4 class="subtitle-1">Есть вопросы?</h4>
+                            <p class="body-text-3">Свяжитесь с нами — мы всегда на связи и готовы помочь</p>
+                        </div>
                         <form>
                             <div class="input-group">
                                 <div class="input-field">
-                                    <label>Имя</label>
-                                    <input type="text" placeholder="Имя">
+                                    <label>Имя:</label>
+                                    <input name="input" type="text" placeholder="Имя">
                                 </div>
                                 <div class="input-field">
-                                    <label>Фамилия</label>
-                                    <input type="text" placeholder="Фамилия">
+                                    <label>Фамилия:</label>
+                                    <input name="input" type="text" placeholder="Фамилия">
                                 </div>
                             </div>
                             <div class="input-group">
                                 <div class="input-field">
-                                    <label>Электронная почта</label>
-                                    <input type="email" placeholder="Электронная почта">
+                                    <label>Электронная почта:</label>
+                                    <input name="input" type="email" placeholder="Электронная почта">
                                 </div>
                                 <div class="input-field">
-                                    <label>Номер телефона</label>
-                                    <input type="tel" placeholder="Номер телефона">
+                                    <label>Номер телефона:</label>
+                                    <input name="input" type="tel" placeholder="Номер телефона">
                                 </div>
                             </div>
-                            <div class="input-group">
-
-                                <div class="input-field">
-                                    <label>Сообщения</label>
-                                </div>
+                            <div class="textarea-group">
+                                <label>Сообщения:</label>
+                                <textarea name="input" placeholder="Сообщения" rows="1"></textarea>
                             </div>
-                            <textarea placeholder="Сообщения"></textarea>
                             <div>
 
                                 <button class="submit" type="submit">
@@ -300,9 +326,10 @@
                         <div class="info-box address-box">
                             <p>Мирзо Улугбек, Мовароуннахр 1 </p>
                             <span>Адрес</span>
-                            <!-- <iframe title="location"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5993.34!2d69.295472!3d41.316056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef51b50c0eda7%3A0x1ef4e0e3a79a0726!2sNew%20Uzbekistan%20University!5e0!3m2!1sen!2sus"
-                        style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+                            <iframe title="location"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5993.34!2d69.295472!3d41.316056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef51b50c0eda7%3A0x1ef4e0e3a79a0726!2sNew%20Uzbekistan%20University!5e0!3m2!1sen!2sus"
+                                style="border:0;" allowfullscreen=""
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
@@ -362,9 +389,9 @@
 
                 <div class="col location">
                     <span class="subtitle-1">Расположение</span>
-                    <!-- <iframe title="location"
+                    <iframe title="location"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5993.34!2d69.295472!3d41.316056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef51b50c0eda7%3A0x1ef4e0e3a79a0726!2sNew%20Uzbekistan%20University!5e0!3m2!1sen!2sus"
-                        style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+                        style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
 
@@ -373,7 +400,7 @@
                     <img src="./assets/images/president-school-logo.png" alt="Logo" height="140" width="140">
                 </div>
                 <span class="body-text-3">
-                    Copyright © <span id="year"></span>, Golden Fund of Nation. Все права защищены.
+                    Copyright © <span id="year"></span>, Community of Support for Gifted Youth. Все права защищены.
                 </span>
                 <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
                 <span class="developer">
@@ -392,8 +419,9 @@
 
     <script src="./assets/js/aos.js"></script>
 
-    <script src="./assets/js/main.js"></script>
 
+    <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
