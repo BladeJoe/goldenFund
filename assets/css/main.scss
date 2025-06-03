@@ -788,6 +788,7 @@ main {
 
         .container {
             padding: 0;
+
             display: flex;
             justify-content: space-between;
 
@@ -803,12 +804,12 @@ main {
 
             .nav-close-btn {
                 height: 72px;
-                width: 72px !important;
+                width: 72px;
                 display: flex;
                 justify-content: center;
                 background: var(--white);
                 align-items: center;
-                font-size: 24px;
+                font-size: 36px;
                 border: 0;
             }
         }
@@ -2987,55 +2988,55 @@ main {
                                 font-size: 16px;
                             }
                         }
+                    }
 
-                        .textarea-group {
-                            display: flex;
-                            flex-direction: column;
-                            width: 100%;
-                            gap: 4px;
+                    .textarea-group {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        gap: 4px;
 
-                            label {
-                                @extend .body-text-3;
+                        label {
+                            @extend .body-text-3;
 
-                            }
-
-                            textarea {
-                                resize: vertical;
-                                height: 84px;
-                                padding: 12px;
-                                border-radius: 8px;
-                                border: 1px solid var(--black6);
-                                background: var(--black7);
-                                font-size: 16px;
-                            }
                         }
 
-                        .submit {
-                            gap: 8px;
-                            padding: 12px 20px;
-                            background: var(--button-light-gdnt);
-                            color: white;
-                            border: none;
+                        textarea {
+                            resize: vertical;
+                            height: 84px;
+                            padding: 12px;
                             border-radius: 8px;
+                            border: 1px solid var(--black6);
+                            background: var(--black7);
                             font-size: 16px;
-                            cursor: pointer;
-
-                            img {
-                                width: 16px;
-                                height: 16px;
-                            }
                         }
                     }
 
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        width: 120px;
-                        height: 120px;
-                        background: url("./../images/naqsh.svg") no-repeat center;
-                        top: 0;
-                        right: 0;
+                    .submit {
+                        gap: 8px;
+                        padding: 12px 20px;
+                        background: var(--button-light-gdnt);
+                        color: white;
+                        border: none;
+                        border-radius: 8px;
+                        font-size: 16px;
+                        cursor: pointer;
+
+                        img {
+                            width: 16px;
+                            height: 16px;
+                        }
                     }
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 120px;
+                    height: 120px;
+                    background: url("./../images/naqsh.svg") no-repeat center;
+                    top: 0;
+                    right: 0;
                 }
             }
 
