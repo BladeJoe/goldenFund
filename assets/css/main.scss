@@ -380,6 +380,7 @@ main {
 
     section {
         background: var(--black8);
+        padding: 0 16px;
     }
 }
 
@@ -2032,6 +2033,7 @@ main {
 
 .infographics {
     .container {
+        padding-top: 0;
 
         .inner-wrapper {
             display: flex;
@@ -2112,6 +2114,267 @@ main {
 }
 
 .news {
+    .container {
+        width: 100%;
+        padding: 0 0 80px 0;
+
+        .inner-wrapper {
+
+            > span {
+                color: var(--blue5);
+                margin-bottom: 12px;
+
+                @media (max-width:1280px) {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            h2 {
+                font-weight: normal;
+                margin-bottom: 24px;
+                color: var(--text);
+
+                span {
+                    font-weight: bold;
+
+                    @media (max-width: 400px) {
+                        text-align: center;
+                    }
+                }
+
+                @media (max-width: 1280px) {
+                    text-align: center;
+                }
+            }
+
+            > div {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                flex-direction: row;
+
+                @media(max-width:1280px) {
+                    justify-content: center;
+                    flex-direction: column;
+                    padding-bottom: 20px;
+
+                }
+
+                a {
+                    color: var(--blue5);
+                    display: flex;
+                    gap: 6px;
+                    align-items: center;
+                }
+            }
+
+
+            .out {
+
+                .newscard-wrapper {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    margin: 0 auto;
+                    max-width: calc(100vw - 32px);
+                    gap: 1px;
+                    clip-path: inset(1px);
+                    background-color: #0B255627;
+
+                    @media (max-width: 1629px) {
+                        width: 1065px;
+                    }
+
+                    @media (max-width: 1100px) {
+                        width: 533px;
+                    }
+
+                    .newscard {
+                        width: 532px;
+                        height: 450px;
+                        overflow: hidden;
+                        position: relative;
+                        background-color: var(--black8);
+                        padding: 20px;
+
+
+
+                        @media (max-width:768px) {
+                            padding: 20px 0;
+                            width: 100%;
+                        }
+
+                        .image-wrapper {
+                            width: 100%;
+                            height: 450px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: start;
+                            border-radius: 20px;
+
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                inset: 0;
+                                background: linear-gradient(180deg, #050D1C00 0%, #050D1CCC 80%);
+                                opacity: 0;
+                                pointer-events: none;
+                                transition: opacity 0.6s linear;
+                                z-index: 2;
+                            }
+
+                            .newscard-img {
+                                margin: 20px;
+                                max-width: calc(100vw - 32px);
+                                width: 493px;
+                                height: 247px;
+                                position: absolute;
+                                border-radius: 20px;
+                                transition: all 0.6s ease-in-out;
+                                top: 0;
+                                object-fit: cover;
+
+                                @media (max-width:768px) {
+                                    margin: 20px 0;
+                                    width: 100%;
+
+
+                                }
+
+                            }
+                        }
+
+                        .newscard-data {
+                            display: flex;
+                            justify-content: start;
+                            flex-direction: column;
+                            align-items: start;
+                            padding-top: 0;
+                            gap: 8px;
+                            transition: all 0.6s ease-in-out;
+                            position: absolute;
+                            z-index: 2;
+                            top: 283px;
+                            padding-right: 20px;
+
+                            @media (max-width:768px) {
+                                padding: 20px;
+
+                            }
+
+                            img {
+                                padding: 0;
+                                border-radius: 0;
+                            }
+
+                            h3 {
+                                color: var(--black1);
+                                transition: all 0.6s ease-in-out;
+                                font-weight: bold;
+                                font-size: 24px;
+                                line-height: 1.2;
+                            }
+
+                            > p,
+                            > h3 {
+                                display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 2;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                line-clamp: 2;
+
+                            }
+
+                            > p {
+                                margin-bottom: 20px;
+                            }
+
+                            p {
+                                @extend .body-text-3;
+                                color: var(--black2);
+                                display: -webkit-box;
+                                transition: all 0.6s ease-in-out;
+
+                            }
+
+                            .details {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                gap: 32px;
+                                padding-bottom: 0;
+                                margin-bottom: 0;
+                                height: 24px;
+
+                                @media (max-width:768px) {}
+
+                                span {
+                                    display: flex;
+                                    align-items: center;
+                                    height: 24px;
+                                    gap: 6px;
+                                    padding-bottom: 0;
+                                    margin-bottom: 0;
+
+                                    p {
+                                        color: var(--blue5);
+                                    }
+                                }
+
+                            }
+
+                            .btn {
+                                @extend .body-text-2;
+                                background: var(--blue5);
+                                display: flex;
+                                justify-content: center;
+                                flex-direction: row;
+                                gap: 6px;
+                            }
+                        }
+                    }
+
+                    .newscard:hover {
+                        .image-wrapper {
+
+                            &::after {
+                                opacity: 1;
+                            }
+
+                            .newscard-img {
+                                height: 450px;
+                                top: 50%;
+                                border-radius: 0px;
+                                margin: 0;
+                                transform: translate(0, -50%) scale(1.1);
+                                transform-origin: center;
+                            }
+
+
+                        }
+
+                        .newscard-data {
+                            top: 202px;
+
+                            * {
+                                color: var(--white) !important;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+.news-page {
     .container {
         width: 100%;
         padding: 80px 0;
@@ -2546,7 +2809,7 @@ main {
         flex-direction: row;
         position: relative;
         overflow: hidden;
-
+        padding-bottom: 0;
 
         .inner-wrapper {
             display: flex;
@@ -2753,6 +3016,8 @@ main {
             hr {
                 margin: 20px 0;
                 margin: 0;
+                border-top: 0 solid white;
+                transition: border-top-color 1s ease;
                 opacity: 0.8;
                 width: 0;
                 border: 0;
@@ -2760,12 +3025,12 @@ main {
 
             .answer {
                 @extend .body-text-2;
+                color: var(--text);
                 text-align: start;
-                color: var(--white);
+                transition: color 0.3s ease;
                 max-height: 0;
                 opacity: 0;
                 overflow: hidden;
-                transition: all 0.3s ease;
                 padding: 0;
             }
 
@@ -2789,6 +3054,7 @@ main {
 
                 .answer {
                     max-height: 500px;
+                    color: var(--white);
                     opacity: 0.8;
                 }
             }
@@ -2803,6 +3069,7 @@ main {
 
     .container {
         padding-bottom: 0;
+        padding-top: 0;
 
         .contact-wrapper {
             display: flex;
