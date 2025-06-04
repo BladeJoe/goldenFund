@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <header class="header" data-aos="fade-zoom-in">
+    <header class="header">
         <div class="container">
             <div class="inner-container">
                 <div class="contacts">
@@ -57,11 +57,29 @@
                     </div>
                     <div class="divider mobile-hidden-sm"></div>
                     <label for="language" class="sr-only">язык</label>
-                    <select name="lang" id="language">
-                        <option value="EN"><span class="flag">🇬🇧</span> ENG</option>
-                        <option value="RU"><span class="flag">🇷🇺</span> РУС</option>
-                        <option value="UZ"><span class="flag">🇺🇿</span> UZB</option>
-                    </select>
+                    <div class="lang-dropdown">
+                        <div class="lang-selected">
+                            <img src="./assets/images/rus.png" alt="">
+                            <span>RUS</span>
+                            <img src="./assets/images/arrownextwhite.svg" class="arrow" width="11" height="11" alt=""
+                                data-arrow="true">
+                        </div>
+                        <div class="lang-options">
+                            <button data-lang="ENG">
+                                <img src="./assets/images/eng.png" alt="">
+                                <span>ENG</span>
+                            </button>
+                            <button data-lang="RUS">
+                                <img src="./assets/images/rus.png" alt="">
+                                <span>RUS</span>
+                            </button>
+                            <button data-lang="UZB">
+                                <img src="./assets/images/uzb.png" alt="">
+                                <span>UZB</span>
+                            </button>
+                        </div>
+                    </div>
+
                     <!-- <div class="lang-select">
                         <img class="lang-flag" src="https://flagcdn.com/w40/gb.png" alt="flag">
                         <select id="language-select">
@@ -93,7 +111,7 @@
         </div>
     </header>
 
-    <nav class="nav" data-aos="fade-zoom-in">
+    <nav class="nav">
 
         <div class="container nav-container">
 
@@ -135,6 +153,10 @@
                             </li>
                             <li>
                                 <a href="./about-exec.html">Исполнительный офис<img src="./assets/images/arrownext.svg"
+                                        width="11" height="11" alt="" /></a>
+                            </li>
+                            <li>
+                                <a href="./faq.html">Часто задаваемые вопросы<img src="./assets/images/arrownext.svg"
                                         width="11" height="11" alt="" /></a>
                             </li>
                         </ul>
@@ -182,6 +204,10 @@
                             </li>
                             <li>
                                 <a href="./about-exec.html">Исполнительный офис<img src="./assets/images/arrownext.svg"
+                                        width="11" height="11" alt="" /></a>
+                            </li>
+                            <li>
+                                <a href="./faq.html">Часто задаваемые вопросы<img src="./assets/images/arrownext.svg"
                                         width="11" height="11" alt="" /></a>
                             </li>
                         </ul>

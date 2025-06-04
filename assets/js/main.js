@@ -118,25 +118,79 @@ function closeSearchBar() {
 
 
 // lenis smooth scroll
+function initLenis() {
+    if (window.innerWidth < 768 || /Mobi|Android/i.test(navigator.userAgent)) return;
 
-const lenis = new Lenis({
-    duration: 1,
-    easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    smoothWheel: true,
-    syncTouch: true,
-    gestureOrientation: 'vertical',
-    touchMultiplier: 2,
-    wheelMultiplier: 1.2,
-    autoResize: true,
-    lerp: 0.1,
-    smoothTouch: false,
-});
-function raf(time) {
-    lenis.raf(time)
-    requestAnimationFrame(raf)
+    const lenis = new Lenis({
+        duration: 1,
+        easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smoothWheel: true,
+        syncTouch: true,
+        gestureOrientation: 'vertical',
+        touchMultiplier: 1,
+        wheelMultiplier: 1.2,
+        autoResize: true,
+        lerp: 0.1,
+        smoothTouch: false,
+    });
+
+    function raf(time) {
+        const centerX = window.innerWidth / 2;
+        const centerY = window.innerHeight / 2;
+        const activeElement = document.elementFromPoint(centerX, centerY);
+        if (!activeElement || activeElement.tagName.toLowerCase() !== 'iframe') {
+            lenis.raf(time);
+        }
+        requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
 }
 
-requestAnimationFrame(raf)
+initLenis();
 
 
 
+
+
+
+function initLangDropdown() {
+    const dropdown = document.querySelector('.lang-dropdown')
+    const selected = dropdown.querySelector('.lang-selected')
+    const options = dropdown.querySelectorAll('.lang-options button')
+
+    selected.addEventListener('click', () => {
+        dropdown.classList.toggle('open');
+    })
+
+    options.forEach(option => {
+        option.addEventListener('click', () => {
+            const svg = option.querySelector('img').cloneNode(true)
+            const text = option.querySelector('span').textContent
+
+            const oldSvg = selected.querySelector('img')
+            selected.replaceChild(svg, oldSvg)
+
+            const oldArrow = selected.querySelector('img[data-arrow]')
+            if (oldArrow) oldArrow.remove()
+
+            const arrow = document.createElement('img')
+            arrow.src = './assets/images/arrownextwhite.svg'
+            arrow.width = 11
+            arrow.classList.add("arrow");
+            arrow.height = 11
+            arrow.alt = ''
+            arrow.setAttribute('data-arrow', 'true')
+            selected.appendChild(arrow)
+            selected.querySelector('span').textContent = text
+
+            dropdown.classList.remove('open')
+            console.log(option.dataset.lang)
+        })
+    })
+
+    document.addEventListener('click', e => {
+        if (!dropdown.contains(e.target)) dropdown.classList.remove('open')
+    })
+}
+initLangDropdown()
