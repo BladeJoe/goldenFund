@@ -43,63 +43,63 @@
 
 @font-face {
     font-family: 'Lato Hairline';
-    src: url('./../fonts/Lato-Hairline.woff') format('woff');
+    src: url('fonts/Lato-Hairline.woff') format('woff');
     font-weight: 100;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Lato';
-    src: url('./../fonts/Lato-Heavy.woff') format('woff');
+    src: url('fonts/Lato-Heavy.woff') format('woff');
     font-weight: 900;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Lato';
-    src: url('./../fonts/Lato-Regular.woff') format('woff');
+    src: url('fonts/Lato-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Lato';
-    src: url('./../fonts/Lato-Black.woff') format('woff');
+    src: url('fonts/Lato-Black.woff') format('woff');
     font-weight: 900;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Lato';
-    src: url('./../fonts/Lato-Thin.woff') format('woff');
+    src: url('fonts/Lato-Thin.woff') format('woff');
     font-weight: 100;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Lato';
-    src: url('./../fonts/Lato-Medium.woff') format('woff');
+    src: url('fonts/Lato-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Lato';
-    src: url('./../fonts/Lato-Semibold.woff') format('woff');
+    src: url('fonts/Lato-Semibold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Lato';
-    src: url('./../fonts/Lato-Bold.woff') format('woff');
+    src: url('fonts/Lato-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Lato';
-    src: url('./../fonts/Lato-Light.woff') format('woff');
+    src: url('fonts/Lato-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
 }
@@ -109,7 +109,7 @@
     margin: 0;
     padding: 0;
     font-family: "Lato", sans-serif;
-
+    scroll-behavior: smooth !important;
 
     ::selection {
         background-color: var(--blue6);
@@ -457,7 +457,7 @@ a {
     width: 100%;
     background-color: var(--blue1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    max-height: 53px;
+    max-height: 52px;
 
     .container {
         margin: 8px 16px;
@@ -1011,7 +1011,7 @@ a {
 
 .breadcrumbs::before {
     content: "";
-    background: url("./../images/breadcrumb-before.svg") center no-repeat;
+    background: url("images/breadcrumb-before.svg") center no-repeat;
     width: 84px;
     height: 167px;
     position: absolute;
@@ -1118,7 +1118,7 @@ a {
 
 .hero::before {
     content: "";
-    background-image: url("./../images/patternleft-lg.svg");
+    background-image: url("images/patternleft-lg.svg");
     width: 150px;
     height: 300px;
     position: absolute;
@@ -1133,7 +1133,7 @@ a {
 
 .hero::after {
     content: "";
-    background-image: url("./../images/patternright-lg.svg");
+    background-image: url("images/patternright-lg.svg");
     width: 150px;
     height: 300px;
     position: absolute;
@@ -1331,7 +1331,7 @@ a {
     top: 0;
     left: 0;
     inset: 0;
-    background: url("./../images/backgorund-wave.png") center no-repeat var(--black8);
+    background: url("images/backgorund-wave.png") center no-repeat var(--black8);
     background-size: cover;
     opacity: 0.15;
     z-index: -1;
@@ -1874,7 +1874,7 @@ a {
     //     position: absolute;
     //     width: 350px;
     //     height: 100%;
-    //     background: url("./../images/member-bg-shadow.svg") no-repeat;
+    //     background: url("images/member-bg-shadow.svg") no-repeat;
     //     background-size: cover;
     //     pointer-events: none;
     //     right: 0;
@@ -1907,7 +1907,7 @@ a {
     left: 50%;
     z-index: 0;
     transform: translate(-50%, 0);
-    background: url("./../images/graffiti.svg") center no-repeat;
+    background: url("images/graffiti.svg") center no-repeat;
     background-size: auto;
 
     @media (max-width:768px) {
@@ -3292,7 +3292,7 @@ a {
                     position: absolute;
                     width: 120px;
                     height: 120px;
-                    background: url("./../images/naqsh.svg") no-repeat center;
+                    background: url("images/naqsh.svg") no-repeat center;
                     top: 0;
                     right: 0;
                 }
@@ -3434,7 +3434,7 @@ a {
 
 .footer::before {
     content: "";
-    background-image: url("./../images/patternleft-sm.svg");
+    background-image: url("images/patternleft-sm.svg");
     width: 120px;
     height: 240px;
     position: absolute;
@@ -3445,7 +3445,7 @@ a {
 
 .footer::after {
     content: "";
-    background-image: url("./../images/patternright-sm.svg");
+    background-image: url("images/patternright-sm.svg");
     width: 120px;
     height: 240px;
     position: absolute;
@@ -3698,7 +3698,7 @@ a {
                     content: "";
                     position: absolute;
                     inset: 0;
-                    background: url("./../images/magnifier-members.svg") center no-repeat;
+                    background: url("images/magnifier-members.svg") center no-repeat;
                     width: 20px;
                     height: 20px;
                     top: 16px;
