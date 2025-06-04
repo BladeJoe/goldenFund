@@ -306,18 +306,204 @@
 
                     <div class="search-wrapper">
                         <input class="searchbar" placeholder="Поиск" type="text" />
-                        <button class="filter-btn">Фильтр</button>
+                        <button class="filter-btn" onclick="toggleFilter()">
+                            <img src="images/filter.svg" width="22" height="22" alt="">
+                            Фильтр</button>
                     </div>
 
 
-                    <div class="filter">
+                    <div id="filter" class="filter hidden">
                         <div class="top-wrapper">
-                            <p class="subtitle-2">Фильтр</p>
+                            <p class="subtitle-2">
+                                Фильтр
+                            </p>
                             <button>Сбросить</button>
                         </div>
                         <hr>
                         <div class="bottom-wrapper">
-
+                            <div class="filter-column">
+                                <h4 class="filter-title">По происхождению</h4>
+                                <label class="checkbox-container">Выпускники Президентских школ
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Выпускники Международной школы Аль-Беруни
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Выпускники Университета «Новый Узбекистан»
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Стипендиаты фонда «Эл-юрт умиди»
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Национальной программы поддержки инициативы «Одаренные
+                                    дети Президента»
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Студенты топ-университетов мира
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Специалисты из авторитетных международных компаний
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="filter-column">
+                                <h4 class="filter-title">По отрасли деятельности</h4>
+                                <label class="checkbox-container">Образование
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Технологии и инновации
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Государственное управление и политика
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Наука и прикладные исследования
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Медицина и здравоохранение
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Культура и искусство
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Предпринимательство и частный сектор
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Медиа и коммуникация
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Право и юридическая практика
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Общественные инициативы / НКО / международные
+                                    организации
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="filter-column">
+                                <h4 class="filter-title">По специальности</h4>
+                                <label class="checkbox-container">Экономика и финансы
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Компьютерные науки и инженерия
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Медицина
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Педагогика
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Международные отношения
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Гуманитарные науки (история, философия, лингвистика и
+                                    т.п.)
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Право
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Журналистика и коммуникации
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Социология и психология
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Искусство и культура
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Другое
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="filter-column">
+                                <h4 class="filter-title">По рейтингу вуза</h4>
+                                <label class="checkbox-container">Топ-50
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Топ-100
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Топ-500
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Национальные ведущие университеты
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <h4 class="filter-title">По локации</h4>
+                                <label class="checkbox-container">В Узбекистане (включая вернувшихся)
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">За рубежом
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="filter-column">
+                                <h4 class="filter-title">По статусу</h4>
+                                <label class="checkbox-container">Студент
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Молодой специалист
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Специалист с опытом
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Руководитель
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Предприниматель
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Ученый / исследователь
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="checkbox-container">Ментор / наставник
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
                         </div>
                     </div>
 
@@ -517,7 +703,7 @@
         <div class="container">
             <div class="footer-wrapper">
                 <div class="col">
-                    <span class="subtitle-1">Разделы</span>
+                    <div class="subtitle-1 title">Разделы</div>
                     <ul class="footer-list">
                         <li><a href="./about-platform.html">О сообществе</a></li>
                         <li><a href="./news.html">Новости</a></li>
@@ -528,18 +714,20 @@
                 </div>
 
                 <div class="col">
-                    <div class="subtitle-1">Контакты</div>
-                    <div>
-                        <p>Электронная почта: </p><a href="mailto:info@newuu.uz">info@newuu.uz</a>
+                    <div class="subtitle-1 title">Контакты</div>
+                    <div class="center">
+                        <p>Электронная почта: </p>
+                        <a href="mailto:info@newuu.uz">info@newuu.uz</a>
                     </div>
                     <div>
-
-                        <p>Номер телефона: </p><a href="tel:+998771202411">+998 771 202 41 11</a>
+                        <p>Номер телефона: </p>
+                        <a href="tel:+998771202411">+998 771 202 41 11</a>
                     </div>
                 </div>
 
                 <div class="col">
-                    <div class="subtitle-1 blank"> </div>
+                    <div class="subtitle-1 blank mobile-hidden title">
+                    </div>
                     <div class="address">
                         <p>Адрес:</p>
                         <a href="#">Мирзо Улугбек, Мовароуннахр 1</a>
@@ -564,7 +752,7 @@
                 </div>
 
                 <div class="col location">
-                    <span class="subtitle-1">Расположение</span>
+                    <div class="subtitle-1 title">Расположение</div>
                     <!-- <iframe title="location"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5993.34!2d69.295472!3d41.316056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef51b50c0eda7%3A0x1ef4e0e3a79a0726!2sNew%20Uzbekistan%20University!5e0!3m2!1sen!2sus"
                         style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe> -->

@@ -115,7 +115,10 @@ function closeSearchBar() {
     document.getElementById('nav-search-bar').value = '';
 
 }
-
+function toggleFilter() {
+    document.querySelector('#filter').classList.toggle('hidden');
+    document.querySelector('.filter-btn').classList.toggle('open');
+}
 
 // lenis smooth scroll
 function initLenis() {
