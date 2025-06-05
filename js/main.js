@@ -272,3 +272,75 @@ function manageNewsBorders() {
 if (window.location.pathname === '/news.html' || window.location.pathname === '/index.html') {
     manageNewsBorders()
 }
+
+
+//slider  const track = document.querySelector('.carousel-track')
+function initSlider() {
+    const track = document.querySelector('.carousel-track')
+    const images = document.querySelectorAll('.carousel-track img')
+    const lineContainer = document.querySelector('.carousel-lines')
+    let index = 0, startX = 0, currentTranslate = 0, prevTranslate = 0, dragging = false
+
+    track.style.width = `${images.length * 100}%`
+    images.forEach(img => {
+        img.style.width = `${100 / images.length}%`
+    })
+
+    images.forEach((_, i) => {
+        const line = document.createElement('div')
+        line.addEventListener('click', () => {
+            index = i
+            setPositionByIndex()
+        })
+        lineContainer.appendChild(line)
+    })
+
+    const lines = document.querySelectorAll('.carousel-lines div')
+    lines[index].classList.add('active')
+
+    track.addEventListener('mousedown', startDrag)
+    track.addEventListener('touchstart', startDrag)
+    track.addEventListener('mousemove', drag)
+    track.addEventListener('touchmove', drag)
+    track.addEventListener('mouseup', endDrag)
+    track.addEventListener('mouseleave', endDrag)
+    track.addEventListener('touchend', endDrag)
+
+    function startDrag(e) {
+        dragging = true
+        startX = e.type.includes('touch') ? e.touches[0].clientX : e.clientX
+        track.style.transition = 'none'
+        e.preventDefault()
+    }
+
+    function drag(e) {
+        if (!dragging) return
+        const currentX = e.type.includes('touch') ? e.touches[0].clientX : e.clientX
+        const delta = currentX - startX
+        currentTranslate = prevTranslate + delta
+        track.style.transform = `translateX(${currentTranslate}px)`
+        e.preventDefault()
+    }
+
+    function endDrag(e) {
+        if (!dragging) return
+        dragging = false
+        const endX = e.type.includes('touch') ? (e.changedTouches[0]?.clientX ?? startX) : e.clientX
+        const moved = endX - startX
+        track.style.transition = 'transform 0.3s ease'
+        if (moved < -50 && index < images.length - 1) index++
+        if (moved > 50 && index > 0) index--
+        setPositionByIndex()
+    }
+
+    function setPositionByIndex() {
+        currentTranslate = -index * (track.clientWidth / images.length)
+        prevTranslate = currentTranslate
+        track.style.transform = `translateX(${currentTranslate}px)`
+        lines.forEach(line => line.classList.remove('active'))
+        lines[index].classList.add('active')
+    }
+}
+if (window.location.pathname !== '/index.html') {
+    initSlider()
+}
