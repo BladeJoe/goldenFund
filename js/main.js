@@ -122,31 +122,27 @@ function toggleFilter() {
 
 // lenis smooth scroll
 function initLenis() {
-    if (window.innerWidth < 768 || /Mobi|Android/i.test(navigator.userAgent)) return;
+    if (window.innerWidth < 768 || /Mobi|Android/i.test(navigator.userAgent)) return
 
     const lenis = new Lenis({
-        duration: 1.2,
-        easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        duration: 1,
+        easing: t => 1 - Math.pow(1 - t, 4),
         smoothWheel: true,
         syncTouch: true,
         gestureOrientation: 'vertical',
         touchMultiplier: 1,
-        wheelMultiplier: 1.5,
+        wheelMultiplier: 1,
         autoResize: true,
-        lerp: 0.1,
-        smoothTouch: false,
-    });
+        smoothTouch: false
+    })
 
-    function raf(time) {
-        lenis.raf(time)
+    requestAnimationFrame(function raf(t) {
+        lenis.raf(t)
         requestAnimationFrame(raf)
-    }
-
-    requestAnimationFrame(raf);
+    })
 }
 
-initLenis();
-
+initLenis()
 
 
 
