@@ -2,7 +2,6 @@ document.querySelectorAll('img').forEach(img => img.ondragstart = () => false)
 
 AOS.init()
 
-
 const menu = document.getElementById("navMenuWrapper")
 const allSubmenus = () => menu.querySelectorAll(".nav-menu-inner-wrapper")
 let timeoutDuration = window.innerWidth < 1280 ? 3000 : 500
@@ -12,35 +11,66 @@ let openTimeout
 let currentOpenMenuId = null
 let trackArea = [menu]
 
-function faqActivate(e) {
-    e.currentTarget.classList.toggle("active");
-}
 
 window.addEventListener("resize", () => {
     timeoutDuration = window.innerWidth < 1280 ? 3000 : 500
 
 })
 
-document.querySelectorAll(".faq-item").forEach(el =>
-    el.addEventListener("click", faqActivate)
-)
+document.querySelectorAll(".faq-item").forEach(el => el.addEventListener("click", e => e.currentTarget.classList.toggle("active")))
+
+
 function initAboutDropdownToggle() {
     const trigger = document.querySelector('.nav-menu-about-dropdown')
     const dropdown = document.querySelector('.nav-menu-about-wrapper')
-
     if (!trigger || !dropdown) return
 
-    trigger.addEventListener('click', () => {
+    const closeDropdown = () => {
+        dropdown.classList.add('hidden')
+        document.removeEventListener('click', outsideClickListener)
+    }
+
+    const outsideClickListener = e => {
+        if (!trigger.contains(e.target) && !dropdown.contains(e.target)) {
+            closeDropdown()
+        }
+    }
+
+    trigger.addEventListener('click', e => {
+        e.stopPropagation()
+        const isHidden = dropdown.classList.contains('hidden')
         dropdown.classList.toggle('hidden')
         menu.classList.add("hidden")
+        if (isHidden) {
+            setTimeout(() => document.addEventListener('click', outsideClickListener), 0)
+        } else {
+            document.removeEventListener('click', outsideClickListener)
+        }
     })
 }
-
 initAboutDropdownToggle()
+
+
 
 function openNavMenu() {
     menu.classList.toggle("hidden")
     document.querySelector('.nav-menu-about-wrapper').classList.add('hidden')
+
+    const isHidden = menu.classList.contains("hidden")
+
+    const outsideClickListener = e => {
+        if (!menu.contains(e.target)) {
+            menu.classList.add("hidden")
+            allSubmenus().forEach(el => el.classList.add("hidden"))
+            currentOpenMenuId = null
+            document.removeEventListener("click", outsideClickListener)
+        }
+    }
+
+    if (!isHidden) {
+        setTimeout(() => document.addEventListener("click", outsideClickListener), 0)
+    }
+
     if (!menu.dataset.listenerAdded) {
         menu.addEventListener("mouseover", (e) => {
             const targetSpan = e.target.closest("li > span")
@@ -81,28 +111,12 @@ function openNavMenu() {
             }
         })
 
-        trackArea.forEach(el => {
-            el.addEventListener("mouseover", () => clearTimeout(closeTimeout))
-            el.addEventListener("mouseout", (e) => {
-                if (!menu.contains(e.relatedTarget)) {
-                    clearTimeout(closeTimeout)
-                    closeTimeout = setTimeout(() => {
-                        menu.classList.add("hidden")
-                        allSubmenus().forEach(el => el.classList.add("hidden"))
-                        currentOpenMenuId = null
-                    }, timeoutDuration)
-                }
-            })
-        })
-        setTimeout(() => {
-            console.log(trackArea)
-        }, 1000);
-
         menu.dataset.listenerAdded = "true"
     }
 }
 
-// searchbar
+
+// searchbar 
 
 
 function openSearchBar() {
@@ -115,34 +129,23 @@ function closeSearchBar() {
     document.getElementById('nav-search-bar').value = '';
 
 }
+
+//filter toggle
 function toggleFilter() {
     document.querySelector('#filter').classList.toggle('hidden');
     document.querySelector('.filter-btn').classList.toggle('open');
 }
 
 // lenis smooth scroll
-function initLenis() {
-    if (window.innerWidth < 768 || /Mobi|Android/i.test(navigator.userAgent)) return
+// function initLenis() {
+//     if (window.innerWidth < 768 || /Mobi|Android/i.test(navigator.userAgent)) return
 
-    const lenis = new Lenis({
-        duration: 1,
-        easing: t => 1 - Math.pow(1 - t, 4),
-        smoothWheel: true,
-        syncTouch: true,
-        gestureOrientation: 'vertical',
-        touchMultiplier: 1,
-        wheelMultiplier: 1,
-        autoResize: true,
-        smoothTouch: false
-    })
+//     const lenis = new Lenis({
+//         autoRaf: true
+//     })
+// }
 
-    requestAnimationFrame(function raf(t) {
-        lenis.raf(t)
-        requestAnimationFrame(raf)
-    })
-}
-
-initLenis()
+// initLenis()
 
 
 
@@ -189,6 +192,8 @@ function initLangDropdown() {
 }
 initLangDropdown()
 
+// category slider , members page
+
 
 function grabNslide() {
     const slider = document.querySelector('.category-wrapper')
@@ -228,3 +233,42 @@ if (window.location.pathname === '/members.html') {
 }
 
 
+
+
+
+
+// news border management
+
+
+function manageNewsBorders() {
+    window.addEventListener('resize', applyBorders);
+    document.addEventListener('DOMContentLoaded', applyBorders);
+
+    function applyBorders() {
+        const cards = [...document.querySelectorAll('.newscard')];
+        const wrapper = document.querySelector('.newscard-wrapper');
+        const wrapperWidth = wrapper.offsetWidth;
+        const cardWidth = 533;
+        const columns = Math.floor(wrapperWidth / cardWidth);
+        const rows = Math.ceil(cards.length / columns);
+
+        cards.forEach((card, index) => {
+            card.style.border = 'none';
+
+            const isLastCard = index === cards.length - 1;
+            const isLastColumn = (index + 1) % columns === 0;
+            const isLastRow = index >= (rows - 1) * columns;
+
+            if (!isLastColumn && !isLastCard) {
+                card.style.borderRight = '1px solid #D3D8E3';
+            }
+
+            if (!isLastRow) {
+                card.style.borderBottom = '1px solid #D3D8E3';
+            }
+        });
+    }
+}
+if (window.location.pathname === '/news.html' || window.location.pathname === '/index.html') {
+    manageNewsBorders()
+}
