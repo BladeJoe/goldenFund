@@ -137,24 +137,21 @@ function toggleFilter() {
 }
 
 // lenis smooth scroll
-// function initLenis() {
-//     // if (window.innerWidth < 1024 || /Mobi|Android/i.test(navigator.userAgent)) return
-//     const lenis = new Lenis({
-//         duration: 0.75,
-//         easing: (t) => 1 - Math.pow(1 - t, 8),
-//         smooth: true,
-//         smoothTouch: true,
-//     });
+function initLenis() {
+    const lenis = new Lenis({
+        duration: 0.75,
+        easing: (t) => 1 - Math.pow(1 - t, 8),
+        smooth: true,
+        smoothTouch: true,
+    });
+    function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
 
-//     // To make Lenis work, you also need to call its update method in your animation loop
-//     function raf(time) {
-//         lenis.raf(time)
-//         requestAnimationFrame(raf)
-//     }
-
-//     requestAnimationFrame(raf)
-// }
-// initLenis()
+    requestAnimationFrame(raf)
+}
+initLenis()
 
 
 
