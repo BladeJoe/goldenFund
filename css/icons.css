@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'goldenFundOfNation';
   src: url('../fonts/goldenFundOfNation.eot?suqm8');
-  src: url('../fonts/goldenFundOfNation.eot?suqm8#iefix') format('embedded-opentype'),
-    url('../fonts/goldenFundOfNation.ttf?suqm8') format('truetype'),
+  src: url('../fonts/goldenFundOfNation.woff2?suqm8') format('woff2'),
     url('../fonts/goldenFundOfNation.woff?suqm8') format('woff'),
-    url('../fonts/goldenFundOfNation.svg?suqm8#goldenFundOfNation') format('svg');
+    url('../fonts/goldenFundOfNation.ttf?suqm8') format('truetype'),
+    url('../fonts/goldenFundOfNation.eot?suqm8#iefix') format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
   font-display: block;
