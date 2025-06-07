@@ -116,7 +116,6 @@
     scrollbar-width: none;
     scrollbar-width: thin;
     overscroll-behavior: none;
-    max-width: 100%;
 
     ::-webkit-scrollbar {
         display: none;
@@ -136,6 +135,7 @@ body {
     margin: 0;
     height: 100%;
     display: flex;
+    max-width: 100%;
     position: relative;
     flex-direction: column;
     justify-content: space-between;
@@ -764,7 +764,7 @@ button:hover [class*=" i-"]:before {
                 color: var(--black1);
                 display: flex;
                 flex-direction: column;
-                max-width: 100vw;
+                max-width: 100%;
                 z-index: 6;
                 transform: translate(-25%, 40%);
                 gap: 12px;
@@ -939,7 +939,7 @@ button:hover [class*=" i-"]:before {
                         padding: 10px;
                         display: flex;
                         flex-direction: column;
-                        max-width: 100vw;
+                        max-width: 100%;
                         z-index: 6;
 
                         @media (max-width: 768px) {
@@ -1335,7 +1335,7 @@ button:hover [class*=" i-"]:before {
     color: var(--white);
     background-color: transparent !important;
     height: calc(100svh - 52px);
-    width: calc(100vw - 0px);
+    width: calc(100% - 0px);
     min-height: 880px;
 
     .video-wrapper {
@@ -1346,7 +1346,7 @@ button:hover [class*=" i-"]:before {
             inset: 0;
             z-index: -1;
             position: absolute;
-            width: calc(100vw - 0px);
+            width: calc(100% - 0px);
             height: 100svh;
             min-height: 880px;
             height: calc(100svh - 52px);
@@ -1356,7 +1356,7 @@ button:hover [class*=" i-"]:before {
 
         .video-overlay {
             position: absolute;
-            width: calc(100vw - 0px);
+            width: calc(100% - 0px);
             inset: 0;
             background: #050D1C99;
 
@@ -2199,7 +2199,7 @@ button:hover [class*=" i-"]:before {
     background-size: auto;
 
     @media (max-width:768px) {
-        width: 100vw;
+        width: 100%;
 
     }
 }
@@ -2219,7 +2219,7 @@ button:hover [class*=" i-"]:before {
             position: relative;
             overflow: visible;
 
-            max-width: 100vw;
+            max-width: 100%;
 
 
             @media (max-width:1564px) {
@@ -2272,7 +2272,7 @@ button:hover [class*=" i-"]:before {
                     border-radius: 20px;
 
                     @media (max-width:768px) {
-                        width: calc(100vw - 32px);
+                        width: calc(100% - 32px);
                         height: auto;
                     }
                 }
@@ -2490,7 +2490,7 @@ button:hover [class*=" i-"]:before {
                 .newscard {
                     overflow: hidden;
                     position: relative;
-                    max-width: calc(100vw - 32px);
+                    max-width: calc(100% - 32px);
                     width: 533px;
                     height: 450px;
                     padding: 20px;
@@ -2607,7 +2607,7 @@ button:hover [class*=" i-"]:before {
                     }
 
                     .newscard-img {
-                        max-width: calc(100vw - 32px);
+                        max-width: calc(100% - 32px);
                         width: 493px;
                         height: 247px;
                         border-radius: 20px;
@@ -3460,7 +3460,7 @@ button:hover [class*=" i-"]:before {
                     opacity: .12;
                     right: 0;
                     top: 0;
-                    width: 100vw;
+                    width: 100%;
                     height: 100%;
                     object-fit: cover;
                 }
