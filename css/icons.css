@@ -1,0 +1,769 @@
+@font-face {
+  font-family: 'goldenFundOfNation';
+  src: url('../fonts/goldenFundOfNation.eot?suqm8');
+  src: url('../fonts/goldenFundOfNation.eot?suqm8#iefix') format('embedded-opentype'),
+    url('../fonts/goldenFundOfNation.ttf?suqm8') format('truetype'),
+    url('../fonts/goldenFundOfNation.woff?suqm8') format('woff'),
+    url('../fonts/goldenFundOfNation.svg?suqm8#goldenFundOfNation') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="i-"],
+[class*=" i-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'goldenFundOfNation' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.i-letter-blue:before {
+  content: "\e988";
+  color: #608ee8;
+}
+
+.i-call-blue:before {
+  content: "\e987";
+  color: #608ee8;
+}
+
+.i-acc-hear:before {
+  content: "\e900";
+  color: #fff;
+}
+
+.i-acc-mobile:before {
+  content: "\e901";
+  color: #fff;
+}
+
+.i-acc-visual:before {
+  content: "\e902";
+  color: #fff;
+}
+
+.i-add-image:before {
+  content: "\e903";
+  color: #b7bbcb;
+}
+
+.i-arrow-blue:before {
+  content: "\e904";
+  color: #1c84cf;
+}
+
+.i-arrow-dark-blue:before {
+  content: "\e905";
+  color: var(--blue1);
+}
+
+.i-breadcrumb-arrow:before {
+  content: "\e906";
+  color: #fff;
+}
+
+.i-breadcrumb-call .path1:before {
+  content: "\e907";
+  color: rgb(0, 153, 144);
+  opacity: 0.6;
+}
+
+.i-breadcrumb-call .path2:before {
+  content: "\e908";
+  margin-left: -1em;
+  color: rgb(28, 132, 207);
+}
+
+.i-breadcrumb-cup .path1:before {
+  content: "\e909";
+  color: rgb(28, 132, 207);
+  opacity: 0.5;
+}
+
+.i-breadcrumb-cup .path2:before {
+  content: "\e90a";
+  margin-left: -1em;
+  color: rgb(0, 153, 144);
+}
+
+.i-breadcrumb-cup .path3:before {
+  content: "\e90b";
+  margin-left: -1em;
+  color: rgb(0, 153, 144);
+}
+
+.i-breadcrumb-cup .path4:before {
+  content: "\e90c";
+  margin-left: -1em;
+  color: rgb(0, 153, 144);
+}
+
+.i-breadcrumb-cup .path5:before {
+  content: "\e90d";
+  margin-left: -1em;
+  color: rgb(28, 132, 207);
+  opacity: 0.5;
+}
+
+.i-breadcrumb-cup .path6:before {
+  content: "\e90e";
+  margin-left: -1em;
+  color: rgb(0, 153, 144);
+}
+
+.i-breadcrumb-cup .path7:before {
+  content: "\e90f";
+  margin-left: -1em;
+  color: rgb(28, 132, 207);
+}
+
+.i-breadcrumb-doc .path1:before {
+  content: "\e910";
+  color: rgb(28, 132, 207);
+}
+
+.i-breadcrumb-doc .path2:before {
+  content: "\e911";
+  margin-left: -1em;
+  color: rgb(0, 153, 144);
+  opacity: 0.5;
+}
+
+.i-breadcrumb-doc .path3:before {
+  content: "\e912";
+  margin-left: -1em;
+  color: rgb(0, 153, 144);
+  opacity: 0.5;
+}
+
+.i-breadcrumb-helper:before {
+  content: "\e913";
+  color: #1a3975;
+}
+
+.i-breadcrumb-home:before {
+  content: "\e914";
+  color: #608ee8;
+}
+
+.i-breadcrumb-ribbon-star .path1:before {
+  content: "\e915";
+  color: rgb(0, 153, 144);
+  opacity: 0.7;
+}
+
+.i-breadcrumb-ribbon-star .path2:before {
+  content: "\e916";
+  margin-left: -1em;
+  color: rgb(28, 132, 207);
+}
+
+.i-breadcrumb-users .path1:before {
+  content: "\e917";
+  color: rgb(28, 132, 207);
+  opacity: 0.5;
+}
+
+.i-breadcrumb-users .path2:before {
+  content: "\e918";
+  margin-left: -1em;
+  color: rgb(28, 132, 207);
+  opacity: 0.5;
+}
+
+.i-breadcrumb-users .path3:before {
+  content: "\e919";
+  margin-left: -1em;
+  color: rgb(28, 132, 207);
+  opacity: 0.5;
+}
+
+.i-breadcrumb-users .path4:before {
+  content: "\e91a";
+  margin-left: -1em;
+  color: rgb(28, 132, 207);
+  opacity: 0.5;
+}
+
+.i-breadcrumb-users .path5:before {
+  content: "\e91b";
+  margin-left: -1em;
+  color: rgb(0, 153, 144);
+}
+
+.i-breadcrumb-users .path6:before {
+  content: "\e91c";
+  margin-left: -1em;
+  color: rgb(0, 153, 144);
+}
+
+.i-building-green:before {
+  content: "\e91d";
+  color: #009990;
+}
+
+.i-call-green:before {
+  content: "\e91e";
+  color: #009990;
+}
+
+.i-case-blue:before {
+  content: "\e91f";
+  color: #1c84cf;
+}
+
+.i-category-all .path1:before {
+  content: "\e920";
+  color: rgb(183, 187, 203);
+}
+
+.i-category-all .path2:before {
+  content: "\e921";
+  margin-left: -1em;
+  color: rgb(183, 187, 203);
+}
+
+.i-category-all .path3:before {
+  content: "\e922";
+  margin-left: -1em;
+  color: rgb(183, 187, 203);
+  opacity: 0.5;
+}
+
+.i-category-all .path4:before {
+  content: "\e923";
+  margin-left: -1em;
+  color: rgb(183, 187, 203);
+  opacity: 0.5;
+}
+
+.i-category-art .path1:before {
+  content: "\e924";
+  color: rgb(183, 187, 203);
+  opacity: 0.5;
+}
+
+.i-category-art .path2:before {
+  content: "\e925";
+  margin-left: -1em;
+  color: rgb(183, 187, 203);
+}
+
+.i-category-art .path3:before {
+  content: "\e926";
+  margin-left: -1em;
+  color: rgb(183, 187, 203);
+  opacity: 0.5;
+}
+
+.i-category-art .path4:before {
+  content: "\e927";
+  margin-left: -1em;
+  color: rgb(183, 187, 203);
+  opacity: 0.5;
+}
+
+.i-category-art .path5:before {
+  content: "\e928";
+  margin-left: -1em;
+  color: rgb(183, 187, 203);
+}
+
+.i-category-art .path6:before {
+  content: "\e929";
+  margin-left: -1em;
+  color: rgb(183, 187, 203);
+}
+
+.i-category-edu .path1:before {
+  content: "\e92a";
+  color: rgb(183, 187, 203);
+}
+
+.i-category-edu .path2:before {
+  content: "\e92b";
+  margin-left: -1em;
+  color: rgb(183, 187, 203);
+}
+
+.i-category-edu .path3:before {
+  content: "\e92c";
+  margin-left: -1em;
+  color: rgb(183, 187, 203);
+  opacity: 0.5;
+}
+
+.i-category-gov .path1:before {
+  content: "\e92d";
+  color: rgb(183, 187, 203);
+}
+
+.i-category-gov .path2:before {
+  content: "\e92e";
+  margin-left: -1em;
+  color: rgb(183, 187, 203);
+  opacity: 0.5;
+}
+
+.i-category-gov .path3:before {
+  content: "\e92f";
+  margin-left: -1em;
+  color: rgb(183, 187, 203);
+  opacity: 0.5;
+}
+
+.i-category-law .path1:before {
+  content: "\e930";
+  color: rgb(183, 187, 203);
+  opacity: 0.5;
+}
+
+.i-category-law .path2:before {
+  content: "\e931";
+  margin-left: -1em;
+  color: rgb(183, 187, 203);
+}
+
+.i-category-law .path3:before {
+  content: "\e932";
+  margin-left: -1em;
+  color: rgb(183, 187, 203);
+}
+
+.i-category-med .path1:before {
+  content: "\e933";
+  color: rgb(183, 187, 203);
+}
+
+.i-category-med .path2:before {
+  content: "\e934";
+  margin-left: -1em;
+  color: rgb(183, 187, 203);
+  opacity: 0.5;
+}
+
+.i-category-med .path3:before {
+  content: "\e935";
+  margin-left: -1em;
+  color: rgb(183, 187, 203);
+}
+
+.i-category-media .path1:before {
+  content: "\e936";
+  color: rgb(183, 187, 203);
+}
+
+.i-category-media .path2:before {
+  content: "\e937";
+  margin-left: -1em;
+  color: rgb(183, 187, 203);
+  opacity: 0.5;
+}
+
+.i-category-media .path3:before {
+  content: "\e938";
+  margin-left: -1em;
+  color: rgb(183, 187, 203);
+  opacity: 0.5;
+}
+
+.i-category-public .path1:before {
+  content: "\e939";
+  color: rgb(183, 187, 203);
+}
+
+.i-category-public .path2:before {
+  content: "\e93a";
+  margin-left: -1em;
+  color: rgb(183, 187, 203);
+  opacity: 0.5;
+}
+
+.i-category-science .path1:before {
+  content: "\e93b";
+  color: rgb(183, 187, 203);
+  opacity: 0.3;
+}
+
+.i-category-science .path2:before {
+  content: "\e93c";
+  margin-left: -1em;
+  color: rgb(183, 187, 203);
+  opacity: 0.3;
+}
+
+.i-category-science .path3:before {
+  content: "\e93d";
+  margin-left: -1em;
+  color: rgb(183, 187, 203);
+}
+
+.i-category-shop .path1:before {
+  content: "\e93e";
+  color: rgb(183, 187, 203);
+}
+
+.i-category-shop .path2:before {
+  content: "\e93f";
+  margin-left: -1em;
+  color: rgb(183, 187, 203);
+}
+
+.i-category-shop .path3:before {
+  content: "\e940";
+  margin-left: -1em;
+  color: rgb(183, 187, 203);
+  opacity: 0.5;
+}
+
+.i-category-shop .path4:before {
+  content: "\e941";
+  margin-left: -1em;
+  color: rgb(183, 187, 203);
+}
+
+.i-category-tech .path1:before {
+  content: "\e942";
+  color: rgb(183, 187, 203);
+}
+
+.i-category-tech .path2:before {
+  content: "\e943";
+  margin-left: -1em;
+  color: rgb(183, 187, 203);
+}
+
+.i-category-tech .path3:before {
+  content: "\e944";
+  margin-left: -1em;
+  color: rgb(183, 187, 203);
+  opacity: 0.5;
+}
+
+.i-chat-send:before {
+  content: "\e945";
+  color: #fff;
+}
+
+.i-chat-smile:before {
+  content: "\e946";
+  color: #757d8e;
+}
+
+.i-clip:before {
+  content: "\e947";
+  color: #00538e;
+}
+
+.i-download-white:before {
+  content: "\e948";
+  color: #fff;
+}
+
+.i-dropdown-white:before {
+  content: "\e949";
+  color: #fff;
+}
+
+.i-exit:before {
+  content: "\e94a";
+}
+
+.i-eye-green:before {
+  content: "\e94b";
+  color: #009990;
+}
+
+.i-facebook-blue:before {
+  content: "\e94c";
+  color: #1c84cf;
+}
+
+.i-facebook-white:before {
+  content: "\e94d";
+  color: #fff;
+}
+
+.i-filter-academic:before {
+  content: "\e94e";
+  color: #1c84cf;
+}
+
+.i-filter-crown:before {
+  content: "\e94f";
+  color: #1c84cf;
+}
+
+.i-filter-globe:before {
+  content: "\e950";
+  color: #1c84cf;
+}
+
+.i-filter-job-title:before {
+  content: "\e951";
+  color: #1c84cf;
+}
+
+.i-filter-location:before {
+  content: "\e952";
+  color: #1c84cf;
+}
+
+.i-filter-star:before {
+  content: "\e953";
+  color: #1c84cf;
+}
+
+.i-footer-after:before {
+  content: "\e954";
+  color: #f6f7fb;
+}
+
+.i-footer-before:before {
+  content: "\e955";
+  color: #f6f7fb;
+}
+
+.i-hero-after:before {
+  content: "\e956";
+  color: #f6f7fb;
+}
+
+.i-hero-before:before {
+  content: "\e957";
+  color: #f6f7fb;
+}
+
+.i-info-globe:before {
+  content: "\e958";
+}
+
+.i-info-like:before {
+  content: "\e959";
+}
+
+.i-info-people:before {
+  content: "\e95a";
+}
+
+.i-info-speak:before {
+  content: "\e95b";
+}
+
+.i-instagram-blue:before {
+  content: "\e95c";
+  color: #1c84cf;
+}
+
+.i-instagram-white:before {
+  content: "\e95d";
+  color: #fff;
+}
+
+.i-join-star:before {
+  content: "\e95e";
+  color: #009990;
+}
+
+.i-link-green:before {
+  content: "\e95f";
+  color: #009990;
+}
+
+.i-magnifier-blue:before {
+  content: "\e960";
+}
+
+.i-mail-green:before {
+  content: "\e961";
+  color: #009990;
+}
+
+.i-map-green:before {
+  content: "\e962";
+  color: #009990;
+}
+
+.i-member-building:before {
+  content: "\e963";
+  color: #009990;
+}
+
+.i-member-call:before {
+  content: "\e964";
+  color: #1c84cf;
+}
+
+.i-member-case:before {
+  content: "\e965";
+  color: #009990;
+}
+
+.i-member-crown:before {
+  content: "\e966";
+  color: #009990;
+}
+
+.i-member-edu:before {
+  content: "\e967";
+  color: #009990;
+}
+
+.i-member-globe:before {
+  content: "\e968";
+  color: #009990;
+}
+
+.i-member-location:before {
+  content: "\e969";
+  color: #009990;
+}
+
+.i-member-logo:before {
+  content: "\e96a";
+  color: #608ee8;
+}
+
+.i-member-mail:before {
+  content: "\e96b";
+  color: #009990;
+}
+
+.i-member-mail-open:before {
+  content: "\e96c";
+  color: #dda853;
+}
+
+.i-member-map:before {
+  content: "\e96d";
+  color: #009990;
+}
+
+.i-member-star:before {
+  content: "\e96e";
+  color: #009990;
+}
+
+.i-navigation-dark:before {
+  content: "\e96f";
+  color: #0b2556;
+}
+
+.i-navigation-light:before {
+  content: "\e970";
+  color: #fff;
+}
+
+.i-nav-magnifier-dark:before {
+  content: "\e971";
+  color: var(--blue1);
+}
+
+.i-nav-magnifier-light:before {
+  content: "\e971";
+  color: #fff;
+}
+
+.i-news-calendar-green:before {
+  content: "\e973";
+  color: #009990;
+}
+
+.i-news-calendar-hover:before {
+  content: "\e974";
+  color: #fff;
+}
+
+.i-news-eye-hover:before {
+  content: "\e975";
+  color: #fff;
+}
+
+.i-next-white:before {
+  content: "\e976";
+  color: #fff;
+}
+
+.i-pagination-back:before {
+  content: "\e977";
+  color: #757d8e;
+}
+
+.i-pagination-forward:before {
+  content: "\e978";
+  color: #757d8e;
+}
+
+.i-proend:before {
+  content: "\e979";
+  color: #fff;
+}
+
+.i-profile:before {
+  content: "\e97a";
+  color: #608ee8;
+}
+
+.i-profile-bell:before {
+  content: "\e97b";
+}
+
+.i-profile-bell-blue:before {
+  content: "\e97c";
+}
+
+.i-profile-calendar:before {
+  content: "\e97d";
+}
+
+.i-profile-dialog:before {
+  content: "\e97e";
+  color: #b7bbcb;
+}
+
+.i-profile-lock:before {
+  content: "\e97f";
+}
+
+.i-send-message:before {
+  content: "\e980";
+  color: #fff;
+}
+
+.i-share:before {
+  content: "\e981";
+  color: #009990;
+}
+
+.i-telegram-blue:before {
+  content: "\e982";
+  color: #1c84cf;
+}
+
+.i-telegram-white:before {
+  content: "\e983";
+  color: #fff;
+}
+
+.i-x:before {
+  content: "\e984";
+  color: #608ee8;
+}
+
+.i-youtube-blue:before {
+  content: "\e985";
+  color: #1c84cf;
+}
+
+.i-youtube-white:before {
+  content: "\e986";
+  color: #fff;
+}

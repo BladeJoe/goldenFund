@@ -10,7 +10,8 @@
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="/css/aos.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/icons.css">
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 
 <body>
@@ -19,51 +20,49 @@
             <div class="inner-container">
                 <div class="contacts">
                     <a href="tel:+998712024111">
-                        <img src="./images/call.svg" alt="" aria-label="call">
+                        <span class="i-call-blue"></span>
                         <span class="mobile-hidden">+998 71 202 41 11</span>
                     </a>
                     </li>
                     <div class="divider"></div>
                     <a href="mailto:info@newuu.uz">
-                        <img src="images/mail.svg" alt="" aria-label="email">
+                        <span class="i-letter-blue"></span>
                         <span class="mobile-hidden">info@newuu.uz</span>
                     </a>
                 </div>
                 <div class="right">
                     <div class="accessibility mobile-hidden">
-                        <a href="#" aria-label="Increase visibility">
-                            <img src="./images/visibility.svg" width="22" height="22" alt="">
-                        </a>
-                        <a href="#" aria-label="Mobile version">
-                            <img src="./images/smartphone.svg" width="22" height="22" alt="">
-                        </a>
-                        <a href="#" aria-label="Read aloud">
-                            <img src="./images/readaloud.svg" width="22" height="22" alt="">
-                        </a>
+                        <button aria-label="Increase visibility">
+                            <span class="i-acc-visual"></span>
+                        </button>
+                        <button aria-label="Mobile version">
+                            <span class="i-acc-mobile"></span>
+                        </button>
+                        <button aria-label="Read aloud">
+                            <span class="i-acc-hear"></span>
+                        </button>
                     </div>
                     <div class="divider mobile-hidden"></div>
                     <div class="socials mobile-hidden-sm">
                         <a href="#" aria-label="Instagram">
-                            <img src="./images/instagram.svg" width="22" height="22" alt="">
+                            <span class="i-instagram-white"></span>
                         </a>
                         <a href="#" aria-label="Telegram">
-                            <img src="./images/telegram.svg" width="22" height="22" alt="">
+                            <span class="i-telegram-white"></span>
                         </a>
                         <a href="#" aria-label="YouTube">
-                            <img src="./images/youtube.svg" width="22" height="22" alt="">
+                            <span class="i-youtube-white"></span>
                         </a>
                         <a href="#" aria-label="Facebook">
-                            <img src="./images/facebook.svg" width="22" height="22" alt="">
+                            <span class="i-facebook-white"></span>
                         </a>
                     </div>
                     <div class="divider mobile-hidden-sm"></div>
-                    <label for="language" class="sr-only">язык</label>
                     <div class="lang-dropdown">
                         <div class="lang-selected">
                             <img src="./images/rus.png" alt="">
                             <span>RUS</span>
-                            <img src="./images/arrownextwhite.svg" class="arrow" width="11" height="11" alt=""
-                                data-arrow="true">
+                            <span class="i-dropdown-white"></span>
                         </div>
                         <div class="lang-options">
                             <button data-lang="ENG">
@@ -80,31 +79,6 @@
                             </button>
                         </div>
                     </div>
-
-                    <!-- <div class="lang-select">
-                        <img class="lang-flag" src="https://flagcdn.com/w40/gb.png" alt="flag">
-                        <select id="language-select">
-                            <option value="ru" data-flag="ru">РУС</option>
-                            <option value="en" data-flag="gb">ENG</option>
-                            <option value="uz" data-flag="uz">UZB</option>
-                        </select>
-                        <svg class="select__arrow" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 0L5 6L10 0H0Z" fill="white" />
-                        </svg>
-                    </div>
-
-
-                    <script>const select = document.getElementById('language-select');
-                        const flagImg = document.querySelector('.lang-flag');
-
-                        const updateFlag = () => {
-                            const code = select.options[select.selectedIndex].dataset.flag;
-                            flagImg.src = `https://flagcdn.com/w40/${code}.png`;
-                        };
-
-                        select.addEventListener('change', updateFlag);
-                        updateFlag();
-                    </script> -->
                 </div>
             </div>
         </div>
@@ -118,71 +92,85 @@
 
             <div class="nav-buttons">
                 <button class="button nav-btn " id="nav-menu" onclick="openNavMenu()" aria-label="Open navigation">
-                    <img id="menuIcon" alt="menu icon" height="20" width="20">
+                    <span class="i-navigation-dark" id="navigation-button"></span>
                     <script>
-                        document.getElementById('menuIcon').src =
-                            location.pathname === '/' || location.pathname === '' || location.pathname === '/index.html'
-                                ? './images/menudots-light.svg'
-                                : './images/menudots-dark.svg';
+                        const navBtn = document.getElementById('navigation-button')
+                        navBtn.className = location.pathname === '/' || location.pathname === '' || location.pathname === '/index.html'
+                            ? 'i-navigation-light'
+                            : 'i-navigation-dark'
                     </script>
-
                 </button>
             </div>
 
             <div class="nav-menu-wrapper hidden" id="navMenuWrapper">
                 <ul>
                     <li>
-                        <span>O сообществе
-                            <img src="./images/arrownext.svg" width="11" height="11" alt="" />
-                        </span>
+                        <p>O сообществе
+                            <span class="i-next-gray"></span>
+                        </p>
                         <ul class="nav-menu-inner-wrapper hidden">
                             <li>
-                                <a href="./about-platform.html">О платформe<img src="./images/arrownext.svg" width="11"
-                                        height="11" alt="" /></a>
+                                <a href="./about-platform.html">О платформe
+                                    <span class="i-next-gray"></span>
+                                </a>
                             </li>
                             <li>
-                                <a href="./about-history.html">История<img src="./images/arrownext.svg" width="11"
-                                        height="11" alt="" /></a>
+                                <a href="./about-history.html">История
+                                    <span class="i-next-gray"></span>
+                                </a>
+
                             </li>
                             <li>
-                                <a href="./about-mission.html">Миссия, цели, ценности<img src="./images/arrownext.svg"
-                                        width="11" height="11" alt="" /></a>
+                                <a href="./about-mission.html">Миссия, цели, ценности
+                                    <span class="i-next-gray"></span>
+                                </a>
+
                             </li>
                             <li>
-                                <a href="./about-structure.html">Полный состав и структура<img
-                                        src="./images/arrownext.svg" width="11" height="11" alt="" /></a>
+                                <a href="./about-structure.html">Полный состав и структура
+                                    <span class="i-next-gray"></span>
+                                </a>
+
                             </li>
                             <li>
-                                <a href="./about-exec.html">Исполнительный офис<img src="./images/arrownext.svg"
-                                        width="11" height="11" alt="" /></a>
+                                <a href="./about-exec.html">Исполнительный офис
+                                    <span class="i-next-gray"></span>
+                                </a>
+
                             </li>
                             <li>
-                                <a href="./faq.html">Часто задаваемые вопросы<img src="./images/arrownext.svg"
-                                        width="11" height="11" alt="" /></a>
+                                <a href="./faq.html">Часто задаваемые вопросы <span class="i-next-gray">
+                                    </span>
+                                </a>
+
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <span>Навигация
-                            <img src="./images/arrownext.svg" width="11" height="11" alt="" />
-                        </span>
+                        <p>Навигация
+                            <span class="i-next-gray"></span>
+                        </p>
                         <ul class="nav-menu-inner-wrapper hidden">
                             <li>
                                 <a href="./news.html">Новости
-                                    <img src="./images/arrownext.svg" width="11" height="11" alt="" /></a>
+                                    <span class="i-next-gray"></span>
+                                </a>
+
                             </li>
                             <li>
                                 <a href="./members.html">Члены
-                                    <img src="./images/arrownext.svg" width="11" height="11" alt="" /></a>
+                                    <span class="i-next-gray"></span>
+                                </a>
+
                             </li>
                             <li>
                                 <a href="./alliance-partners.html">Альянс партнёры
-                                    <img src="./images/arrownext.svg" width="11" height="11" alt="" />
+                                    <span class="i-next-gray"></span>
                                 </a>
                             </li>
                             <li>
                                 <a href="./contact.html">Контакты
-                                    <img src="./images/arrownext.svg" width="11" height="11" alt="" />
+                                    <span class="i-next-gray"></span>
                                 </a>
                             </li>
                         </ul>
@@ -194,32 +182,29 @@
                 <ul class="left">
                     <li>
                         <span class="nav-menu-about-dropdown">O сообществе
-                            <img src="./images/arrownext.svg" width="11" height="11" alt="" />
+                            <span class="i-dropdown-white"></span>
                         </span>
                         <ul class="nav-menu-about-wrapper hidden">
                             <li>
-                                <a href="./about-platform.html">О платформe<img src="./images/arrownext.svg" width="11"
-                                        height="11" alt="" /></a>
+                                <a href="./about-platform.html">О платформe
+                                    <span class="i-next-gray"></span>
                             </li>
                             <li>
-                                <a href="./about-history.html">История<img src="./images/arrownext.svg" width="11"
-                                        height="11" alt="" /></a>
+                                <a href="./about-history.html">История
+                                    <span class="i-next-gray"></span>
                             </li>
                             <li>
-                                <a href="./about-mission.html">Миссия, цели, ценности<img src="./images/arrownext.svg"
-                                        width="11" height="11" alt="" /></a>
+                                <a href="./about-mission.html">Миссия, цели, ценности <span class="i-next-gray"></span>
                             </li>
                             <li>
-                                <a href="./about-structure.html">Полный состав и структура<img
-                                        src="./images/arrownext.svg" width="11" height="11" alt="" /></a>
+                                <a href="./about-structure.html">Полный состав и структура<span
+                                        class="i-next-gray"></span>
                             </li>
                             <li>
-                                <a href="./about-exec.html">Исполнительный офис<img src="./images/arrownext.svg"
-                                        width="11" height="11" alt="" /></a>
+                                <a href="./about-exec.html">Исполнительный офис <span class="i-next-gray"></span>
                             </li>
                             <li>
-                                <a href="./faq.html">Часто задаваемые вопросы<img src="./images/arrownext.svg"
-                                        width="11" height="11" alt="" /></a>
+                                <a href="./faq.html">Часто задаваемые вопросы <span class="i-next-gray"></span>
                             </li>
                         </ul>
                     </li>
@@ -232,27 +217,27 @@
                 </ul>
                 <a href="/index.html"><img src="./images/president-school-logo.png" width="140" height="140" alt=""
                         class="nav-logo" data-aos="fade-zoom-in"></a>
-
                 <ul class="right">
                     <li><a href="./alliance-partners.html">Альянс партнёры</a></li>
-                    <li><a href="./contact.html">Контакты</a></li>
+                    <li><a href="./contact.html">Контакты </a></li>
                 </ul>
             </div>
 
             <div class="nav-buttons nav-right">
                 <button class="button nav-btn searchIcon " onclick="openSearchBar()" aria-label="Search website">
-                    <img id="magnifierIcon" alt="search icon" height="24" width="24">
+                    <span id="magnifierIcon" class="i-nav-magnifier-light"></span>
                     <script>
-                        document.getElementById('magnifierIcon').src =
-                            location.pathname === '/' || location.pathname === '' || location.pathname === '/index.html'
-                                ? './images/magnifier-light.svg'
-                                : './images/magnifier-dark.svg';
+                        const icon = document.getElementById('magnifierIcon')
+                        icon.className = location.pathname === '/' || location.pathname === '' || location.pathname === '/index.html'
+                            ? 'i-nav-magnifier-light'
+                            : 'i-nav-magnifier-dark'
                     </script>
+
 
                 </button>
 
                 <a class="button" aria-label="Cabinet" href="login.html">
-                    <img src="./images/profile.svg" width="24" height="24" alt="">
+                    <span id="magnifierIcon" class="i-profile"></span>
                     Кабинет
                 </a>
             </div>
@@ -265,7 +250,7 @@
 
                 <input type="text" class="nav-search-bar" name="nav-search-bar" id="nav-search-bar" placeholder="search"
                     value="">
-                <button class="nav-close-btn" onclick="closeSearchBar()">×
+                <button class="nav-close-btn" onclick="closeSearchBar()"><span class="i-x"></span>
                 </button>
             </div>
         </div>

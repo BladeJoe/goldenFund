@@ -73,7 +73,7 @@ function openNavMenu() {
 
     if (!menu.dataset.listenerAdded) {
         menu.addEventListener("mouseover", (e) => {
-            const targetSpan = e.target.closest("li > span")
+            const targetSpan = e.target.closest("li > p")
             if (targetSpan) {
                 menu.classList.remove("hidden")
                 const clickedLi = targetSpan.closest("li")
@@ -171,31 +171,23 @@ function initLangDropdown() {
         dropdown.classList.toggle('open');
     })
 
-    options.forEach(option => {
-        option.addEventListener('click', () => {
-            const svg = option.querySelector('img').cloneNode(true)
-            const text = option.querySelector('span').textContent
+    options.forEach(option => option.onclick = () => {
+        const svg = option.querySelector('img').cloneNode(true)
+        const text = option.querySelector('span').textContent
 
-            const oldSvg = selected.querySelector('img')
-            selected.replaceChild(svg, oldSvg)
+        selected.replaceChild(svg, selected.querySelector('img'))
+        selected.querySelector('.i-dropdown-white')?.remove()
 
-            const oldArrow = selected.querySelector('img[data-arrow]')
-            if (oldArrow) oldArrow.remove()
+        const arrow = document.createElement('span')
+        arrow.className = 'i-dropdown-white'
+        selected.append(arrow)
 
-            const arrow = document.createElement('img')
-            arrow.src = 'images/arrownextwhite.svg'
-            arrow.width = 11
-            arrow.classList.add("arrow");
-            arrow.height = 11
-            arrow.alt = ''
-            arrow.setAttribute('data-arrow', 'true')
-            selected.appendChild(arrow)
-            selected.querySelector('span').textContent = text
-
-            dropdown.classList.remove('open')
-            console.log(option.dataset.lang)
-        })
+        selected.querySelector('span').textContent = text
+        dropdown.classList.remove('open')
+        console.log(option.dataset.lang)
     })
+
+
 
     document.addEventListener('click', e => {
         if (!dropdown.contains(e.target)) dropdown.classList.remove('open')

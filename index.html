@@ -10,8 +10,8 @@
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/aos.css">
-    <link rel="stylesheet" href="/css/main.css" />
-
+    <link rel="stylesheet" href="/css/icons.css">
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 
 <body class="lenis-smooth">
@@ -20,41 +20,41 @@
             <div class="inner-container">
                 <div class="contacts">
                     <a href="tel:+998712024111">
-                        <img src="./images/call.svg" alt="" aria-label="call">
+                        <span class="i-call-blue"></span>
                         <span class="mobile-hidden">+998 71 202 41 11</span>
                     </a>
                     </li>
                     <div class="divider"></div>
                     <a href="mailto:info@newuu.uz">
-                        <img src="images/mail.svg" alt="" aria-label="email">
+                        <span class="i-letter-blue"></span>
                         <span class="mobile-hidden">info@newuu.uz</span>
                     </a>
                 </div>
                 <div class="right">
                     <div class="accessibility mobile-hidden">
-                        <a href="#" aria-label="Increase visibility">
-                            <img src="./images/visibility.svg" width="22" height="22" alt="">
-                        </a>
-                        <a href="#" aria-label="Mobile version">
-                            <img src="./images/smartphone.svg" width="22" height="22" alt="">
-                        </a>
-                        <a href="#" aria-label="Read aloud">
-                            <img src="./images/readaloud.svg" width="22" height="22" alt="">
-                        </a>
+                        <button aria-label="Increase visibility">
+                            <span class="i-acc-visual"></span>
+                        </button>
+                        <button aria-label="Mobile version">
+                            <span class="i-acc-mobile"></span>
+                        </button>
+                        <button aria-label="Read aloud">
+                            <span class="i-acc-hear"></span>
+                        </button>
                     </div>
                     <div class="divider mobile-hidden"></div>
                     <div class="socials mobile-hidden-sm">
                         <a href="#" aria-label="Instagram">
-                            <img src="./images/instagram.svg" width="22" height="22" alt="">
+                            <span class="i-instagram-white"></span>
                         </a>
                         <a href="#" aria-label="Telegram">
-                            <img src="./images/telegram.svg" width="22" height="22" alt="">
+                            <span class="i-telegram-white"></span>
                         </a>
                         <a href="#" aria-label="YouTube">
-                            <img src="./images/youtube.svg" width="22" height="22" alt="">
+                            <span class="i-youtube-white"></span>
                         </a>
                         <a href="#" aria-label="Facebook">
-                            <img src="./images/facebook.svg" width="22" height="22" alt="">
+                            <span class="i-facebook-white"></span>
                         </a>
                     </div>
                     <div class="divider mobile-hidden-sm"></div>
@@ -62,8 +62,7 @@
                         <div class="lang-selected">
                             <img src="./images/rus.png" alt="">
                             <span>RUS</span>
-                            <img src="./images/arrownextwhite.svg" class="arrow" width="11" height="11" alt=""
-                                data-arrow="true">
+                            <span class="i-dropdown-white"></span>
                         </div>
                         <div class="lang-options">
                             <button data-lang="ENG">
@@ -93,71 +92,85 @@
 
             <div class="nav-buttons">
                 <button class="button nav-btn " id="nav-menu" onclick="openNavMenu()" aria-label="Open navigation">
-                    <img id="menuIcon" alt="menu icon" height="20" width="20">
+                    <span class="i-navigation-dark" id="navigation-button"></span>
                     <script>
-                        document.getElementById('menuIcon').src =
-                            location.pathname === '/' || location.pathname === '' || location.pathname === '/index.html'
-                                ? './images/menudots-light.svg'
-                                : './images/menudots-dark.svg';
+                        const navBtn = document.getElementById('navigation-button')
+                        navBtn.className = location.pathname === '/' || location.pathname === '' || location.pathname === '/index.html'
+                            ? 'i-navigation-light'
+                            : 'i-navigation-dark'
                     </script>
-
                 </button>
             </div>
 
             <div class="nav-menu-wrapper hidden" id="navMenuWrapper">
                 <ul>
                     <li>
-                        <span>O сообществе
-                            <img src="./images/arrownext.svg" width="11" height="11" alt="" />
-                        </span>
+                        <p>O сообществе
+                            <span class="i-next-gray"></span>
+                        </p>
                         <ul class="nav-menu-inner-wrapper hidden">
                             <li>
-                                <a href="./about-platform.html">О платформe<img src="./images/arrownext.svg" width="11"
-                                        height="11" alt="" /></a>
+                                <a href="./about-platform.html">О платформe
+                                    <span class="i-next-gray"></span>
+                                </a>
                             </li>
                             <li>
-                                <a href="./about-history.html">История<img src="./images/arrownext.svg" width="11"
-                                        height="11" alt="" /></a>
+                                <a href="./about-history.html">История
+                                    <span class="i-next-gray"></span>
+                                </a>
+
                             </li>
                             <li>
-                                <a href="./about-mission.html">Миссия, цели, ценности<img src="./images/arrownext.svg"
-                                        width="11" height="11" alt="" /></a>
+                                <a href="./about-mission.html">Миссия, цели, ценности
+                                    <span class="i-next-gray"></span>
+                                </a>
+
                             </li>
                             <li>
-                                <a href="./about-structure.html">Полный состав и структура<img
-                                        src="./images/arrownext.svg" width="11" height="11" alt="" /></a>
+                                <a href="./about-structure.html">Полный состав и структура
+                                    <span class="i-next-gray"></span>
+                                </a>
+
                             </li>
                             <li>
-                                <a href="./about-exec.html">Исполнительный офис<img src="./images/arrownext.svg"
-                                        width="11" height="11" alt="" /></a>
+                                <a href="./about-exec.html">Исполнительный офис
+                                    <span class="i-next-gray"></span>
+                                </a>
+
                             </li>
                             <li>
-                                <a href="./faq.html">Часто задаваемые вопросы<img src="./images/arrownext.svg"
-                                        width="11" height="11" alt="" /></a>
+                                <a href="./faq.html">Часто задаваемые вопросы <span class="i-next-gray">
+                                    </span>
+                                </a>
+
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <span>Навигация
-                            <img src="./images/arrownext.svg" width="11" height="11" alt="" />
-                        </span>
+                        <p>Навигация
+                            <span class="i-next-gray"></span>
+                        </p>
                         <ul class="nav-menu-inner-wrapper hidden">
                             <li>
                                 <a href="./news.html">Новости
-                                    <img src="./images/arrownext.svg" width="11" height="11" alt="" /></a>
+                                    <span class="i-next-gray"></span>
+                                </a>
+
                             </li>
                             <li>
                                 <a href="./members.html">Члены
-                                    <img src="./images/arrownext.svg" width="11" height="11" alt="" /></a>
+                                    <span class="i-next-gray"></span>
+                                </a>
+
                             </li>
                             <li>
                                 <a href="./alliance-partners.html">Альянс партнёры
-                                    <img src="./images/arrownext.svg" width="11" height="11" alt="" />
+                                    <span class="i-next-gray"></span>
                                 </a>
                             </li>
                             <li>
                                 <a href="./contact.html">Контакты
-                                    <img src="./images/arrownext.svg" width="11" height="11" alt="" />
+                                    <span class="i-next-gray"></span>
                                 </a>
                             </li>
                         </ul>
@@ -169,32 +182,29 @@
                 <ul class="left">
                     <li>
                         <span class="nav-menu-about-dropdown">O сообществе
-                            <img src="./images/arrownext.svg" width="11" height="11" alt="" />
+                            <span class="i-dropdown-white"></span>
                         </span>
                         <ul class="nav-menu-about-wrapper hidden">
                             <li>
-                                <a href="./about-platform.html">О платформe<img src="./images/arrownext.svg" width="11"
-                                        height="11" alt="" /></a>
+                                <a href="./about-platform.html">О платформe
+                                    <span class="i-next-gray"></span>
                             </li>
                             <li>
-                                <a href="./about-history.html">История<img src="./images/arrownext.svg" width="11"
-                                        height="11" alt="" /></a>
+                                <a href="./about-history.html">История
+                                    <span class="i-next-gray"></span>
                             </li>
                             <li>
-                                <a href="./about-mission.html">Миссия, цели, ценности<img src="./images/arrownext.svg"
-                                        width="11" height="11" alt="" /></a>
+                                <a href="./about-mission.html">Миссия, цели, ценности <span class="i-next-gray"></span>
                             </li>
                             <li>
-                                <a href="./about-structure.html">Полный состав и структура<img
-                                        src="./images/arrownext.svg" width="11" height="11" alt="" /></a>
+                                <a href="./about-structure.html">Полный состав и структура<span
+                                        class="i-next-gray"></span>
                             </li>
                             <li>
-                                <a href="./about-exec.html">Исполнительный офис<img src="./images/arrownext.svg"
-                                        width="11" height="11" alt="" /></a>
+                                <a href="./about-exec.html">Исполнительный офис <span class="i-next-gray"></span>
                             </li>
                             <li>
-                                <a href="./faq.html">Часто задаваемые вопросы<img src="./images/arrownext.svg"
-                                        width="11" height="11" alt="" /></a>
+                                <a href="./faq.html">Часто задаваемые вопросы <span class="i-next-gray"></span>
                             </li>
                         </ul>
                     </li>
@@ -209,24 +219,25 @@
                         class="nav-logo" data-aos="fade-zoom-in"></a>
                 <ul class="right">
                     <li><a href="./alliance-partners.html">Альянс партнёры</a></li>
-                    <li><a href="./contact.html">Контакты</a></li>
+                    <li><a href="./contact.html">Контакты </a></li>
                 </ul>
             </div>
 
             <div class="nav-buttons nav-right">
                 <button class="button nav-btn searchIcon " onclick="openSearchBar()" aria-label="Search website">
-                    <img id="magnifierIcon" alt="search icon" height="24" width="24">
+                    <span id="magnifierIcon" class="i-nav-magnifier-light"></span>
                     <script>
-                        document.getElementById('magnifierIcon').src =
-                            location.pathname === '/' || location.pathname === '' || location.pathname === '/index.html'
-                                ? './images/magnifier-light.svg'
-                                : './images/magnifier-dark.svg';
+                        const icon = document.getElementById('magnifierIcon')
+                        icon.className = location.pathname === '/' || location.pathname === '' || location.pathname === '/index.html'
+                            ? 'i-nav-magnifier-light'
+                            : 'i-nav-magnifier-dark'
                     </script>
+
 
                 </button>
 
                 <a class="button" aria-label="Cabinet" href="login.html">
-                    <img src="./images/profile.svg" width="24" height="24" alt="">
+                    <span id="magnifierIcon" class="i-profile"></span>
                     Кабинет
                 </a>
             </div>
@@ -239,7 +250,7 @@
 
                 <input type="text" class="nav-search-bar" name="nav-search-bar" id="nav-search-bar" placeholder="search"
                     value="">
-                <button class="nav-close-btn" onclick="closeSearchBar()">×
+                <button class="nav-close-btn" onclick="closeSearchBar()"><span class="i-x"></span>
                 </button>
             </div>
         </div>
@@ -283,7 +294,7 @@
                             <span>Присоединяйтесь к нашей команде</span>
                             <p>Присоединяйтесь к нашей команде</p>
                         </div>
-                        <a href="#">Присоединиться <img src="./images/arrownext.svg" width="6" height="11" alt=""></a>
+                        <a href="#">Присоединиться <span class="i-arrow-dark-blue"></span></a>
 
                         <div class="img-wrapper">
 
@@ -295,7 +306,7 @@
                             <span>Станьте нашим партнером</span>
                             <p>Станьте нашим партнером</p>
                         </div>
-                        <a href="#"> Стать партнёром <img src="./images/arrownext.svg" width="6" height="11" alt=""></a>
+                        <a href="#"> Стать партнёром <span class="i-arrow-dark-blue"></span></a>
                         <div class="img-wrapper">
 
                             <img src="./images/card2.png" alt="" class="img-card">
@@ -324,7 +335,7 @@
                     <a href="./about-platform.html" class="button btn-about">Узнать больше
 
                         <div class="arrow">
-                            <img src="./images/arrownextwhite.svg" alt="">
+                            <span class="i-next-white"></span>
                         </div>
                     </a>
                 </div>
@@ -465,8 +476,8 @@
                                 В этом разделе можно ознакомиться с профилями членов сообщества, их специализациями,
                                 географией и сферами деятельности.
                             </p>
-                            <a href="./members.html" class="button">Члены сообщества <img
-                                    src="./images/arrownextwhite.svg" alt=""></a>
+                            <a href="./members.html" class="button">Члены сообщества <span class="i-next-white"></span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -493,8 +504,10 @@
                             соотечественники, ваша искренняя поддержка, благословение старшего поколения, доверие,
                             оказанное
                             молодежью, придают мне новые силы и энергию.</p>
-                        <a class="button" href="./example.pdf" aria-label="download"><img src="./images/download.svg"
-                                alt="">Скачать
+                        <a class="button" href="./example.pdf" aria-label="download">
+                            <span class="i-download-white"></span>
+
+                            Скачать
                             полную
                             версию (PDF)</a>
                     </div>
@@ -528,22 +541,22 @@
                     <p>Обзор роста, активности и вовлечённости участников за выбранный период</p>
                     <div class="card-wrapper">
                         <div class="card">
-                            <img src="./images/infocard1.svg" width="100" height="100" alt="infocard">
+                            <span class="i-info-people"></span>
                             <span>10 000+</span>
                             <p>Участников по всему миру</p>
                         </div>
                         <div class="card">
-                            <img src="./images/infocard2.svg" width="100" height="100" alt="infocard">
+                            <span class="i-info-globe"></span>
                             <span>50+</span>
                             <p>Стран с активными представителями</p>
                         </div>
                         <div class="card">
-                            <img src="./images/infocard3.svg" width="100" height="100" alt="infocard">
+                            <span class="i-info-speak"></span>
                             <span>100+</span>
                             <p>Участников, вернувшихся и реализующих проекты в Узбекистане</p>
                         </div>
                         <div class="card">
-                            <img src="./images/infocard4.svg" width="100" height="100" alt="infocard">
+                            <span class="i-info-like"></span>
                             <span>30+</span>
                             <p>Стратегических партнёров</p>
                         </div>
@@ -558,8 +571,8 @@
 
                     <div class="inner-wrapper">
                         <h2>Чем заняты <span class="title-blue"> члены организации</span></h2>
-                        <a href="./news.html">Смотреть больше <img src="./images/arrownextblue.svg" width="18"
-                                height="18" alt=""></a>
+                        <a href="./news.html">Смотреть больше
+                            <span class="i-arrow-blue"></span></a>
                     </div>
 
                     <div class="newscard-wrapper">
@@ -570,11 +583,11 @@
 
                                 <div class="details">
                                     <span>
-                                        <img src="./images/calendar.svg" alt="" width="22" height="22">
+                                        <span class="i-news-calendar-green"></span>
                                         <p>9 мая 2025 г</p>
                                     </span>
                                     <span>
-                                        <img src="./images/views.svg" alt="" width="22" height="22">
+                                        <span class="i-eye-green"></span>
                                         <p>85</p>
                                     </span>
                                 </div>
@@ -582,8 +595,8 @@
                                 <p>Стипендиаты фонда обсудили перспективы сотрудничества и реализации проектов
                                     устойчивого
                                     развития в Узбекистане.</p>
-                                <a href="./meeting.html" class="button">Подробно <img src="./images/arrownextwhite.svg"
-                                        alt="" width="18" height="18"></a>
+                                <a href="./meeting.html" class="button">Подробно <span class="i-next-white"></span>
+                                </a>
                             </div>
                         </div>
                         <div class="newscard">
@@ -592,11 +605,11 @@
 
                                 <div class="details">
                                     <span>
-                                        <img src="./images/calendar.svg" alt="" width="22" height="22">
+                                        <span class="i-news-calendar-green"></span>
                                         <p>9 мая 2025 г</p>
                                     </span>
                                     <span>
-                                        <img src="./images/views.svg" alt="" width="22" height="22">
+                                        <span class="i-eye-green"></span>
                                         <p>85</p>
                                     </span>
                                 </div>
@@ -604,8 +617,8 @@
                                 <p>Стипендиаты фонда обсудили перспективы сотрудничества и реализации проектов
                                     устойчивого
                                     развития в Узбекистане.</p>
-                                <a href="./meeting.html" class="button">Подробно <img src="./images/arrownextwhite.svg"
-                                        alt="" width="18" height="18"></a>
+                                <a href="./meeting.html" class="button">Подробно <span class="i-next-white"></span>
+                                </a>
                             </div>
                         </div>
                         <div class="newscard">
@@ -614,11 +627,11 @@
 
                                 <div class="details">
                                     <span>
-                                        <img src="./images/calendar.svg" alt="" width="22" height="22">
+                                        <span class="i-news-calendar-green"></span>
                                         <p>9 мая 2025 г</p>
                                     </span>
                                     <span>
-                                        <img src="./images/views.svg" alt="" width="22" height="22">
+                                        <span class="i-eye-green"></span>
                                         <p>85</p>
                                     </span>
                                 </div>
@@ -626,8 +639,8 @@
                                 <p>Стипендиаты фонда обсудили перспективы сотрудничества и реализации проектов
                                     устойчивого
                                     развития в Узбекистане.</p>
-                                <a href="./meeting.html" class="button">Подробно <img src="./images/arrownextwhite.svg"
-                                        alt="" width="18" height="18"></a>
+                                <a href="./meeting.html" class="button">Подробно <span class="i-next-white"></span>
+                                </a>
                             </div>
                         </div>
                         <div class="newscard">
@@ -636,11 +649,11 @@
 
                                 <div class="details">
                                     <span>
-                                        <img src="./images/calendar.svg" alt="" width="22" height="22">
+                                        <span class="i-news-calendar-green"></span>
                                         <p>9 мая 2025 г</p>
                                     </span>
                                     <span>
-                                        <img src="./images/views.svg" alt="" width="22" height="22">
+                                        <span class="i-eye-green"></span>
                                         <p>85</p>
                                     </span>
                                 </div>
@@ -648,8 +661,8 @@
                                 <p>Стипендиаты фонда обсудили перспективы сотрудничества и реализации проектов
                                     устойчивого
                                     развития в Узбекистане.</p>
-                                <a href="./meeting.html" class="button">Подробно <img src="./images/arrownextwhite.svg"
-                                        alt="" width="18" height="18"></a>
+                                <a href="./meeting.html" class="button">Подробно <span class="i-next-white"></span>
+                                </a>
                             </div>
                         </div>
                         <div class="newscard">
@@ -658,11 +671,11 @@
 
                                 <div class="details">
                                     <span>
-                                        <img src="./images/calendar.svg" alt="" width="22" height="22">
+                                        <span class="i-news-calendar-green"></span>
                                         <p>9 мая 2025 г</p>
                                     </span>
                                     <span>
-                                        <img src="./images/views.svg" alt="" width="22" height="22">
+                                        <span class="i-eye-green"></span>
                                         <p>85</p>
                                     </span>
                                 </div>
@@ -670,8 +683,8 @@
                                 <p>Стипендиаты фонда обсудили перспективы сотрудничества и реализации проектов
                                     устойчивого
                                     развития в Узбекистане.</p>
-                                <a href="./meeting.html" class="button">Подробно <img src="./images/arrownextwhite.svg"
-                                        alt="" width="18" height="18"></a>
+                                <a href="./meeting.html" class="button">Подробно <span class="i-next-white"></span>
+                                </a>
                             </div>
                         </div>
                         <div class="newscard">
@@ -680,11 +693,11 @@
 
                                 <div class="details">
                                     <span>
-                                        <img src="./images/calendar.svg" alt="" width="22" height="22">
+                                        <span class="i-news-calendar-green"></span>
                                         <p>9 мая 2025 г</p>
                                     </span>
                                     <span>
-                                        <img src="./images/views.svg" alt="" width="22" height="22">
+                                        <span class="i-eye-green"></span>
                                         <p>85</p>
                                     </span>
                                 </div>
@@ -692,8 +705,8 @@
                                 <p>Стипендиаты фонда обсудили перспективы сотрудничества и реализации проектов
                                     устойчивого
                                     развития в Узбекистане.</p>
-                                <a href="./meeting.html" class="button">Подробно <img src="./images/arrownextwhite.svg"
-                                        alt="" width="18" height="18"></a>
+                                <a href="./meeting.html" class="button">Подробно <span class="i-next-white"></span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -718,8 +731,7 @@
                         инновационные решения.Мы гордимся успешным взаимодействием с нашими партнерами и стремимся к
                         укреплению этих связей. Вместе мы создаем новые возможности и уверенно движемся к успеху.
                     </p>
-                    <a href="./alliance-partners.html" class="button">Партнёры <img src="./images/arrownextwhite.svg"
-                            width="18" height="18" alt=""></a>
+                    <a href="./alliance-partners.html" class="button">Партнёры <span class="i-next-white"></span></a>
                 </div>
                 <div class="vertical-carousel1">
                     <div class="slider-track">
@@ -787,10 +799,9 @@
                         </div>
                         <div class="slide">
                             <div>
-                                <img src="./images/your-spot.svg" width="200" height="57" alt="">
+                                <span class="i-join-star"></span>
                                 <p>Это твое место</p>
-                                <a href="#" class="link">Стать партнёром <img src="./images/arrownextblue.svg"
-                                        width="18" height="18" alt=""> </a>
+                                <a href="#" class="link">Стать партнёром <span class="i-arrow-blue"></span></a>
                             </div>
                         </div>
                     </div>
@@ -805,7 +816,7 @@
 
                     <button class="faq-item active">
                         <p class="question">Что такое Сообщество поддержки одаренной молодежи
-                            <img class="plus" src="./images/plus.svg" width="28" height="28" alt="">
+                            <span class="i-x plus"></span>
                         </p>
 
                         <hr>
@@ -817,7 +828,7 @@
                     </button>
                     <button class="faq-item">
                         <p class="question">Кто может стать участником сообщества?
-                            <img class="plus" src="./images/plus.svg" width="28" height="28" alt="">
+                            <span class="i-x plus"></span>
                         </p>
 
                         <hr>
@@ -829,7 +840,7 @@
                     </button>
                     <button class="faq-item">
                         <p class="question">Какова основная цель создания сообщества?
-                            <img class="plus" src="./images/plus.svg" width="28" height="28" alt="">
+                            <span class="i-x plus"></span>
                         </p>
 
                         <hr>
@@ -842,7 +853,7 @@
                     <button class="faq-item">
                         <p class="question">Какие возможности предоставляет сообщество своим участникам?
 
-                            <img class="plus" src="./images/plus.svg" width="28" height="28" alt="">
+                            <span class="i-x plus"></span>
                         </p>
 
                         <hr>
@@ -854,7 +865,7 @@
                     </button>
                     <button class="faq-item">
                         <p class="question">На каком основании создано сообщество?
-                            <img class="plus" src="./images/plus.svg" width="28" height="28" alt="">
+                            <span class="i-x plus"></span>
                         </p>
 
                         <hr>
@@ -903,8 +914,8 @@
 
                         </div>
 
-                        <button class="button submit-btn ">Отправить сообщение <img src="images/send-message.svg"
-                                width="20" height="20" alt=""></button>
+                        <button class="button submit-btn ">Отправить сообщение <span
+                                class="i-send-message"></span></button>
                     </div>
 
                     <div class="graphic-section">
@@ -953,20 +964,19 @@
                         <div class="footer-social-label">Социальные сети:</div>
                         <div class="footer-social-icons d-flex gap-2 mt-1">
                             <a class="footer-social-link" href="#" aria-label="Instagram">
-                                <img class="footer-social-icon" src="./images/instagram.svg" width="22" height="22"
-                                    alt="">
+                                <span class="i-instagram-blue"></span>
                             </a>
                             <a class="footer-social-link" href="#" aria-label="Telegram">
-                                <img class="footer-social-icon" src="./images/telegram.svg" width="22" height="22"
-                                    alt="">
+                                <span class="i-telegram-blue"></span>
+
                             </a>
                             <a class="footer-social-link" href="#" aria-label="YouTube">
-                                <img class="footer-social-icon" src="./images/youtube.svg" width="22" height="22"
-                                    alt="">
+                                <span class="i-youtube-blue"></span>
+
                             </a>
                             <a class="footer-social-link" href="#" aria-label="Facebook">
-                                <img class="footer-social-icon" src="./images/facebook.svg" width="22" height="22"
-                                    alt="">
+                                <span class="i-facebook-blue"></span>
+
                             </a>
                         </div>
                     </div>
@@ -993,7 +1003,8 @@
                 <span class="developer footer-dev">
                     <span class="footer-dev-label">Developed by:</span>
                     <a class="footer-dev-link" href="https://proend.uz" aria-label="developed by proend">
-                        <img class="footer-dev-img" src="./images/Proend-logo.svg" alt="Proend logo">
+                        <span class="i-proend"></span>
+
                     </a>
                 </span>
             </div>
