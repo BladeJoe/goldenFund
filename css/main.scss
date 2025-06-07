@@ -128,7 +128,8 @@
 }
 
 html {
-    height: 100%;
+    max-width: 100%;
+    height: 100% !important;
 }
 
 body {
@@ -2194,6 +2195,7 @@ button:hover [class*=" i-"]:before {
     top: 5%;
     left: 50%;
     z-index: 0;
+    max-width: 100%;
     transform: translate(-50%, 0);
     background: url("../images/graffiti.svg") center no-repeat;
     background-size: auto;
