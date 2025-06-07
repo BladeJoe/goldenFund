@@ -8,8 +8,8 @@
     <meta name="author" content="xbm" />
     <meta name="description" content="Golden Fund of Nation" />
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="/css/aos.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/aos.css">
     <link rel="stylesheet" href="/css/main.css" />
 
 </head>
@@ -252,9 +252,14 @@
 
         <section id="hero" class="section hero" data-aos="fade-zoom-in">
             <div class="video-wrapper">
-                <video id="video" autoplay loop muted preload="auto">
-                    <source src="./videos/slider.mp4" type="video/mp4">
+                <video id="video" autoplay loop muted>
+                    <source src="./videos/slider.mp4" media="(min-width: 769px)" type="video/mp4" />
+                    <source src="./videos/slider-mobile.mp4" media="(max-width: 768px)" type="video/mp4" />
                 </video>
+
+
+
+
                 <div class="video-overlay"></div>
             </div>
             <div class="container">
@@ -330,12 +335,8 @@
         </section>
 
         <section id="members" class="section members">
-            <div class="inner-wrapper">
+            <div class="outer-wrapper">
                 <div class="container">
-                    <div class="rotate360">
-                        <img src="./images/memberimg.png" alt="" width="120" height="120">
-                    </div>
-
                     <div class="members-wrapper">
                         <div class="golden-fund-wrapper">
                             <div class="profiles">
@@ -474,7 +475,7 @@
 
         <section id="speech" class="section speech">
             <div class="container">
-                <div class="inner-wrapper">
+                <div class="wrapper">
                     <div class="text">
                         <h2><span class="title-blue">Послание Президента</span>
                             Республики Узбекистан</h2>
@@ -907,7 +908,7 @@
                     </div>
 
                     <div class="graphic-section">
-                        <img src="images/message-side.png" alt="">
+                        <img src="images/1.png" alt="">
                     </div>
                 </div>
 
@@ -989,12 +990,12 @@
                     Copyright © <span id="year"></span>, Community of Support for Gifted Youth. Все права защищены.
                 </span>
                 <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
-                <p class="developer footer-dev ">
+                <span class="developer footer-dev">
                     <span class="footer-dev-label">Developed by:</span>
                     <a class="footer-dev-link" href="https://proend.uz" aria-label="developed by proend">
                         <img class="footer-dev-img" src="./images/Proend-logo.svg" alt="Proend logo">
                     </a>
-                </p>
+                </span>
             </div>
         </div>
     </footer>
